@@ -3,36 +3,70 @@
 % ==========================================
 \chapter{PENDAHULUAN}
 \label{chap:pendahuluan}
+
+Bab I adalah pendahuluan yang menceritakan keseluruhan isi dari tugas akhir. Bab ini diawali dengan penjelasan mengenai topik dan latar belakang tugas akhir, dilanjuti dengan rumusan masalah, tujuan tugas akhir, serta batasan masalah yang dibahas di tugas akhir. Selain itu, Bab I akan menjelaskan tentang pendekatan dan metode yang digunakan di metodologi.
+
 % --- Latar Belakang ---
 \section{Latar Belakang}
-Latar Belakang menjelaskan dasar pemikiran, motivasi, kebutuhan, alasan, atau urgensi pemilihan masalah tugas akhir. Subbab ini berisi penjelasan ringkas tentang kondisi atau situasi yang ada saat ini terkait dengan topik yang dibahas. Tujuan utamanya adalah untuk memberikan informasi secukupnya kepada pembaca agar memahami topik yang akan dibahas. Dalam subbab ini, jelaskan hal-hal berikut ini:
-\begin{enumerate}
-\item	Kondisi atau situasi topik yang dibahas beserta permasalahannya, misalnya tentang pengelolaan informasi di puskesmas daerah pedesaan dan masalah yang dihadapi.
-\item	Berbagai solusi yang telah diterapkan atau solusi yang tersedia dan memungkinkan untuk diterapkan untuk menyelesaikan masalah tersebut.
-\end{enumerate}
+Revolusi digital telah memicu ledakan produksi data; volume data global diproyeksikan akan mencapai 181 zettabyte pada tahun 2025, meningkat drastis dari hanya 2 zettabyte pada tahun 2010 \autocite{idc2025}. Pertumbuhan ini melahirkan tantangan \textit{information overload}, di mana volume informasi melampaui kapasitas kognitif individu untuk memprosesnya \autocite{eppler2004}. Menurut \textit{Cognitive Load Theory}, kapasitas memori kerja manusia yang terbatas membuat kualitas pengambilan keputusan dapat menurun hingga 50\% saat dihadapkan pada beban informasi berlebih \autocite{sweller1988,arnold2023}.
+
+Masalah ini menjadi akut dalam komunitas online di media sosial, di mana laju pesan yang tinggi dapat menenggelamkan informasi krusial \autocite{nematzadeh2019}. Konsekuensinya adalah atensi selektif hingga kelumpuhan dalam pengambilan keputusan \autocite{edmunds2000}. Fenomena ini relevan di Indonesia, di mana platform seperti Telegram telah menjadi ekosistem dominan untuk komunitas finansial berskala besar. Didukung oleh fitur seperti kapasitas grup hingga 200.000 anggota, Telegram menjadi medium pilihan dengan lebih dari 27 juta pengguna di Indonesia untuk diskusi investasi \textit{real-time} \autocite{statista2024,perlo2025}.
+
+Dominasi Telegram ini berjalan paralel dengan lonjakan jumlah investor ritel di Indonesia, yang mencapai lebih dari 6 juta investor pada September 2024, dengan pertumbuhan 744.000 investor baru di tahun tersebut \autocite{bei2024}. Mayoritas investor baru ini adalah generasi muda yang sangat bergantung pada komunitas media sosial untuk pengambilan keputusan investasi \autocite{ojk2022,jema2023}. Ketergantungan ini menciptakan masalah dimana akses informasi justru berujung pada \textit{information overload} yang parah, sehingga investor kesulitan memilah sinyal berkualitas dari kebisingan informasi. Tantangan ini terefleksi secara nyata dalam komunitas finansial Michael Yeoh, yang memiliki lebih dari 22.000 anggota dalam struktur berjenjang (\textit{multi-tiered}), di mana fragmentasi informasi antar grup semakin memperburuk masalah.
+
+Penelitian akademis sebelumnya cenderung berfokus pada analisis sentimen dari forum publik seperti X (Twitter) dan Reddit untuk tujuan prediksi pergerakan harga saham (misalnya, \textcite{bollen2011}; \textcite{sianipar2023}; \textcite{liew2021}). Sementara itu, solusi praktis seperti bot Telegram yang ada saat ini bersifat generik, tidak mampu melakukan sintesis lintas-grup, dan tidak dioptimalkan untuk domain finansial Indonesia yang spesifik (misalnya, \textcite{stars2023}; \textcite{panda2023}). Kedua pendekatan tersebut tidak dirancang untuk menyelesaikan masalah operasional internal sebuah komunitas.
+
+Kondisi \textit{information overload} parah dan fragmentasi informasi akibat struktur komunitas berjenjang ini menyoroti permasalahan signifikan yang perlu diteliti. Fenomena ini tidak hanya berisiko mengurangi efektivitas anggota dalam mengambil keputusan investasi, tetapi juga mengikis nilai dari komunitas itu sendiri.
 
 % --- Rumusan Masalah ---
 \section{Rumusan Masalah}
-Rumusan Masalah berisi masalah utama yang dibahas dalam tugas akhir. Rumusan masalah yang baik memiliki struktur sebagai berikut:
+Berdasarkan latar belakang yang telah diuraikan pada subbab I.1, rumusan masalah yang akan dibahas pada tugas akhir ini adalah:
+
 \begin{enumerate}
-\item	Pokok persoalan dari kondisi atau situasi yang ada saat ini. Dengan kata lain, jelaskan kelemahan atau kekurangan dari kondisi, situasi, atau solusi yang dijelaskan pada latar belakang. Ini merupakan pokok rumusan masalah.
-\item	Elaborasi lebih lanjut urgensi penyelesaian masalah tersebut (mengapa penting untuk diselesaikan dan akibat yang dapat terjadi jika tidak diselesaikan).
-\item	Usulan singkat terkait dengan solusi yang ditawarkan untuk menyelesaikan persoalan.
-Penting untuk diperhatikan bahwa persoalan yang dideskripsikan pada subbab ini akan dipertanggungjawabkan di bab Evaluasi (apakah terselesaikan atau tidak).
+\item Bagaimana \textit{information overload} dan fragmentasi informasi dalam komunitas finansial berjenjang (\textit{multi-tiered}) secara spesifik menghambat kemampuan anggota untuk mengekstraksi wawasan investasi yang relevan?
+\item Bagaimana sebuah sistem rangkuman otomatis berbasis AI dapat dikembangkan dan dievaluasi efektivitasnya untuk mereduksi \textit{information overload} dengan melakukan sintesis intelijen lintas-grup di komunitas tersebut?
 \end{enumerate}
 
 % --- Tujuan ---
 \section{Tujuan}
-Tuliskan tujuan utama dan/atau tujuan detail yang akan dicapai dalam pelaksanaan tugas akhir. Fokuskan pada hasil akhir yang ingin diperoleh setelah tugas akhir diselesaikan, terkait dengan penyelesaian persoalan pada rumusan masalah. Penting untuk diperhatikan bahwa tujuan yang dideskripsikan pada subbab ini akan dipertanggungjawabkan di akhir pelaksanaan tugas akhir apakah tercapai atau tidak. Tuliskan kriteria keberhasilan tugas akhir ini.
+Berdasarkan latar belakang dan rumusan masalah yang telah dijelaskan, tujuan dari tugas akhir ini adalah:
+
+\begin{enumerate}
+\item Menganalisis dampak \textit{information overload} dan fragmentasi informasi terhadap efektivitas anggota dalam memperoleh wawasan investasi di dalam studi kasus komunitas yang diteliti.
+\item Merancang, membangun, dan mengevaluasi sebuah \textit{prototype} rangkuman otomatis yang mampu melakukan sintesis intelijen lintas-grup untuk membuktikan efektivitasnya dalam mengurangi \textit{information overload}.
+\end{enumerate}
 
 % --- Batasan Masalah ---
 \section{Batasan Masalah}
-Tuliskan batasan-batasan yang diambil dalam pelaksanaan tugas akhir. Batasan ini dapat dihindari (bersifat opsional, tidak perlu ada) jika topik atau judul tugas akhir dibuat cukup spesifik.
+Batasan masalah digunakan untuk menjaga pelebaran dari pokok masalah dan mengarahkan tugas akhir menjadi lebih spesifik. Batasan masalah dari tugas akhir ini adalah:
+
+\begin{enumerate}
+\item Konteks penelitian dan implementasi sistem terbatas secara eksklusif pada ekosistem komunitas investasi Michael Yeoh di Telegram, yang terdiri dari tiga grup utama: MY Cuap Cuap, MY Swing Plan, dan MY Advanced Group.
+\item Arsitektur sistem menggunakan tumpukan teknologi (\textit{technology stack}) yang telah ditentukan, meliputi model NLP \textit{indonesian-roberta-base-emotion-classifier} dan \textit{bert-base-indonesian-NER}, serta pemanfaatan Groq API dengan model bahasa Llama 3.1 70B untuk proses generasi rangkuman.
+\item Keluaran (\textit{output}) utama dari sistem adalah rangkuman terstruktur yang dihasilkan secara periodik setiap jam (\textit{hourly summary}). Penelitian ini tidak mencakup pengembangan sistem peringatan (\textit{alert}) \textit{real-time} atau fitur percakapan interaktif.
+\item Sumber data untuk analisis terbatas pada pesan berbasis teks yang ada di dalam grup-grup Telegram yang ditentukan. Sistem tidak mengintegrasikan sumber data eksternal seperti API harga saham \textit{real-time} atau umpan berita finansial dari portal media.
+\end{enumerate}
 
 % --- Metodologi Pengerjaan TA ---
 \section{Metodologi}
-Tuliskan semua tahapan yang akan dilalui selama pelaksanaan tugas akhir. Tahapan ini spesifik untuk menyelesaikan persoalan tugas akhir. Khusus untuk penyusunan proposal ini, jelaskan secara detail:
+Pengerjaan tugas akhir ini menggunakan dua metodologi, yaitu metodologi untuk penelitian dan metodologi pengembangan.
+
+\subsection{Metodologi Penelitian}
+Metodologi penelitian yang digunakan adalah \textit{Design Science Research Methodology} (DSRM). Pendekatan DSRM dipilih karena relevansinya yang tinggi dengan penelitian di bidang sistem informasi yang bertujuan untuk merancang dan mengevaluasi artefak teknologi inovatif guna memecahkan masalah di dunia nyata. Proses DSRM terdiri dari enam tahapan yang akan diikuti dalam penelitian ini:
+
 \begin{enumerate}
-\item	Tahapan investigasi pengumpulan fakta di latar belakang untuk merumuskan masalah.
-\item	Langkah-langkah pencarian, pengelompokan, dan penapisan literatur atau sumber informasi untuk mengumpulkan informasi yang relevan tentang topik yang diangkat, termasuk teori (konsep atau teori apa saja yang perlu dicari), hal-hal yang telah dicapai oleh orang lain (cara mencari dan kata kuncinya), dan berbagai informasi pendukung, untuk mencari solusi terhadap masalah yang dibahas. Gunakan metodologi yang tepat dalam menggali informasi dan dokumentasikan prosesnya (termasuk rekaman wawancara atau survei) di dalam Lampiran, termasuk tautan ke video atau foto. Hasil penggalian informasi ini akan dijelaskan secara sistematis di Bab II Studi Literatur.
+\item \textbf{Identifikasi Masalah \& Motivasi}: Tahap ini telah diuraikan dalam latar belakang, di mana masalah spesifik yang diidentifikasi adalah \textit{information overload} dan fragmentasi informasi dalam komunitas finansial Telegram yang besar dan berjenjang. Motivasi utamanya adalah kebutuhan untuk meningkatkan efisiensi akses informasi bagi anggota komunitas.
+
+\item \textbf{Perumusan Tujuan Solusi}: Berdasarkan masalah yang ada, tujuan solusi didefinisikan secara kuantitatif dan kualitatif. Tujuan utamanya adalah menghasilkan sebuah artefak (sistem) yang terbukti mampu mereduksi beban informasi, yang akan diukur melalui akurasi identifikasi topik dan efisiensi akses informasi yang dirasakan pengguna.
+
+\item \textbf{Desain \& Pengembangan}: Tahap ini merupakan aktivitas inti dalam menciptakan artefak penelitian. Pada tugas akhir ini, artefak yang dirancang dan dikembangkan adalah sebuah sistem purwarupa untuk rangkuman otomatis. Proses ini mencakup perancangan arsitektur, implementasi \textit{pipeline} pemrosesan data, dan integrasi model NLP.
+
+\item \textbf{Demonstrasi}: Pada tahap ini, artefak yang telah dibangun akan didemonstrasikan untuk menyelesaikan masalah yang telah diidentifikasi. Sistem purwarupa akan dioperasikan menggunakan data percakapan nyata dari komunitas Michael Yeoh untuk menunjukkan kemampuannya dalam mengubah data mentah menjadi rangkuman yang terstruktur.
+
+\item \textbf{Evaluasi}: Artefak akan dievaluasi secara sistematis untuk mengukur sejauh mana tujuan solusi tercapai. Evaluasi akan membandingkan kondisi sebelum dan sesudah penggunaan sistem, menggunakan metrik yang telah ditetapkan seperti akurasi, tingkat kompresi pesan, dan umpan balik kualitatif dari pengguna melalui survei.
+
+\item \textbf{Komunikasi}: Tahap terakhir adalah mengkomunikasikan masalah, artefak yang dibangun, serta hasil evaluasinya kepada audiens akademis. Komunikasi ini diwujudkan melalui penulisan laporan tugas akhir ini serta presentasi dalam forum seminar dan sidang.
 \end{enumerate}
+
+\subsection{Metodologi Pengembangan}
+Metodologi pengembangan yang akan digunakan akan dijelaskan lebih detail pada tahap selanjutnya setelah analisis kebutuhan sistem dilakukan.
