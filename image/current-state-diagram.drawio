@@ -1,0 +1,78 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="24.7.17">
+  <diagram name="Current System" id="current-system-michael-yeoh">
+    <mxGraphModel dx="1434" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="SISTEM KOMUNITAS TELEGRAM MICHAEL YEOH - KONDISI SAAT INI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="284" y="30" width="600" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Michael Yeoh + 2 Admins -->
+        <mxCell id="admin-node" value="&lt;b&gt;MICHAEL YEOH&lt;/b&gt;&lt;br&gt;+ 2 Administrators&lt;br&gt;&lt;br&gt;Content Creators&lt;br&gt;Community Leaders" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="484" y="90" width="200" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- 4 Groups -->
+        <!-- Cuap Cuap -->
+        <mxCell id="group-cuap" value="&lt;b&gt;MY CUAP CUAP&lt;/b&gt;&lt;br&gt;~18,000 members&lt;br&gt;Read-only Broadcast&lt;br&gt;&lt;br&gt;~100 msg/day&lt;br&gt;(~10 msg/hour)&lt;br&gt;&lt;br&gt;❌ No Recap" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="270" width="180" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Swing Plan -->
+        <mxCell id="group-swing" value="&lt;b&gt;MY SWING PLAN&lt;/b&gt;&lt;br&gt;~5,000 members&lt;br&gt;Signal-only&lt;br&gt;&lt;br&gt;~5 msg/day&lt;br&gt;&lt;br&gt;Format: &quot;BGTG BUY 106-100&quot;&lt;br&gt;❌ No Recap" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="340" y="270" width="180" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Advanced -->
+        <mxCell id="group-advanced" value="&lt;b&gt;MY ADVANCED GROUP&lt;/b&gt;&lt;br&gt;~4,000 members&lt;br&gt;Interactive 2-way&lt;br&gt;&lt;br&gt;~200 msg/hour&lt;br&gt;(~1,400/day)&lt;br&gt;&lt;br&gt;✅ Manual Recap 10:00&lt;br&gt;(by Richy)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="560" y="270" width="180" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- PIRANHA -->
+        <mxCell id="group-piranha" value="&lt;b&gt;MY PIRANHA (ELITE)&lt;/b&gt;&lt;br&gt;~2,000 members&lt;br&gt;Interactive 2-way&lt;br&gt;&lt;br&gt;&gt;200 msg/hour&lt;br&gt;(~1,400/day)&lt;br&gt;&lt;br&gt;Casual but Deep&lt;br&gt;❌ No Recap" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="780" y="270" width="180" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Arrows from Admin to Groups -->
+        <mxCell id="arrow-admin-cuap" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;entryX=0.5;entryY=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="admin-node" target="group-cuap">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-admin-swing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="admin-node" target="group-swing">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-admin-advanced" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="admin-node" target="group-advanced">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-admin-piranha" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;entryX=0.5;entryY=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="admin-node" target="group-piranha">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Problems Box -->
+        <mxCell id="problems-box" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;⚠️ MASALAH UTAMA&lt;/b&gt;&lt;br&gt;&lt;br&gt;1. INFORMATION OVERLOAD EKSTRIM&lt;br&gt;   • PIRANHA: &gt;200 msg/hr, NO recap&lt;br&gt;   • Advanced: ~200 msg/hr, only 1 recap (jam 10)&lt;br&gt;&lt;br&gt;2. FRAGMENTASI INFORMASI&lt;br&gt;   • 4 grup terpisah, no cross-group synthesis&lt;br&gt;   • Member harus manual connect dots&lt;br&gt;&lt;br&gt;3. COGNITIVE OVERLOAD&lt;br&gt;   • Reading 200 msg/hr = 50 min/hr&lt;br&gt;   • No time for analysis &amp; decision-making&lt;br&gt;&lt;br&gt;4. COVERAGE GAP&lt;br&gt;   • Recap hanya jam 10:00 (Advanced)&lt;br&gt;   • Gap 6 jam trading (10:00-16:00)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="120" y="480" width="840" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend-title" value="&lt;b&gt;KETERANGAN:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="720" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-1" value="Broadcast (read-only)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="750" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-2" value="Signal-only" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="750" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-3" value="Interactive (Premium)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="440" y="750" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-4" value="Interactive (Ultra-Premium)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="750" width="140" height="30" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
