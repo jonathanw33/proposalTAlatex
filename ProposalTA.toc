@@ -1,9 +1,29 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {chapter}{DAFTAR GAMBAR}{v}{figure.caption.1}%
-\contentsline {chapter}{DAFTAR TABEL}{vi}{figure.caption.1}%
-\contentsline {chapter}{\centering \normalsize DAFTAR KODE}{vii}{chapter*.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {chapter}{DAFTAR GAMBAR}{iv}{figure.caption.1}%
+\contentsline {chapter}{DAFTAR TABEL}{v}{figure.caption.1}%
+\contentsline {chapter}{\centering \normalsize DAFTAR KODE}{vi}{chapter*.2}%
 \contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {I.1}Latar Belakang}{1}{section.1.1}%
 \babel@toc {english}{}\relax 
@@ -71,6 +91,10 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
 \contentsline {subsection}{\numberline {II.1.2}Landasan Teori: \textit {Cognitive Load Theory}}{8}{subsection.2.1.2}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
@@ -84,26 +108,25 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.1.3}Ekonomi Perhatian di Media Sosial}{9}{subsection.2.1.3}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.1.3}Ekonomi Perhatian di Media Sosial}{10}{subsection.2.1.3}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {section}{\numberline {II.2}\textit {Text Summarization} dengan \textit {Large Language Models}}{10}{section.2.2}%
-\contentsline {subsection}{\numberline {II.2.1}Peringkasan Berbasis \textit {Transformer}}{10}{subsection.2.2.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {II.2}\textit {Text Summarization} dengan \textit {Large Language Models}}{11}{section.2.2}%
+\contentsline {subsection}{\numberline {II.2.1}Fondasi: Arsitektur \textit {Transformer} dan BERT}{11}{subsection.2.2.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.2.2}Peringkasan Multi-Dokumen dan Sintesis Informasi}{11}{subsection.2.2.2}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -112,21 +135,20 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.2.3}Peringkasan Percakapan dan Dialog}{12}{subsection.2.2.3}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.2.2}Peringkasan Berbasis \textit {Transformer}}{13}{subsection.2.2.2}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.2.4}Memori Jangka Panjang dalam Sistem Dialog}{12}{subsection.2.2.4}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.2.5}Metrik Evaluasi untuk Peringkasan}{13}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {II.2.3}Peringkasan Multi-Dokumen dan Sintesis Informasi}{14}{subsection.2.2.3}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -135,8 +157,7 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {section}{\numberline {II.3}Analisis Sentimen untuk Media Sosial Finansial}{13}{section.2.3}%
-\contentsline {subsection}{\numberline {II.3.1}Model Bahasa untuk Analisis Sentimen Indonesia}{13}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {II.2.4}Peringkasan Percakapan dan Dialog}{15}{subsection.2.2.4}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -145,11 +166,12 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.2.5}Memori Jangka Panjang dalam Sistem Dialog}{15}{subsection.2.2.5}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.3.2}Analisis Sentimen Domain Finansial}{14}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {II.2.6}Metrik Evaluasi untuk Peringkasan}{16}{subsection.2.2.6}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -158,14 +180,12 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.3.3}Pemanfaatan Sinyal Komunitas dalam Peringkasan}{15}{subsection.2.3.3}%
+\contentsline {section}{\numberline {II.3}Analisis Sentimen untuk Media Sosial Finansial}{16}{section.2.3}%
+\contentsline {subsection}{\numberline {II.3.1}Model Bahasa untuk Analisis Sentimen Indonesia}{17}{subsection.2.3.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.3.4}Klasifikasi Emosi versus Sentimen untuk Investor Ritel}{15}{subsection.2.3.4}%
-\contentsline {section}{\numberline {II.4}\textit {Named Entity Recognition} untuk Teks Finansial Indonesia}{16}{section.2.4}%
-\contentsline {subsection}{\numberline {II.4.1}NER untuk Bahasa Indonesia}{17}{subsection.2.4.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -174,7 +194,7 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.4.2}NER Domain Finansial}{17}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {II.3.2}Analisis Sentimen Domain Finansial}{17}{subsection.2.3.2}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -183,23 +203,23 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {section}{\numberline {II.5}\textit {Topic Modeling} dengan BERTopic}{18}{section.2.5}%
-\contentsline {subsection}{\numberline {II.5.1}BERTopic: Metodologi dan Keunggulan}{18}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {II.3.3}Pemanfaatan Sinyal Komunitas dalam Peringkasan}{18}{subsection.2.3.3}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.3.4}Klasifikasi Emosi versus Sentimen untuk Investor Ritel}{19}{subsection.2.3.4}%
+\contentsline {section}{\numberline {II.4}\textit {Named Entity Recognition} untuk Teks Finansial Indonesia}{20}{section.2.4}%
+\contentsline {subsection}{\numberline {II.4.1}NER untuk Bahasa Indonesia}{20}{subsection.2.4.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.5.2}Perkembangan Terkini dalam \textit {Topic Modeling} Neural}{19}{subsection.2.5.2}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {section}{\numberline {II.6}Telegram sebagai Platform Komunitas}{19}{section.2.6}%
-\contentsline {subsection}{\numberline {II.6.1}Karakteristik dan Dinamika Platform Telegram}{19}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {II.4.2}NER Domain Finansial}{21}{subsection.2.4.2}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -208,7 +228,8 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.6.2}Analisis Skala Besar Komunitas Telegram}{20}{subsection.2.6.2}%
+\contentsline {section}{\numberline {II.5}\textit {Topic Modeling} dengan BERTopic}{22}{section.2.5}%
+\contentsline {subsection}{\numberline {II.5.1}BERTopic: Metodologi dan Keunggulan}{22}{subsection.2.5.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -217,69 +238,77 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {section}{\numberline {II.7}Arsitektur Pemrosesan Data \textit {Real-Time}}{21}{section.2.7}%
-\contentsline {subsection}{\numberline {II.7.1}\textit {Pipeline} NLP untuk Pemrosesan \textit {Stream} Teks}{21}{subsection.2.7.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.5.2}Perkembangan Terkini dalam \textit {Topic Modeling} Neural}{23}{subsection.2.5.2}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.7.2}Arsitektur Berbasis \textit {Event} dan Performa}{22}{subsection.2.7.2}%
+\contentsline {section}{\numberline {II.6}Telegram sebagai Platform Komunitas}{24}{section.2.6}%
+\contentsline {subsection}{\numberline {II.6.1}Karakteristik dan Dinamika Platform Telegram}{24}{subsection.2.6.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.7.3}Pertimbangan \textit {Micro-batching} dan Frekuensi Data}{22}{subsection.2.7.3}%
-\contentsline {subsection}{\numberline {II.7.4}Tantangan Inferensi LLM dalam Sistem \textit {Real-Time}}{23}{subsection.2.7.4}%
-\contentsline {section}{\numberline {II.8}Peringkasan untuk Media Sosial dan Percakapan Online}{24}{section.2.8}%
-\contentsline {subsection}{\numberline {II.8.1}Pemanfaatan Sinyal Komunitas dalam Peringkasan}{24}{subsection.2.8.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.6.2}Analisis Skala Besar Komunitas Telegram}{25}{subsection.2.6.2}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.8.2}Peringkasan Percakapan \textit {Multi-speaker}}{25}{subsection.2.8.2}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.8.3}Peringkasan Ekstrim untuk Konten Media Sosial}{25}{subsection.2.8.3}%
+\contentsline {section}{\numberline {II.7}Arsitektur Pemrosesan Data \textit {Real-Time}}{25}{section.2.7}%
+\contentsline {subsection}{\numberline {II.7.1}\textit {Pipeline} NLP untuk Pemrosesan \textit {Stream} Teks}{26}{subsection.2.7.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {section}{\numberline {II.9}Kesenjangan Penelitian dan Kontribusi}{25}{section.2.9}%
-\contentsline {chapter}{\numberline {III}ANALISIS MASALAH}{28}{chapter.3}%
-\contentsline {section}{\numberline {III.1}Analisis Kondisi Saat Ini}{28}{section.3.1}%
-\contentsline {subsection}{\numberline {III.1.1}Model Konseptual Komunitas Telegram Eksisting}{28}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {III.1.2}Identifikasi Masalah Sistem Saat Ini}{31}{subsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {III.1.2.1}\textit {Information Overload} Ekstrim di Grup PIRANHA}{31}{subsubsection.3.1.2.1}%
-\contentsline {subsubsection}{\numberline {III.1.2.2}\textit {Information Overload} Tinggi di Grup Advanced dengan \textit {Coverage Gap}}{32}{subsubsection.3.1.2.2}%
-\contentsline {subsubsection}{\numberline {III.1.2.3}Fragmentasi Informasi Lintas Struktur Hierarkis}{33}{subsubsection.3.1.2.3}%
-\contentsline {subsubsection}{\numberline {III.1.2.4}Keterbatasan Kapasitas Kognitif dan Dampaknya terhadap Kualitas Keputusan}{34}{subsubsection.3.1.2.4}%
-\contentsline {section}{\numberline {III.2}Analisis Kebutuhan}{35}{section.3.2}%
-\contentsline {subsection}{\numberline {III.2.1}Identifikasi \textit {Stakeholder} dan \textit {Pain Points}}{35}{subsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {III.2.1.1}Anggota Grup PIRANHA (Target Primer)}{35}{subsubsection.3.2.1.1}%
-\contentsline {subsubsection}{\numberline {III.2.1.2}Anggota Grup Advanced (Target Sekunder)}{36}{subsubsection.3.2.1.2}%
-\contentsline {subsubsection}{\numberline {III.2.1.3}Anggota Cuap Cuap dan Swing Plan}{36}{subsubsection.3.2.1.3}%
-\contentsline {subsubsection}{\numberline {III.2.1.4}Michael Yeoh dan Tim Administrator}{36}{subsubsection.3.2.1.4}%
-\contentsline {subsection}{\numberline {III.2.2}Kebutuhan Fungsional}{37}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {III.2.3}Kebutuhan Non-Fungsional}{38}{subsection.3.2.3}%
-\contentsline {section}{\numberline {III.3}Analisis Alternatif Solusi}{40}{section.3.3}%
-\contentsline {subsection}{\numberline {III.3.1}Alternatif Pendekatan untuk Mereduksi \textit {Information Overload}}{41}{subsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {III.3.1.1}Alternatif 1: Ekspansi \textit {Manual Curation} (Status Quo yang Ditingkatkan)}{41}{subsubsection.3.3.1.1}%
-\contentsline {subsubsection}{\numberline {III.3.1.2}Alternatif 2: Bot Filter Berbasis Aturan (\textit {Rule-Based Keyword Bot})}{41}{subsubsection.3.3.1.2}%
-\contentsline {subsubsection}{\numberline {III.3.1.3}Alternatif 3: Bot Rangkuman Berbasis \textit {AI} dengan NLP Khusus Domain (DIUSULKAN)}{42}{subsubsection.3.3.1.3}%
-\contentsline {subsubsection}{\numberline {III.3.1.4}Alternatif 4: Solusi SaaS \textit {Generic} dengan LLM \textit {Third-Party}}{43}{subsubsection.3.3.1.4}%
-\contentsline {subsection}{\numberline {III.3.2}Analisis Pemilihan Solusi}{44}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {IV}DESAIN KONSEP SOLUSI}{47}{chapter.4}%
-\contentsline {chapter}{\numberline {V}RENCANA SELANJUTNYA}{48}{chapter.5}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.7.2}Arsitektur Berbasis \textit {Event} dan Performa}{26}{subsection.2.7.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.7.3}Pertimbangan \textit {Micro-batching} dan Frekuensi Data}{27}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {II.7.4}Tantangan Inferensi LLM dalam Sistem \textit {Real-Time}}{27}{subsection.2.7.4}%
+\contentsline {section}{\numberline {II.8}Peringkasan untuk Media Sosial dan Percakapan Online}{28}{section.2.8}%
+\contentsline {subsection}{\numberline {II.8.1}Peringkasan Percakapan dengan \textit {Argument Mining}}{29}{subsection.2.8.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.8.2}Peringkasan Percakapan \textit {Multi-speaker}}{29}{subsection.2.8.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.8.3}Peringkasan Ekstrim untuk Konten Media Sosial}{29}{subsection.2.8.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {II.9}Kesenjangan Penelitian dan Kontribusi}{30}{section.2.9}%
+\contentsline {chapter}{\numberline {III}ANALISIS MASALAH}{32}{chapter.3}%
+\contentsline {section}{\numberline {III.1}Analisis Kondisi Saat Ini}{32}{section.3.1}%
+\contentsline {subsection}{\numberline {III.1.1}Model Konseptual Komunitas Telegram Eksisting}{32}{subsection.3.1.1}%
+\contentsline {chapter}{\numberline {IV}DESAIN KONSEP SOLUSI}{33}{chapter.4}%
+\contentsline {chapter}{\numberline {V}RENCANA SELANJUTNYA}{34}{chapter.5}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 

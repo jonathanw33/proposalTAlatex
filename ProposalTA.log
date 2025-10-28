@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.10.21)  27 OCT 2025 22:02
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.10.21)  28 OCT 2025 22:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1134,31 +1134,45 @@ Package datetime2 Warning: Region `bahasai' has ignored
 
 
 ] [1] (ProposalTA.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+
 
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+
 
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [2
 
-] [3])
+])
 \tf@toc=\write5
 \openout5 = `ProposalTA.toc'.
 
- [4] (ProposalTA.lof)
+ [3] (ProposalTA.lof
+Overfull \hbox (11.30385pt too wide) in paragraph at lines 126--126
+ [][] [][][]\TU/TimesNewRoman(0)/m/n/12 Arsitektur BERT menunjukkan mekanisme \
+TU/TimesNewRoman(0)/m/it/12 bidirectional self-attention 
+ []
+
+
+Overfull \hbox (4.4357pt too wide) in paragraph at lines 139--139
+ \TU/TimesNewRoman(0)/m/n/12 penting) dan abstraktif (menghasilkan teks baru) m
+enunjukkan \TU/TimesNewRoman(0)/m/it/12 trade- 
+ []
+
+)
 \tf@lof=\write6
 \openout6 = `ProposalTA.lof'.
 
- [5] (ProposalTA.lot)
+ [4] (ProposalTA.lot)
 \tf@lot=\write7
 \openout7 = `ProposalTA.lot'.
 
- [6] (ProposalTA.lol)
+ [5] (ProposalTA.lol)
 \tf@lol=\write8
 \openout8 = `ProposalTA.lol'.
 
@@ -1215,7 +1229,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\z@skip' on input line 332.
 
-[7
+[6
 
 ] (Bab I - Pendahuluan.tex
 Bab I.
@@ -1255,403 +1269,57 @@ Overfull \hbox (3.54617pt too wide) in paragraph at lines 102--4
 Bab II.
 [7
 
-] [8] [9] [10] [11] [12] [13] [14] [15]
-Overfull \hbox (0.2239pt too wide) in paragraph at lines 100--101
+]
+File: image/information-overload-curve.png Graphic file (type bmp)
+<image/information-overload-curve.png>
+ [8]
+File: image/cognitive-load-theory.png Graphic file (type bmp)
+<image/cognitive-load-theory.png>
+ [9] [10]
+File: image/transformer-architecture.png Graphic file (type bmp)
+<image/transformer-architecture.png>
+ [11]
+Overfull \hbox (2.08113pt too wide) in paragraph at lines 69--70
+\TU/TimesNewRoman(0)/m/n/12 perkenalkan BERT (\TU/TimesNewRoman(0)/m/it/12 Bidi
+rectional Encoder Representations from Transformers\TU/TimesNewRoman(0)/m/n/12 
+), mo-
+ []
+
+File: image/bert-architecture-diagram.png Graphic file (type bmp)
+<image/bert-architecture-diagram.png>
+[12] [13]
+File: image/extractive-vs-abstractive.png Graphic file (type bmp)
+<image/extractive-vs-abstractive.png>
+ [14] [15] [16] [17] [18]
+Overfull \hbox (0.2239pt too wide) in paragraph at lines 147--148
 []\TU/TimesNewRoman(0)/m/n/12 Model klasifikasi emosi yang digunakan dalam pene
 litian ini dapat mendeteksi spek-
  []
 
-[16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26])
-(Bab III - Analisis-Masalah.tex [27]
+File: image/sentiment-analysis-example.jpg Graphic file (type bmp)
+<image/sentiment-analysis-example.jpg>
+[19] [20]
+File: image/ner-example.png Graphic file (type bmp)
+<image/ner-example.png>
+ [21]
+File: image/bertopic-workflow.png Graphic file (type bmp)
+<image/bertopic-workflow.png>
+ [22] [23] [24] [25] [26] [27] [28] [29] [30])
+(Bab III - Analisis-Masalah.tex [31]
 Bab III.
-File: image/current-state-diagram.png Graphic file (type bmp)
-<image/current-state-diagram.png>
-[28
+
+LaTeX Warning: Reference `fig:current-system' on page 32 undefined on input lin
+e 18.
+
+) (Bab IV - Desain-Konsep-Solusi.tex [32
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 39--39
-[]\TU/TimesNewRoman(0)/m/n/12 Broadcast
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
-[]\TU/TimesNewRoman(0)/m/n/12 Interaktif
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
-[]\TU/TimesNewRoman(0)/m/n/12 Edukasi
- []
-
-
-Underfull \hbox (badness 5533) in paragraph at lines 43--43
-\TU/TimesNewRoman(0)/m/n/12 umum, berita
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
-[]\TU/TimesNewRoman(0)/m/n/12 Diskusi analisis
- []
-
-
-Underfull \hbox (badness 2126) in paragraph at lines 43--44
-[]\TU/TimesNewRoman(0)/m/n/12 Debat strategi
- []
-
-
-Overfull \hbox (45.77357pt too wide) in paragraph at lines 33--50
- [][] 
- []
-
-[29] [30] [31]
-Overfull \hbox (5.53316pt too wide) in paragraph at lines 80--81
-[]\TU/TimesNewRoman(0)/m/n/12 Keterbatasan rangkuman manual juga terletak pada 
-skalabilitas dan konsistensi. Pem-
- []
-
-[32] [33] [34]
-Overfull \hbox (2.4036pt too wide) in paragraph at lines 118--119
-[]\TU/TimesNewRoman(0)/m/n/12 Kebutuhan spesifik kelompok ini meliputi: (1) ran
-gkuman periodik yang dapat mem-
- []
-
-[35] [36]
-Overfull \hbox (62.22633pt too wide) in alignment at lines 142--148
- [] [] [] [] 
- []
-
-
-Overfull \hbox (62.22633pt too wide) in alignment at lines 148--155
- [] [] [] [] 
- []
-
-
-Overfull \hbox (62.22633pt too wide) in alignment at lines 155--158
- [] [] [] [] 
- []
-
-
-Overfull \hbox (62.22633pt too wide) in alignment at lines 158--161
- [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
-[]|\TU/TimesNewRoman(0)/m/n/12 Fondasi sistem
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
-\TU/TimesNewRoman(0)/m/n/12 untuk akuisisi
- []
-
-
-Underfull \hbox (badness 3271) in paragraph at lines 166--166
-[]|\TU/TimesNewRoman(0)/m/n/12 Sistem harus dapat mengekstrak entitas fi-
- []
-
-
-Underfull \hbox (badness 4036) in paragraph at lines 166--166
-\TU/TimesNewRoman(0)/m/n/12 nansial (nama perusahaan, kode ticker sa-
- []
-
-
-Underfull \hbox (badness 3965) in paragraph at lines 166--166
-\TU/TimesNewRoman(0)/m/n/12 ham) menggunakan model \TU/TimesNewRoman(0)/m/it/12
- cahya/bert-base-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
-[]|\TU/TimesNewRoman(0)/m/n/12 Identifikasi aset
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
-\TU/TimesNewRoman(0)/m/n/12 menggunakan \TU/TimesNewRoman(0)/m/it/12 indonesian
--roberta-base-
- []
-
-
-Underfull \hbox (badness 2469) in paragraph at lines 172--173
-[]|\TU/TimesNewRoman(0)/m/n/12 Pemodelan topik
- []
-
-
-Underfull \hbox (badness 2547) in paragraph at lines 175--175
-[]|\TU/TimesNewRoman(0)/m/n/12 Sistem harus menerapkan \TU/TimesNewRoman(0)/m/i
-t/12 weighted influen-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
-[]|\TU/TimesNewRoman(0)/m/n/12 Filter intelijen
- []
-
-
-Underfull \hbox (badness 1014) in paragraph at lines 181--181
-[]|\TU/TimesNewRoman(0)/m/n/12 Rangkuman harus merupakan sintesis lintas-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
-[]|\TU/TimesNewRoman(0)/m/n/12 Readability dan
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
-\TU/TimesNewRoman(0)/m/n/12 comprehensive-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
-[]|\TU/TimesNewRoman(0)/m/n/12 Persistensi data
- []
-
-
-Overfull \hbox (62.22633pt too wide) in alignment at lines 161--198
- [] [] [] [] 
- []
-
-[37]
-Overfull \hbox (14.70699pt too wide) in paragraph at lines 202--203
-\TU/TimesNewRoman(0)/m/it/12 world \TU/TimesNewRoman(0)/m/n/12 komunitas Telegr
-am finansial. Tabel [][]III.3[][] merangkum kebutuhan non-fungsional
- []
-
-
-Overfull \hbox (33.77359pt too wide) in alignment at lines 204--210
- [] [] [] [] 
- []
-
-
-Overfull \hbox (33.77359pt too wide) in alignment at lines 210--217
- [] [] [] [] 
- []
-
-
-Overfull \hbox (33.77359pt too wide) in alignment at lines 217--220
- [] [] [] [] 
- []
-
-
-Overfull \hbox (33.77359pt too wide) in alignment at lines 220--223
- [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--225
-[]|\TU/TimesNewRoman(0)/m/n/12 Rangkuman harus
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--225
-\TU/TimesNewRoman(0)/m/n/12 selesai dihasilkan
- []
-
-
-Underfull \hbox (badness 4441) in paragraph at lines 225--225
-\TU/TimesNewRoman(0)/m/n/12 dari 5 menit sete-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--225
-\TU/TimesNewRoman(0)/m/n/12 lah akhir periode
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
-[]|\TU/TimesNewRoman(0)/m/n/12 Relevansi temporal untuk
- []
-
-
-Underfull \hbox (badness 4859) in paragraph at lines 228--228
-\TU/TimesNewRoman(0)/m/n/12 ham Indonesia ha-
- []
-
-
-Underfull \hbox (badness 1237) in paragraph at lines 228--228
-\TU/TimesNewRoman(0)/m/n/12 rus mencapai mini-
- []
-
-
-Underfull \hbox (badness 1478) in paragraph at lines 231--231
-[]|\TU/TimesNewRoman(0)/m/n/12 Kualitas \TU/TimesNewRoman(0)/m/it/12 Topic Mo-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--231
-[]|\TU/TimesNewRoman(0)/m/it/12 Coherence score
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--231
-\TU/TimesNewRoman(0)/m/n/12 BERTopic harus
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--231
-\TU/TimesNewRoman(0)/m/n/12 mencapai minimal
- []
-
-
-Underfull \hbox (badness 1048) in paragraph at lines 234--234
-[]|\TU/TimesNewRoman(0)/m/n/12 Ketersediaan sistem
- []
-
-
-Underfull \hbox (badness 4846) in paragraph at lines 234--234
-\TU/TimesNewRoman(0)/m/n/12 nimal 95% selama
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--234
-\TU/TimesNewRoman(0)/m/n/12 jam perdagangan
- []
-
-
-Underfull \hbox (badness 1874) in paragraph at lines 237--237
-\TU/TimesNewRoman(0)/m/n/12 per grup tanpa de-
- []
-
-
-Underfull \hbox (badness 1189) in paragraph at lines 237--238
-[]|\TU/TimesNewRoman(0)/m/it/12 Future-proof \TU/TimesNewRoman(0)/m/n/12 untuk 
-pertum-
- []
-
-
-Underfull \hbox (badness 2150) in paragraph at lines 240--240
-\TU/TimesNewRoman(0)/m/n/12 ta; pesan yang di-
- []
-
-
-Underfull \hbox (badness 2229) in paragraph at lines 240--240
-\TU/TimesNewRoman(0)/m/it/12 unsend \TU/TimesNewRoman(0)/m/n/12 harus dike-
- []
-
-
-Underfull \hbox (badness 3312) in paragraph at lines 240--241
-[]|\TU/TimesNewRoman(0)/m/n/12 Kepatuhan terhadap prinsip
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
-[]|\TU/TimesNewRoman(0)/m/n/12 Rangkuman harus
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
-\TU/TimesNewRoman(0)/m/n/12 dapat dibaca dan
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
-\TU/TimesNewRoman(0)/m/n/12 dipahami dalam
- []
-
-
-Underfull \hbox (badness 1629) in paragraph at lines 243--243
-\TU/TimesNewRoman(0)/m/n/12 menit oleh anggota
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 246--246
-\TU/TimesNewRoman(0)/m/n/12 Bahasa Indonesia
- []
-
-
-Underfull \hbox (badness 6204) in paragraph at lines 246--246
-\TU/TimesNewRoman(0)/m/n/12 dengan terminologi
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--249
-[]|\TU/TimesNewRoman(0)/m/n/12 Biaya operasional
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--249
-\TU/TimesNewRoman(0)/m/n/12 Groq API untuk
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--249
-\TU/TimesNewRoman(0)/m/n/12 kurang dari $50
- []
-
-
-Overfull \hbox (33.77359pt too wide) in alignment at lines 223--251
- [] [] [] [] 
- []
-
-[38] [39] [40]
-Overfull \hbox (1.53055pt too wide) in paragraph at lines 280--281
-[]\TU/TimesNewRoman(0)/m/n/12 Ketidakmampuan untuk menerapkan \TU/TimesNewRoman
-(0)/m/it/12 weighted influence \TU/TimesNewRoman(0)/m/n/12 secara algoritmik da
-n
- []
-
-[41]
-Overfull \hbox (3.1536pt too wide) in paragraph at lines 306--307
-\TU/TimesNewRoman(0)/m/it/12 indonesian-NER\TU/TimesNewRoman(0)/m/n/12 , analis
-is emosi dengan \TU/TimesNewRoman(0)/m/it/12 indonesian-roberta-base-emotion-cl
-assifier\TU/TimesNewRoman(0)/m/n/12 ,
- []
-
-[42]
-Overfull \hbox (5.28836pt too wide) in paragraph at lines 335--336
-[]\TU/TimesNewRoman(0)/m/n/12 Deployment cepat: dapat diimplementasikan dalam 1
--2 minggu dengan \TU/TimesNewRoman(0)/m/it/12 prompt
- []
-
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
-[]\TU/TimesNewRoman(0)/b/n/12 Alt 1:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
-\TU/TimesNewRoman(0)/b/n/12 Manu-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
-[]\TU/TimesNewRoman(0)/b/n/12 Alt 2:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
-[]\TU/TimesNewRoman(0)/b/n/12 Alt
- []
-
-
-Underfull \hbox (badness 3333) in paragraph at lines 359--359
-\TU/TimesNewRoman(0)/b/n/12 3: AI
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
-[]\TU/TimesNewRoman(0)/b/n/12 Alt 4:
- []
-
-
-Underfull \hbox (badness 2096) in paragraph at lines 361--361
-[]\TU/TimesNewRoman(0)/m/n/12 Skalabilitas (24 re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 371--371
-[]\TU/TimesNewRoman(0)/m/n/12 Kecepatan Deplo-
- []
-
-[44] [45]) (Bab IV - Desain-Konsep-Solusi.tex [46]
 Bab IV.
-) (Bab V - Rencana-Selanjutnya.tex [47
+) (Bab V - Rencana-Selanjutnya.tex [33
 
 ]
 Bab V.
-) [48
+) [34
 
 ]
 Overfull \hbox (1.1197pt too wide) in paragraph at lines 377--377
@@ -1665,16 +1333,22 @@ Overfull \hbox (0.78575pt too wide) in paragraph at lines 377--377
 n Pers 2224. Total investor: 6.001.573 SID per 25 Septem-
  []
 
-[49
+[35
 
 
 ]
+Overfull \hbox (1.80646pt too wide) in paragraph at lines 377--377
+[][]\TU/TimesNewRoman(0)/m/n/12 Devlin, Jacob, Ming-Wei Chang, Kenton Lee, dan 
+Kristina Toutanova. 2019. “  BERT:
+ []
+
+[36]
 Overfull \hbox (3.95685pt too wide) in paragraph at lines 377--377
 [][]\TU/TimesNewRoman(0)/m/n/12 Gliwa, Bogdan, Iwona Mochol, Maciej Biesek, dan
  Aleksander Wawer. 2019. “  SAM-
  []
 
-[50]
+[37]
 Overfull \hbox (10.79628pt too wide) in paragraph at lines 377--377
 \TU/TimesNewRoman(0)/m/n/12 tractive Summarization of Online Conversations”. Da
 lam \TU/TimesNewRoman(0)/m/it/12 Proceedings of EMNLP
@@ -1686,17 +1360,21 @@ Overfull \hbox (3.88417pt too wide) in paragraph at lines 377--377
 tity Recognition”. Dalam
  []
 
-[51] [52] [53] [54]
+[38] [39] [40]
 Overfull \hbox (15.86453pt too wide) in paragraph at lines 377--377
 \TU/TimesNewRoman(0)/m/n/12 Recognition Using BERT Under the Machine Reading Co
 mprehension Paradigm”.
  []
 
 
+Package caption Warning: Unused \captionsetup[table] on input line 355.
+See the caption package documentation for explanation.
+
+
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 357.
 See the caption package documentation for explanation.
 
-[55] (ProposalTA.aux)
+[41] (ProposalTA.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1706,7 +1384,7 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `ProposalTA.out' has not changed.
-(rerunfilecheck)             Checksum: 91F2B106DA40E6D59D3AC8605E723EB6;17760.
+(rerunfilecheck)             Checksum: 76AA609DA89C8B46E23F4CC1C029A264;11961.
 
 Package biblatex Warning: Please rerun LaTeX.
 
@@ -1715,12 +1393,12 @@ Package logreq Info: Writing requests to 'ProposalTA.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31498 strings out of 409617
- 620044 string characters out of 5774215
- 1980124 words of memory out of 5000000
- 53262 multiletter control sequences out of 15000+600000
+ 31553 strings out of 409617
+ 622255 string characters out of 5774215
+ 1970372 words of memory out of 5000000
+ 53310 multiletter control sequences out of 15000+600000
  563266 words of font info for 79 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 79i,10n,95p,1376b,8317s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,6n,95p,1376b,8317s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on ProposalTA.pdf (63 pages).
+Output written on ProposalTA.pdf (48 pages).
