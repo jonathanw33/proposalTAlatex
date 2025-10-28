@@ -16,11 +16,25 @@ Bab ini menyajikan tinjauan komprehensif terhadap literatur yang relevan dengan 
 
 Penelitian seminal oleh \textcite{eppler2004} menyediakan landasan teoretis yang komprehensif tentang konsep \textit{information overload}. Berdasarkan tinjauan literatur dari berbagai disiplin ilmu termasuk \textit{Organization Science}, Akuntansi, Pemasaran, dan Sistem Informasi Manajemen, mereka mendefinisikan \textit{information overload} sebagai kondisi di mana kualitas pengambilan keputusan menurun ketika kuantitas informasi yang tersedia melampaui kapasitas pemrosesan individu. Studi tersebut mengidentifikasi hubungan inverted U-curve antara kuantitas informasi dan kualitas keputusan, yang menunjukkan bahwa setelah mencapai titik optimal, penambahan informasi justru menurunkan performa kognitif. Temuan ini sangat relevan dengan konteks komunitas Telegram finansial yang menghasilkan ratusan hingga ribuan pesan per hari, yang berpotensi menempatkan anggota komunitas pada sisi kanan kurva tersebut di mana \textit{overload} terjadi.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{image/information-overload-curve.png}
+  \caption{Hubungan \textit{inverted U-curve} antara kuantitas informasi dan kualitas pengambilan keputusan, menunjukkan titik optimal dan zona \textit{overload} (diadaptasi dari \textcite{eppler2004})}
+  \label{fig:info-overload}
+\end{figure}
+
 \textcite{shahrzadi2024} memperkuat pemahaman ini melalui \textit{scoping review} terbaru yang menganalisis penyebab, konsekuensi, dan strategi penanganan \textit{information overload}. Penelitian mereka mengidentifikasi tiga kategori penyebab utama: (1) faktor personal seperti keterbatasan kapasitas kognitif dan kurangnya keterampilan manajemen informasi, (2) karakteristik informasi seperti ambiguitas, kompleksitas, dan ketidakpastian, dan (3) parameter teknologi informasi termasuk intensitas notifikasi dan desain antarmuka. Dampak yang diidentifikasi mencakup penurunan produktivitas, kualitas keputusan yang buruk, stres, dan kelelahan kognitif. Yang paling signifikan bagi penelitian ini adalah identifikasi mereka terhadap strategi mitigasi berbasis teknologi, khususnya penggunaan \textit{filtering tools} dan sistem otomatis untuk mereduksi volume informasi, yang memberikan justifikasi langsung untuk pengembangan bot rangkuman otomatis.
 
 \subsection{Landasan Teori: \textit{Cognitive Load Theory}}
 
 \textit{Cognitive Load Theory} (CLT), yang dikembangkan oleh \textcite{sweller1988}, memberikan kerangka teoretis untuk memahami keterbatasan kapasitas memori kerja manusia dalam pemrosesan informasi. Teori ini mengidentifikasi tiga jenis beban kognitif: (1) \textit{intrinsic load}, yang inheren dengan kompleksitas materi yang dipelajari, (2) \textit{extraneous load}, yang dihasilkan oleh cara informasi disajikan, dan (3) \textit{germane load}, yang berkontribusi pada pembentukan skema dan otomatisasi. Dalam konteks komunitas online, anggota menghadapi \textit{intrinsic load} yang tinggi karena kompleksitas informasi finansial, sementara desain antarmuka platform media sosial sering kali meningkatkan \textit{extraneous load} melalui notifikasi, pesan yang tidak terstruktur, dan kurangnya organisasi informasi.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{image/cognitive-load-theory.png}
+  \caption{Tiga jenis beban kognitif dalam \textit{Cognitive Load Theory}: \textit{intrinsic}, \textit{extraneous}, dan \textit{germane load} (diadaptasi dari \textcite{sweller1988})}
+  \label{fig:cognitive-load}
+\end{figure}
 
 \textcite{skulmowski2022} mengembangkan pemahaman CLT dengan mengadaptasinya untuk lingkungan digital dan pembelajaran daring. Penelitian mereka mengusulkan perspektif baru tentang \textit{extraneous cognitive load} yang mempertimbangkan karakteristik unik media digital, seperti konten yang kaya secara perseptual, distraksi visual, dan desain antarmuka yang kompleks. Mereka berargumen bahwa media digital menciptakan bentuk \textit{extraneous load} yang berbeda dari media tradisional, terutama melalui elemen-elemen yang tidak relevan dengan tujuan pembelajaran atau pemrosesan informasi inti. Temuan ini sangat relevan untuk memahami bagaimana antarmuka Telegram yang penuh dengan pesan, emoji, dan media visual dapat meningkatkan beban kognitif ekstrinsik bagi anggota yang mencoba mengekstrak informasi investasi yang relevan.
 
@@ -45,6 +59,13 @@ Sebelum membahas aplikasi model bahasa dalam peringkasan teks, penting untuk mem
 
 \textcite{vaswani2017} memperkenalkan arsitektur \textit{Transformer} yang menggantikan arsitektur rekuren tradisional (\textit{RNN}, \textit{LSTM}) dengan mekanisme \textit{self-attention} yang dapat memproses seluruh urutan input secara paralel. Inovasi kunci dari \textit{Transformer} adalah kemampuannya untuk menangkap dependensi jarak jauh dalam teks tanpa keterbatasan memori yang dialami oleh arsitektur rekuren. Mekanisme \textit{multi-head attention} memungkinkan model untuk menghadiri berbagai aspek representasional input secara simultan, sementara \textit{positional encoding} mempertahankan informasi tentang urutan kata. Arsitektur \textit{encoder-decoder} yang diusulkan terdiri dari tumpukan lapisan \textit{transformer} yang masing-masing mengandung sub-lapisan \textit{multi-head self-attention} dan \textit{feed-forward neural network}. Penelitian seminal ini mencapai hasil \textit{state-of-the-art} pada tugas terjemahan mesin dan menetapkan \textit{Transformer} sebagai arsitektur dominan untuk NLP.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.65\textwidth]{image/transformer-architecture.png}
+  \caption{Arsitektur Transformer dengan mekanisme \textit{multi-head attention} dan struktur \textit{encoder-decoder} (diadaptasi dari \textcite{vaswani2017})}
+  \label{fig:transformer-arch}
+\end{figure}
+
 \textcite{devlin2019} mengembangkan konsep \textit{Transformer} lebih lanjut dengan memperkenalkan BERT (\textit{Bidirectional Encoder Representations from Transformers}), model bahasa yang dilatih secara \textit{bidirectional} menggunakan arsitektur \textit{Transformer encoder}. Berbeda dengan model bahasa unidirectional sebelumnya yang hanya memproses teks dari kiri ke kanan atau kanan ke kiri, BERT dilatih menggunakan dua tugas pra-latih: \textit{Masked Language Modeling} (MLM), di mana sebagian token input di-\textit{mask} dan model harus memprediksinya berdasarkan konteks bidirectional, dan \textit{Next Sentence Prediction} (NSP), di mana model memprediksi apakah dua kalimat berurutan dalam teks original. Pendekatan \textit{pre-training} dan \textit{fine-tuning} yang diusulkan memungkinkan BERT untuk mencapai performa \textit{state-of-the-art} pada sebelas tugas NLP yang beragam, termasuk klasifikasi teks, \textit{question answering}, dan \textit{natural language inference}. Representasi kontekstual bidirectional yang dihasilkan BERT menangkap nuansa semantik yang tidak dapat ditangkap oleh model unidirectional atau representasi statis seperti Word2Vec.
 
 Gambar \ref{fig:bert-architecture} mengilustrasikan arsitektur BERT dan perbedaannya dengan model bahasa unidirectional. Arsitektur ini menjadi fondasi bagi berbagai varian yang digunakan dalam penelitian ini, termasuk IndoBERT untuk bahasa Indonesia, RoBERTa untuk klasifikasi emosi, dan model NER berbasis BERT untuk ekstraksi entitas finansial.
@@ -63,6 +84,13 @@ Kontribusi BERT terhadap NLP tidak hanya terletak pada performa superiornya pada
 \textcite{liu2019bertsum} memperkenalkan pendekatan \textit{BERTSum} yang memanfaatkan representasi BERT untuk peringkasan ekstraktif dan abstraktif. Penelitian mereka mendemonstrasikan bahwa model \textit{encoder} tingkat dokumen yang dibangun di atas BERT dengan lapisan \textit{Transformer} antar-kalimat dapat menghasilkan rangkuman berkualitas tinggi. Pendekatan dua tahap \textit{fine-tuning} yang mereka usulkan, di mana model pertama-tama di-\textit{fine-tune} untuk tugas ekstraksi kalimat sebelum dilatih untuk generasi abstraktif, menetapkan metodologi dasar yang diadopsi oleh banyak penelitian berikutnya. Kontribusi kunci dari penelitian ini adalah demonstrasi bahwa model bahasa pra-latih dapat secara efektif menangkap struktur dokumen dan hubungan semantik antar-kalimat, yang esensial untuk menghasilkan rangkuman yang koheren dan informatif.
 
 Pemahaman tentang \textit{trade-off} antara peringkasan ekstraktif dan abstraktif diperluas oleh penelitian \textcite{pilault2020}, yang membandingkan kedua pendekatan menggunakan model \textit{transformer} pada dokumen panjang. Evaluasi manusia mereka mengungkapkan temuan penting: sementara pendekatan abstraktif berbasis \textit{transformer} unggul dalam koherensi dan kelancaran, metode ekstraktif cenderung mencetak lebih tinggi dalam hal informativeness. Temuan ini menginformasikan desain sistem dalam penelitian ini, di mana pendekatan hibrida digunakan: BERTopic untuk ekstraksi topik dan entitas kunci (pendekatan ekstraktif), dikombinasikan dengan Llama 3.1 70B untuk generasi rangkuman naratif yang koheren (pendekatan abstraktif).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/extractive-vs-abstractive.png}
+  \caption{Perbandingan pendekatan peringkasan ekstraktif (memilih kalimat penting) dan abstraktif (menghasilkan teks baru) menunjukkan \textit{trade-off} antara \textit{informativeness} dan koherensi}
+  \label{fig:extract-abstract}
+\end{figure}
 
 \subsection{Peringkasan Multi-Dokumen dan Sintesis Informasi}
 
@@ -120,6 +148,13 @@ Model klasifikasi emosi yang digunakan dalam penelitian ini dapat mendeteksi spe
 
 Lebih lanjut, konteks diskusi informal di Telegram lebih cenderung mengekspresikan emosi autentik dibandingkan dengan laporan finansial formal atau analisis profesional. Anggota komunitas sering kali berbagi reaksi emosional mereka terhadap pergerakan harga, keputusan investasi, atau berita pasar dengan cara yang langsung dan tidak tersaring. Klasifikasi emosi dapat menangkap sinyal-sinyal psikologis ini yang hilang dalam analisis sentimen tradisional, memberikan wawasan yang lebih mendalam tentang suasana hati (\textit{mood}) komunitas dan potensi implikasinya terhadap perilaku investasi kolektif.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{image/sentiment-analysis-example.jpeg}
+  \caption{Contoh klasifikasi emosi pada teks, menunjukkan deteksi berbagai emosi seperti ketakutan, kegembiraan, dan kesedihan yang memberikan sinyal psikologi pasar}
+  \label{fig:sentiment-example}
+\end{figure}
+
 % ==========================================
 \section{\textit{Named Entity Recognition} untuk Teks Finansial Indonesia}
 \label{sec:ner}
@@ -131,6 +166,13 @@ Lebih lanjut, konteks diskusi informal di Telegram lebih cenderung mengekspresik
 Sebagaimana telah dibahas dalam Section \ref{sec:sentiment-analysis}, model IndoBERT dari \textcite{koto2020} telah menetapkan fondasi kuat untuk berbagai tugas NLP Indonesia, termasuk NER. Dataset \textit{IndoLEM} yang mereka kembangkan menyediakan benchmark NER bahasa Indonesia yang komprehensif, di mana IndoBERT mencapai performa \textit{state-of-the-art} dengan mengungguli mBERT secara signifikan. Model \textit{cahya/bert-base-indonesian-NER} yang digunakan dalam penelitian ini dibangun di atas arsitektur IndoBERT ini, yang telah di-\textit{fine-tune} khusus untuk tugas ekstraksi entitas.
 
 Penelitian \textcite{khairunnisa2020} mengidentifikasi masalah kritis dalam dataset NER Indonesia yang ada: inkonsistensi anotasi yang dapat menurunkan performa model. Mereka menyediakan dataset yang dianotasi ulang dengan standar yang lebih konsisten dan mengevaluasi berbagai pendekatan \textit{deep learning} termasuk BiLSTM-CRF dengan berbagai jenis \textit{embeddings}. Penelitian mereka menekankan pentingnya kualitas data pelatihan dan konsistensi skema anotasi untuk mencapai performa NER yang optimal. Wawasan ini relevan dengan penelitian ini, terutama dalam konteks adaptasi model NER untuk mengenali entitas finansial spesifik Indonesia yang mungkin tidak terwakili dengan baik dalam dataset NER umum, termasuk penggunaan \textit{whitelist} ticker saham dari Bursa Efek Indonesia untuk meningkatkan akurasi deteksi.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{image/ner-example.png}
+  \caption{Contoh \textit{Named Entity Recognition} pada teks, menunjukkan identifikasi entitas seperti nama perusahaan, kode saham, dan lokasi yang diberikan label berbeda}
+  \label{fig:ner-example}
+\end{figure}
 
 \subsection{NER Domain Finansial}
 
@@ -147,6 +189,13 @@ Penelitian \textcite{khairunnisa2020} mengidentifikasi masalah kritis dalam data
 \subsection{BERTopic: Metodologi dan Keunggulan}
 
 \textcite{grootendorst2022} memperkenalkan BERTopic, metodologi \textit{topic modeling} neural yang menggabungkan model bahasa berbasis \textit{transformer} (BERT), \textit{document embeddings}, \textit{clustering} dengan HDBSCAN, dan prosedur \textit{class-based TF-IDF} (c-TF-IDF) untuk mengekstrak representasi topik yang koheren. Arsitektur BERTopic mengatasi keterbatasan pendekatan tradisional seperti \textit{Latent Dirichlet Allocation} (LDA) dengan memanfaatkan representasi semantik kontekstual dari \textit{transformer models}. Prosedur c-TF-IDF yang diusulkan menghasilkan representasi topik yang lebih interpretatif dibandingkan dengan metode konvensional dengan memperlakukan semua dokumen dalam satu kluster sebagai satu dokumen besar dan membandingkannya dengan dokumen dari kluster lain. Metodologi ini sangat sesuai untuk teks media sosial yang pendek dan informal, karena tidak memerlukan asumsi distribusional yang ketat seperti LDA.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{image/bertopic-workflow.png}
+  \caption{Alur kerja BERTopic menunjukkan tahapan dari \textit{document embeddings}, dimensionality reduction dengan UMAP, \textit{clustering} dengan HDBSCAN, hingga ekstraksi representasi topik dengan c-TF-IDF (diadaptasi dari \textcite{grootendorst2022})}
+  \label{fig:bertopic-workflow}
+\end{figure}
 
 Keunggulan BERTopic untuk teks media sosial divalidasi secara empiris oleh \textcite{egger2022}, yang membandingkan BERTopic dengan LDA, NMF, dan Top2Vec pada dataset 31.800 \textit{tweet} terkait COVID-19 dan perjalanan. Evaluasi mereka mendemonstrasikan superioritas BERTopic untuk teks pendek dan tidak terstruktur, khususnya dalam hal koherensi topik dan interpretabilitas. Metrik evaluasi menunjukkan bahwa BERTopic menghasilkan topik yang lebih koheren dan mudah dipahami dibandingkan dengan metode tradisional, terutama untuk data yang memiliki karakteristik serupa dengan media sosial: panjang dokumen pendek, penggunaan bahasa informal, dan struktur gramatikal yang longgar. Temuan ini memberikan justifikasi kuat untuk pemilihan BERTopic dalam penelitian ini, mengingat pesan Telegram finansial memiliki karakteristik yang sangat mirip dengan \textit{tweet}: pendek, informal, dan sering menggunakan singkatan atau jargon.
 
