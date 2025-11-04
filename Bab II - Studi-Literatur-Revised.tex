@@ -1,0 +1,272 @@
+% ==========================================
+% BAB II STUDI LITERATUR (REVISED - FINAL)
+% ==========================================
+\chapter{STUDI LITERATUR}
+\label{chap:studi-literatur}
+
+Bab ini menyajikan tinjauan komprehensif terhadap literatur yang relevan dengan pengembangan sistem rangkuman otomatis berbasis \textit{AI} untuk mereduksi \textit{information overload} dalam komunitas finansial. Tinjauan mencakup enam domain utama: (1) \textit{Information Overload} dan \textit{Cognitive Load Theory} sebagai landasan teoretis, (2) Fondasi arsitektur \textit{Transformer}, BERT, dan evolusi menuju \textit{Large Language Models}, (3) \textit{Text Summarization} dengan model bahasa skala besar, (4) Analisis teks finansial mencakup sentimen, emosi, dan ekstraksi entitas, (5) Infrastruktur sistem yang mengintegrasikan platform, arsitektur \textit{real-time}, \textit{topic modeling}, dan \textit{pipeline} pemrosesan, dan (6) Kesenjangan penelitian. Setiap domain memberikan landasan teoretis dan metodologis untuk pengembangan sistem rangkuman otomatis.
+
+% ==========================================
+\section{\textit{Information Overload} dan \textit{Cognitive Load Theory}}
+\label{sec:information-overload}
+
+\textit{Information overload} merupakan fenomena di mana individu dihadapkan pada volume informasi yang melampaui kapasitas kognitif mereka untuk memproses secara efektif \autocite{eppler2004}. Dalam konteks komunitas online, khususnya platform media sosial seperti Telegram, masalah ini menjadi semakin akut karena tingginya laju produksi dan distribusi informasi. Bagian ini mengulas teori-teori fundamental yang menjelaskan bagaimana \textit{information overload} memengaruhi pengambilan keputusan, serta mengidentifikasi strategi mitigasi melalui sistem otomatis berbasis \textit{AI}.
+
+\subsection{Konsep dan Dampak \textit{Information Overload}}
+
+Penelitian seminal oleh \textcite{eppler2004} menyediakan landasan teoretis komprehensif tentang konsep \textit{information overload}. Berdasarkan tinjauan literatur dari berbagai disiplin ilmu termasuk \textit{Organization Science}, Akuntansi, Pemasaran, dan Sistem Informasi Manajemen, mereka mendefinisikan \textit{information overload} sebagai kondisi di mana kualitas pengambilan keputusan menurun ketika kuantitas informasi yang tersedia melampaui kapasitas pemrosesan individu. Studi tersebut mengidentifikasi hubungan inverted U-curve antara kuantitas informasi dan kualitas keputusan, yang menunjukkan bahwa setelah mencapai titik optimal, penambahan informasi justru menurunkan performa kognitif.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{image/information-overload-curve.png}
+  \caption{Hubungan \textit{inverted U-curve} antara kuantitas informasi dan kualitas pengambilan keputusan, menunjukkan titik optimal dan zona \textit{overload} (diadaptasi dari \textcite{eppler2004})}
+  \label{fig:info-overload}
+\end{figure}
+
+\textcite{shahrzadi2024} memperkuat pemahaman ini melalui \textit{scoping review} terbaru yang menganalisis penyebab, konsekuensi, dan strategi penanganan \textit{information overload}. Penelitian mereka mengidentifikasi tiga kategori penyebab utama: (1) faktor personal seperti keterbatasan kapasitas kognitif dan kurangnya keterampilan manajemen informasi, (2) karakteristik informasi seperti ambiguitas, kompleksitas, dan ketidakpastian, dan (3) parameter teknologi informasi termasuk intensitas notifikasi dan desain antarmuka. Dampak yang diidentifikasi mencakup penurunan produktivitas, kualitas keputusan yang buruk, stres, dan kelelahan kognitif. Strategi mitigasi berbasis teknologi yang diidentifikasi mencakup penggunaan \textit{filtering tools} dan sistem otomatis untuk mereduksi volume informasi.
+
+\subsection{Landasan Teori: \textit{Cognitive Load Theory}}
+
+\textit{Cognitive Load Theory} (CLT), yang dikembangkan oleh \textcite{sweller1988}, memberikan kerangka teoretis untuk memahami keterbatasan kapasitas memori kerja manusia dalam pemrosesan informasi. Teori ini mengidentifikasi tiga jenis beban kognitif: (1) \textit{intrinsic load}, yang inheren dengan kompleksitas materi yang dipelajari, (2) \textit{extraneous load}, yang dihasilkan oleh cara informasi disajikan, dan (3) \textit{germane load}, yang berkontribusi pada pembentukan skema dan otomatisasi. Dalam konteks komunitas online, pengguna menghadapi \textit{intrinsic load} yang tinggi karena kompleksitas informasi finansial, sementara desain antarmuka platform media sosial sering kali meningkatkan \textit{extraneous load} melalui notifikasi, pesan yang tidak terstruktur, dan kurangnya organisasi informasi.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{image/cognitive-load-theory.png}
+  \caption{Tiga jenis beban kognitif dalam \textit{Cognitive Load Theory}: \textit{intrinsic}, \textit{extraneous}, dan \textit{germane load} (diadaptasi dari \textcite{sweller1988})}
+  \label{fig:cognitive-load}
+\end{figure}
+
+\textcite{skulmowski2022} mengembangkan pemahaman CLT dengan mengadaptasinya untuk lingkungan digital dan pembelajaran daring. Penelitian mereka mengusulkan perspektif baru tentang \textit{extraneous cognitive load} yang mempertimbangkan karakteristik unik media digital, seperti konten yang kaya secara perseptual, distraksi visual, dan desain antarmuka yang kompleks. Mereka berargumen bahwa media digital menciptakan bentuk \textit{extraneous load} yang berbeda dari media tradisional, terutama melalui elemen-elemen yang tidak relevan dengan tujuan pembelajaran atau pemrosesan informasi inti.
+
+Penelitian empiris oleh \textcite{sidnammauch2024} menerapkan CLT secara khusus pada konteks distraksi media sosial melalui studi dengan 1.026 partisipan. Mereka mengintegrasikan \textit{load theory of attention} dengan kerangka \textit{uses and gratifications} untuk menjelaskan bagaimana media sosial mobile menciptakan distraksi melalui sumber daya kognitif yang terbatas. Studi mereka mendemonstrasikan bahwa individu dengan kapasitas memori kerja yang lebih rendah lebih rentan terhadap distraksi media sosial, dan bahwa \textit{affordances} teknologi seperti notifikasi \textit{push} dan aksesibilitas konstan memperburuk masalah ini.
+
+\subsection{Ekonomi Perhatian di Media Sosial}
+
+\textcite{heitmayer2025} memberikan perspektif teoretis terbaru dengan mengusulkan bahwa perhatian (\textit{attention}) berfungsi sebagai mata uang simbolis universal di media sosial. Penelitian ini memperkenalkan model \textit{dual-stream} yang membedakan antara perhatian yang "mengalir" (\textit{flow attention}) dan perhatian yang "mengeras" (\textit{calcified attention}). \textit{Flow attention} mengacu pada alokasi perhatian yang dinamis dan sementara terhadap konten yang terus berubah, sementara \textit{calcified attention} merujuk pada investasi perhatian jangka panjang yang termanifestasi dalam bentuk \textit{followers}, \textit{likes}, atau keanggotaan komunitas. Kelangkaan perhatian (\textit{attention scarcity}) yang diidentifikasi menjadi masalah sentral yang harus diatasi oleh sistem rangkuman otomatis.
+
+Analisis empiris oleh \textcite{nematzadeh2019} tentang \textit{information overload} dalam komunikasi grup menggunakan data dari platform Twitch menunjukkan bagaimana peningkatan volume pesan dalam grup dapat menyebabkan transisi dari percakapan yang koheren menjadi "kakofoni" di mana informasi bermakna tenggelam dalam kebisingan. Mereka mengidentifikasi bahwa ketika laju pesan melebihi ambang batas tertentu, kualitas percakapan menurun drastis, partisipasi menjadi tidak merata, dan informasi penting hilang.
+
+
+% ==========================================
+\section{Fondasi Arsitektur: \textit{Transformer} dan BERT}
+\label{sec:transformer-bert}
+
+Arsitektur fundamental yang mendasari perkembangan NLP modern mencakup \textit{Transformer} dan \textit{Bidirectional Encoder Representations from Transformers} (BERT). Bagian ini mengulas inovasi arsitektural yang telah merevolusi pemrosesan bahasa alami dan menjadi fondasi bagi hampir semua model bahasa kontemporer.
+
+\subsection{Arsitektur \textit{Transformer}}
+
+\textcite{vaswani2017} memperkenalkan arsitektur \textit{Transformer} yang menggantikan arsitektur rekuren tradisional (\textit{RNN}, \textit{LSTM}) dengan mekanisme \textit{self-attention} yang dapat memproses seluruh urutan input secara paralel. Inovasi kunci dari \textit{Transformer} adalah kemampuannya untuk menangkap dependensi jarak jauh dalam teks tanpa keterbatasan memori yang dialami oleh arsitektur rekuren. Mekanisme \textit{multi-head attention} memungkinkan model untuk menghadiri berbagai aspek representasional input secara simultan, sementara \textit{positional encoding} mempertahankan informasi tentang urutan kata. Arsitektur \textit{encoder-decoder} yang diusulkan terdiri dari tumpukan lapisan \textit{transformer} yang masing-masing mengandung sub-lapisan \textit{multi-head self-attention} dan \textit{feed-forward neural network}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.65\textwidth]{image/transformer-architecture.png}
+  \caption{Arsitektur Transformer dengan mekanisme \textit{multi-head attention} dan struktur \textit{encoder-decoder} (diadaptasi dari \textcite{vaswani2017})}
+  \label{fig:transformer-arch}
+\end{figure}
+
+\subsection{BERT dan Representasi \textit{Bidirectional}}
+
+\textcite{devlin2019} mengembangkan konsep \textit{Transformer} lebih lanjut dengan memperkenalkan BERT, model bahasa yang dilatih secara \textit{bidirectional} menggunakan arsitektur \textit{Transformer encoder}. Berbeda dengan model bahasa unidirectional sebelumnya yang hanya memproses teks dari kiri ke kanan atau kanan ke kiri, BERT dilatih menggunakan dua tugas pra-latih: \textit{Masked Language Modeling} (MLM), di mana sebagian token input di-\textit{mask} dan model harus memprediksinya berdasarkan konteks bidirectional, dan \textit{Next Sentence Prediction} (NSP), di mana model memprediksi apakah dua kalimat berurutan dalam teks original. Pendekatan \textit{pre-training} dan \textit{fine-tuning} yang diusulkan memungkinkan BERT untuk mencapai performa \textit{state-of-the-art} pada sebelas tugas NLP yang beragam. Representasi kontekstual bidirectional yang dihasilkan BERT menangkap nuansa semantik yang tidak dapat ditangkap oleh model unidirectional atau representasi statis seperti Word2Vec.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{image/bert-architecture-diagram.png}
+  \caption{Arsitektur BERT menunjukkan mekanisme \textit{bidirectional self-attention} dan proses \textit{pre-training} dengan \textit{Masked Language Modeling} (diadaptasi dari \textcite{devlin2019})}
+  \label{fig:bert-architecture}
+\end{figure}
+
+Kontribusi BERT terhadap NLP tidak hanya terletak pada performa superiornya pada berbagai \textit{benchmark}, tetapi juga pada paradigma \textit{transfer learning} yang efektif: model bahasa umum yang besar dilatih pada korpus teks masif, kemudian di-\textit{fine-tune} untuk tugas spesifik dengan data berlabel yang relatif terbatas.
+
+\subsection{IndoBERT untuk Bahasa Indonesia}
+
+\textcite{wilie2020} memperkenalkan \textit{IndoNLU}, benchmark komprehensif untuk evaluasi pemahaman bahasa Indonesia yang mencakup dua belas tugas termasuk analisis sentimen. Dataset mereka dilatih pada \textit{Indo4B}, korpus bahasa Indonesia dengan empat miliar kata, dan menyediakan model IndoBERT yang mengungguli \textit{multilingual BERT} (mBERT) pada berbagai tugas. Penelitian ini mendemonstrasikan bahwa model bahasa monolingual yang dilatih khusus pada korpus bahasa Indonesia menghasilkan performa superior dibandingkan model multilingual untuk tugas-tugas NLP Indonesia.
+
+Penelitian oleh \textcite{koto2020} memperkuat temuan ini dengan memperkenalkan \textit{IndoLEM}, benchmark dataset dan model IndoBERT untuk NLP Indonesia. Mereka mendemonstrasikan bahwa \textit{pre-training} pada korpus bahasa Indonesia yang besar (220 juta kata) menghasilkan representasi bahasa yang lebih baik untuk tugas-tugas \textit{downstream}, yang mencapai F1-score 84,13\% untuk analisis sentimen.
+
+\subsection{Evolusi Menuju \textit{Large Language Models}}
+
+Perkembangan arsitektur \textit{Transformer} dan BERT menjadi fondasi bagi evolusi model bahasa dengan skala parameter yang jauh lebih besar. Evolusi ini mengikuti dua jalur paralel yang berbeda: jalur \textit{encoder} (BERT dan variannya) dan jalur \textit{decoder-only} (GPT dan variannya), dengan munculnya model \textit{open-source} skala besar seperti LLaMA yang memberikan alternatif terhadap model proprietary.
+
+\textcite{brown2020language} memperkenalkan GPT-3, model bahasa autoregresif dengan 175 miliar parameter, 10 kali lebih besar dari model \textit{non-sparse} sebelumnya. GPT-3 mendemonstrasikan kemampuan \textit{few-shot learning}, di mana model dapat melakukan tugas baru hanya dengan beberapa contoh tanpa \textit{fine-tuning}, sebuah kemampuan emergen yang muncul dari skala model yang sangat besar. Penelitian ini menetapkan paradigma baru dalam NLP di mana \textit{scaling up} ukuran model secara dramatis meningkatkan kemampuan \textit{task-agnostic} dan \textit{in-context learning}.
+
+\textcite{touvron2023llama} memperkenalkan LLaMA, koleksi model bahasa fondasi dengan range 7B hingga 65B parameter yang dilatih menggunakan dataset publik secara eksklusif. Penelitian ini mendemonstrasikan bahwa model \textit{state-of-the-art} dapat dilatih tanpa bergantung pada dataset proprietary yang tidak dapat diakses. LLaMA-13B mengungguli GPT-3 (175B) pada sebagian besar \textit{benchmark}, sementara LLaMA-65B kompetitif dengan model terbaik seperti Chinchilla-70B dan PaLM-540B. Karakteristik \textit{open-source} dari LLaMA telah memfasilitasi pengembangan ekosistem model turunan dan aplikasi spesifik domain.
+
+Evolusi menuju LLMs ini didorong oleh \textit{scaling laws} yang menghubungkan peningkatan jumlah parameter dan data dengan peningkatan performa, serta munculnya kemampuan emergen seperti \textit{few-shot learning} dan \textit{in-context learning} yang tidak dimiliki model skala kecil. Model-model ini menjadi fondasi bagi berbagai aplikasi NLP kontemporer, termasuk peringkasan teks, \textit{question answering}, dan generasi konten.
+
+
+% ==========================================
+\section{\textit{Text Summarization} dengan \textit{Large Language Models}}
+\label{sec:text-summarization}
+
+Peringkasan teks otomatis telah mengalami evolusi signifikan dengan munculnya model bahasa berbasis \textit{transformer} dan \textit{large language models} (LLMs). Bagian ini mengulas perkembangan metodologi peringkasan teks dari pendekatan berbasis ekstraksi hingga generasi abstraktif dengan LLMs, dengan fokus khusus pada tantangan peringkasan multi-dokumen, percakapan, dan media sosial.
+
+\subsection{Peringkasan Berbasis \textit{Transformer}}
+
+\textcite{liu2019bertsum} memperkenalkan pendekatan \textit{BERTSum} yang memanfaatkan representasi BERT untuk peringkasan ekstraktif dan abstraktif. Penelitian mereka mendemonstrasikan bahwa model \textit{encoder} tingkat dokumen yang dibangun di atas BERT dengan lapisan \textit{Transformer} antar-kalimat dapat menghasilkan rangkuman berkualitas tinggi. Pendekatan dua tahap \textit{fine-tuning} yang mereka usulkan, di mana model pertama-tama di-\textit{fine-tune} untuk tugas ekstraksi kalimat sebelum dilatih untuk generasi abstraktif, menetapkan metodologi dasar yang diadopsi oleh banyak penelitian berikutnya.
+
+Pemahaman tentang \textit{trade-off} antara peringkasan ekstraktif dan abstraktif diperluas oleh penelitian \textcite{pilault2020}, yang membandingkan kedua pendekatan menggunakan model \textit{transformer} pada dokumen panjang. Evaluasi manusia mereka mengungkapkan temuan penting: sementara pendekatan abstraktif berbasis \textit{transformer} unggul dalam koherensi dan kelancaran, metode ekstraktif cenderung mencetak lebih tinggi dalam hal informativeness. Temuan ini menginformasikan desain sistem hibrida yang mengkombinasikan ekstraksi topik dengan generasi naratif.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/extractive-vs-abstractive.png}
+  \caption{Perbandingan pendekatan peringkasan ekstraktif (memilih kalimat penting) dan abstraktif (menghasilkan teks baru) menunjukkan \textit{trade-off} antara \textit{informativeness} dan koherensi}
+  \label{fig:extract-abstract}
+\end{figure}
+
+\subsection{Peringkasan Multi-Dokumen dan Sintesis Informasi}
+
+\textcite{deyoung2024} mengajukan pertanyaan fundamental: apakah model peringkasan multi-dokumen modern benar-benar dapat mensintesis informasi, atau hanya melakukan agregasi sederhana? Melalui evaluasi terhadap berbagai model dari \textit{fine-tuned transformers} hingga GPT-4, mereka menemukan bahwa sebagian besar model mengalami kesulitan dalam mensintesis informasi yang bertentangan atau berbeda perspektif, dan sangat sensitif terhadap urutan input dokumen. Temuan kritis ini memiliki implikasi langsung bagi desain sistem: sistem harus dirancang dengan mekanisme eksplisit untuk menangani informasi yang mungkin bertentangan, dan tidak boleh bergantung semata-mata pada kemampuan sintesis implisit LLM.
+
+\textcite{ravaut2024} menyediakan wawasan penting tentang bagaimana LLMs memanfaatkan konteks panjang dalam peringkasan. Penelitian mereka mengungkapkan masalah \textit{position bias}, di mana LLMs cenderung memberikan bobot yang tidak merata terhadap informasi berdasarkan posisinya dalam konteks. Mereka mengevaluasi enam LLMs berbeda pada sepuluh dataset dengan lima metrik evaluasi, menemukan bahwa model cenderung memberikan perhatian berlebihan pada informasi di awal dan akhir konteks, sementara mengabaikan informasi di tengah. Desain sistem harus mempertimbangkan strategi mitigasi \textit{position bias}, seperti pengelompokan pesan berdasarkan topik sebelum peringkasan atau penggunaan rangkuman inkremental.
+
+\subsection{Peringkasan Percakapan dan Dialog}
+
+\textcite{gliwa2019} memperkenalkan \textit{SAMSum Corpus}, dataset dialog yang dianotasi secara manual untuk peringkasan abstraktif, yang menetapkan bahwa peringkasan percakapan memiliki tantangan unik dibandingkan dengan peringkasan artikel berita. Dialog dan percakapan grup memiliki struktur yang lebih kompleks dengan pergantian pembicara, konteks implisit, referensi anaforik, dan topik yang bercabang.
+
+\textcite{tian2024} mengembangkan metodologi peringkasan dialog lebih lanjut dengan mengusulkan pendekatan \textit{Mixture of Experts} (MoE) berbasis LLM. Penelitian mereka memperkenalkan mekanisme \textit{role-oriented routing} yang memilih model atau strategi peringkasan yang sesuai berdasarkan karakteristik informasi percakapan yang berbeda. Pendekatan ini relevan dengan konteks komunitas finansial berjenjang, di mana pesan dari berbagai peran mungkin memerlukan perlakuan berbeda dalam proses peringkasan.
+
+\textcite{chen2021} mengusulkan pendekatan yang sadar struktur (\textit{structure-aware}) untuk peringkasan percakapan abstraktif. Penelitian mereka memodelkan relasi wacana dan \textit{action triples} ("siapa-melakukan-apa") menggunakan graf terstruktur untuk menangkap karakteristik kompleks interaksi manusia-manusia di media sosial. Mereka mengimplementasikan mekanisme \textit{decoding} multi-granularitas yang dapat menghasilkan rangkuman pada tingkat abstraksi berbeda.
+
+\textcite{fabbri2021} memperkenalkan \textit{ConvoSumm}, benchmark peringkasan percakapan yang mencakup empat dataset dari berbagai bentuk percakapan online. Penelitian mereka menggunakan \textit{framework} \textit{issues-viewpoints-assertions} yang menginkorporasikan \textit{argument mining} melalui konstruksi graf untuk memodelkan struktur percakapan. Pendekatan ini mengakui bahwa percakapan online sering kali melibatkan pertukaran pandangan yang kompleks dengan argumen pendukung.
+
+\textcite{sotudeh2021} memperkenalkan dataset TLDR9+ dengan lebih dari 9 juta \textit{instance} pelatihan dari Reddit untuk peringkasan ekstrim (rangkuman satu kalimat). Mereka mendemonstrasikan bahwa peringkasan ekstrim, yang menghasilkan rangkuman sangat singkat dengan tingkat kompresi dan abstraksi tinggi, dapat efektif untuk konten media sosial yang cenderung verbose.
+
+\subsection{Memori Jangka Panjang dalam Sistem Dialog}
+
+\textcite{wang2023recursive} mengusulkan metode peringkasan rekursif untuk memungkinkan LLMs mempertahankan konteks percakapan yang panjang. Pendekatan mereka melibatkan pembuatan rangkuman hierarkis dari konteks dialog yang kemudian digunakan untuk menjaga konsistensi dalam percakapan yang berkepanjangan. Konsep ini paralel dengan desain sistem rangkuman per jam, di mana setiap rangkuman per jam dapat dipandang sebagai pembentukan "memori jangka panjang" bagi komunitas.
+
+\subsection{Metrik Evaluasi untuk Peringkasan}
+
+\textcite{zhang2020bertscore} memperkenalkan \textit{BERTScore}, metrik evaluasi yang menggunakan \textit{contextual embeddings} dari BERT untuk menghitung kesamaan antara rangkuman yang dihasilkan dan rangkuman referensi, mengatasi keterbatasan metrik berbasis \textit{n-gram} seperti ROUGE yang hanya menghitung kecocokan kata eksak. \textit{BERTScore} mendemonstrasikan korelasi yang lebih baik dengan penilaian manusia karena dapat mengenali parafrase dan kesamaan semantik.
+
+\textcite{shen2023} memberikan peringatan penting tentang penggunaan LLMs sebagai evaluator otomatis untuk peringkasan abstraktif. Melalui analisis ekstensif terhadap ChatGPT dan GPT-4 sebagai evaluator, mereka menemukan masalah signifikan dalam stabilitas, reliabilitas, dan ketergantungan pada dimensi evaluasi tertentu. Temuan mereka menunjukkan bahwa evaluasi otomatis berbasis LLM tidak dapat sepenuhnya menggantikan evaluasi manusia, terutama untuk aspek kualitatif seperti koherensi naratif dan relevansi kontekstual.
+
+\subsection{Tantangan Inferensi LLM dalam Sistem \textit{Real-Time}}
+
+Bottleneck arsitektural yang paling signifikan dalam sistem rangkuman otomatis berbasis LLM adalah latensi inferensi model bahasa besar. Tidak seperti komponen NLP tradisional seperti tokenisasi atau \textit{named entity recognition} yang dapat dieksekusi dalam milidetik, generasi teks dengan LLM skala besar (puluhan hingga ratusan miliar parameter) dapat memerlukan waktu detik hingga menit untuk satu panggilan inferensi.
+
+Penelitian terkini menunjukkan bahwa kecepatan inferensi LLM sangat dipengaruhi oleh tiga faktor utama: (1) ukuran model (jumlah parameter), (2) panjang konteks input, dan (3) infrastruktur komputasi yang digunakan (CPU, GPU, atau akselerator khusus seperti TPU). Model yang lebih besar seperti Llama 3.1 70B, meskipun memberikan kualitas output superior, memerlukan sumber daya komputasi yang substansial. Solusi arsitektural termasuk penggunaan akselerator khusus seperti \textit{Language Processing Unit} (LPU) yang dirancang untuk inferensi LLM dengan kecepatan ekstrem, serta strategi optimasi seperti \textit{quantization} dan \textit{batching}.
+
+
+% ==========================================
+\section{Analisis Teks Finansial: Sentimen, Emosi, dan Entitas}
+\label{sec:financial-text-analysis}
+
+Analisis teks finansial merupakan komponen esensial dalam memahami dinamika diskusi di media sosial. Bagian ini membahas ekstraksi sinyal-sinyal spesifik dari teks: sentimen dan emosi yang mencerminkan psikologi pasar, serta entitas finansial yang menjadi objek diskusi. Ketiga komponen ini—sentimen, emosi, dan ekstraksi entitas—bersifat komplementer dalam sistem rangkuman.
+
+\subsection{Model Bahasa untuk Analisis Sentimen Indonesia}
+
+\textcite{nugroho2021} menerapkan \textit{fine-tuning} BERT untuk analisis sentimen pada ulasan aplikasi mobile berbahasa Indonesia, konteks yang memiliki kesamaan dengan teks media sosial karena sifatnya yang informal dan sering mengandung bahasa gaul atau singkatan. Penelitian mereka membandingkan model multibahasa dengan model khusus Indonesia, mendemonstrasikan keunggulan \textit{transfer learning} untuk bahasa Indonesia dengan data berlabel terbatas.
+
+\subsection{Analisis Sentimen Domain Finansial}
+
+\textcite{araci2019} memperkenalkan \textit{FinBERT}, model BERT pertama yang dilatih khusus pada korpus finansial untuk analisis sentimen. Model ini mencapai peningkatan akurasi 15\% dibandingkan BERT umum pada dataset \textit{Financial PhraseBank} dan FiQA. Penelitian ini mendemonstrasikan pentingnya \textit{domain-specific pre-training} untuk teks finansial, yang memiliki karakteristik linguistik unik termasuk terminologi khusus dan nuansa sentimen yang berbeda dari domain umum.
+
+\textcite{si2014} mengeksplorasi pemanfaatan sentimen media sosial untuk prediksi pergerakan saham dengan mengintegrasikan analisis sentimen Twitter dengan struktur relasi sosial. Penelitian mereka mendemonstrasikan bahwa menggabungkan sentimen dengan informasi jaringan sosial secara signifikan meningkatkan akurasi prediksi. Temuan kunci mereka adalah bahwa tidak semua opini memiliki bobot yang sama; pendapat dari individu yang lebih berpengaruh atau kredibel dalam jaringan sosial harus diberi bobot lebih tinggi.
+
+\subsection{Klasifikasi Emosi vs Sentimen untuk Investor Ritel}
+
+Penelitian perilaku keuangan menunjukkan bahwa keputusan investasi ritel sangat dipengaruhi oleh emosi, terutama ketakutan (\textit{fear}) dan keserakahan (\textit{greed}). Berbeda dengan analis profesional yang dilatih untuk membuat keputusan berdasarkan analisis rasional, investor ritel sering kali membuat keputusan yang didorong oleh reaksi emosional terhadap pergerakan pasar atau diskusi komunitas.
+
+Model klasifikasi emosi dapat mendeteksi spektrum emosi yang lebih nuansa, termasuk ketakutan, kegembiraan, kemarahan, dan kesedihan. Emosi-emosi ini memberikan sinyal yang lebih kaya tentang psikologi pasar dibandingkan dengan sentimen biner. Misalnya, ekspresi ketakutan tinggi dalam diskusi komunitas dapat mengindikasikan potensi \textit{panic selling}, sementara kegembiraan berlebihan dapat menandakan \textit{euphoria} yang sering kali mendahului koreksi pasar.
+
+Konteks diskusi informal di platform seperti Telegram lebih cenderung mengekspresikan emosi autentik dibandingkan dengan laporan finansial formal atau analisis profesional. Klasifikasi emosi dapat menangkap sinyal-sinyal psikologis ini yang hilang dalam analisis sentimen tradisional.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{image/sentiment-analysis-example.jpg}
+  \caption{Contoh klasifikasi emosi pada teks menggunakan model \textit{semantic emotion detection}, menunjukkan deteksi berbagai emosi seperti \textit{sad}, \textit{happy}, \textit{fear}, \textit{disgust}, \textit{surprise}, dan \textit{angry} beserta skor probabilitasnya}
+  \label{fig:sentiment-example}
+\end{figure}
+
+\subsection{Pemanfaatan Sinyal Komunitas dalam Peringkasan}
+
+\textcite{kano2018} mengusulkan metodologi inovatif untuk memanfaatkan sinyal popularitas dalam media sosial (seperti \textit{votes}, \textit{shares}, \textit{bookmarks}) sebagai label jarak jauh (\textit{distant labels}) untuk peringkasan ekstraktif percakapan online. Penelitian mereka mendemonstrasikan bahwa metrik keterlibatan komunitas dapat berfungsi sebagai indikator kualitas dan relevansi konten. Pendekatan ini relevan dengan konteks komunitas finansial berjenjang, di mana struktur hierarkis dan peran pengguna dapat dimanfaatkan sebagai sinyal implisit tentang pentingnya informasi. Sistem \textit{weighted sentiment} dapat memberikan bobot lebih tinggi pada pesan dari sumber yang lebih kredibel atau berpengaruh dalam komunitas.
+
+\subsection{\textit{Named Entity Recognition} untuk Teks Finansial Indonesia}
+
+\textit{Named Entity Recognition} (NER) merupakan tugas fundamental dalam NLP yang bertujuan mengidentifikasi dan mengklasifikasikan entitas bernama dalam teks, seperti nama orang, organisasi, lokasi, dan dalam konteks finansial, nama perusahaan dan kode saham (ticker).
+
+\textcite{khairunnisa2020} mengidentifikasi masalah kritis dalam dataset NER Indonesia yang ada: inkonsistensi anotasi yang dapat menurunkan performa model. Mereka menyediakan dataset yang dianotasi ulang dengan standar yang lebih konsisten dan mengevaluasi berbagai pendekatan \textit{deep learning}. Penelitian mereka menekankan pentingnya kualitas data pelatihan dan konsistensi skema anotasi untuk mencapai performa NER yang optimal.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{image/ner-example.png}
+  \caption{Contoh \textit{Named Entity Recognition} pada teks, menunjukkan identifikasi berbagai jenis entitas seperti nama orang (\textit{PERSON}), lokasi (\textit{LOCATION}), tanggal (\textit{DATE}), dan istilah khusus (\textit{TERM}) yang diberikan label dan warna berbeda}
+  \label{fig:ner-example}
+\end{figure}
+
+\textcite{zhang2022finbert} mengembangkan \textit{FinBERT-MRC}, pendekatan NER finansial yang merumuskan tugas ekstraksi entitas sebagai masalah \textit{machine reading comprehension}. Model mereka mencapai F1-score 92,78\% dan 96,80\% pada dataset finansial. Penelitian ini mendemonstrasikan bahwa NER domain finansial memiliki tantangan unik karena variasi semantik dan leksikal yang spesifik.
+
+\textcite{shah2023} menyediakan \textit{FiNER-ORD}, dataset NER finansial \textit{open research} pertama dengan kualitas tinggi. Penelitian mereka menekankan bahwa entitas finansial sering kali memiliki representasi multipel (misalnya, "Apple Inc.", "Apple", "AAPL") yang harus dikenali sebagai entitas yang sama.
+
+
+% ==========================================
+\section{Infrastruktur Sistem: Platform, Arsitektur, dan \textit{Pipeline}}
+\label{sec:system-infrastructure}
+
+Implementasi sistem rangkuman otomatis untuk komunitas yang aktif memerlukan pemahaman mendalam tentang karakteristik platform, arsitektur pemrosesan yang dapat menangani aliran data \textit{real-time}, komponen analisis yang dapat beroperasi secara asinkron, dan integrasi \textit{pipeline} yang kohesif.
+
+\subsection{Karakteristik Platform Telegram}
+
+\textcite{nobari2017} menyediakan analisis pionir tentang struktur dan aspek topikal Telegram menggunakan data yang di-\textit{crawl} dari kanal publik. Penelitian mereka mengeksplorasi pola jaringan dan arsitektur Telegram sebagai platform \textit{messaging} hibrida yang menggabungkan fitur komunikasi pribadi dan publik. Mereka mengidentifikasi bahwa Telegram memiliki karakteristik unik: kombinasi antara privasi komunikasi dengan kemampuan penyebaran informasi massal melalui kanal dan grup besar.
+
+\textcite{hashemi2019} mengembangkan metodologi untuk mengukur kualitas grup Telegram melalui analisis perilaku pengguna. Mereka mengusulkan fitur-fitur pengukuran kualitas yang membedakan grup berkualitas tinggi dari grup berkualitas rendah berdasarkan pola aktivitas pengguna, konsistensi partisipasi, dan struktur komunikasi. Penelitian mereka menunjukkan bahwa grup berkualitas tinggi cenderung memiliki partisipasi yang lebih seimbang, topik diskusi yang lebih fokus, dan tingkat spam yang lebih rendah.
+
+\textcite{lamorgia2024} menyediakan dataset Telegram terbesar dengan 120.979 kanal dan lebih dari 400 juta pesan, bersama dengan infrastruktur untuk pengumpulan dan analisis data skala besar. Kontribusi mereka mendemonstrasikan bahwa Telegram telah berkembang menjadi ekosistem informasi yang kompleks dengan dinamika komunitas yang beragam.
+
+\textcite{perlo2025} menyediakan analisis per-topik pertama dari grup Telegram, mengeksplorasi 51 juta pesan dari 669 grup di berbagai topik termasuk Cryptocurrency. Temuan kunci mereka adalah bahwa grup dengan topik berbeda menunjukkan pola komunikasi yang sangat berbeda dalam hal volume pesan, distribusi waktu aktivitas, dan tipe konten yang dibagikan. Khususnya untuk kategori Cryptocurrency, mereka menemukan tingkat aktivitas yang sangat tinggi dengan puncak aktivitas yang berkorelasi dengan jam perdagangan pasar.
+
+\subsection{Arsitektur Sistem \textit{Real-time} dan \textit{Event-Driven}}
+
+\textcite{hamidi2021} mengusulkan arsitektur \textit{pipeline} NLP yang dinamis dan terdistribusi untuk pemrosesan \textit{stream} teks \textit{real-time}. Penelitian mereka menggunakan Apache Storm dan Apache Kafka untuk menerapkan tugas-tugas NLP pada aliran data tekstual. Arsitektur mereka mendemonstrasikan bagaimana komponen NLP yang berbeda dapat dikomposisikan dalam \textit{pipeline} yang dapat di-\textit{scale} secara horizontal.
+
+\textcite{isah2019} menyediakan survei komprehensif tentang \textit{framework} pemrosesan \textit{stream} data terdistribusi. Penelitian mereka membandingkan model pemrosesan, karakteristik operasional, dan pola arsitektural dari berbagai \textit{framework}. Untuk konteks dengan volume pesan yang tinggi namun tidak ekstrem, mereka mengidentifikasi bahwa pendekatan \textit{micro-batch processing} atau arsitektur berbasis \textit{event} yang lebih sederhana dapat memberikan keseimbangan optimal antara latensi, throughput, dan kompleksitas implementasi.
+
+\textcite{rubert2023} menyediakan bukti empiris tentang dampak \textit{event-driven architecture} (EDA) terhadap performa melalui studi eksploratif. Penelitian mereka mendemonstrasikan bahwa EDA dapat memberikan keunggulan signifikan dalam \textit{scalability} dan responsivitas, terutama untuk sistem yang menangani beban kerja yang bervariasi dan tidak dapat diprediksi.
+
+Pendekatan \textit{micro-batching} sering kali lebih praktis untuk banyak aplikasi NLP. Konsep rangkuman periodik dapat dipandang sebagai bentuk \textit{macro-batching}, di mana pesan dikumpulkan selama periode waktu tertentu sebelum diproses sebagai satu \textit{batch}. Pendekatan ini memberikan beberapa keuntungan: memungkinkan agregasi konteks yang lebih kaya untuk tugas-tugas seperti \textit{topic modeling}, mengurangi beban komputasi, dan sesuai dengan ritme natural konsumsi informasi pengguna.
+
+\subsection{Komponen Analisis Asinkron: \textit{Topic Modeling} dengan BERTopic}
+
+\textcite{grootendorst2022} memperkenalkan BERTopic, metodologi \textit{topic modeling} neural yang menggabungkan model bahasa berbasis \textit{transformer}, \textit{document embeddings}, \textit{clustering} dengan HDBSCAN, dan prosedur \textit{class-based TF-IDF} (c-TF-IDF). Arsitektur BERTopic mengatasi keterbatasan pendekatan tradisional seperti \textit{Latent Dirichlet Allocation} (LDA) dengan memanfaatkan representasi semantik kontekstual. Metodologi ini sangat sesuai untuk teks media sosial yang pendek dan informal.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{image/bertopic-workflow.png}
+  \caption{Alur kerja BERTopic menunjukkan tahapan dari \textit{document embeddings}, dimensionality reduction dengan UMAP, \textit{clustering} dengan HDBSCAN, hingga ekstraksi representasi topik dengan c-TF-IDF (diadaptasi dari \textcite{grootendorst2022})}
+  \label{fig:bertopic-workflow}
+\end{figure}
+
+Keunggulan BERTopic untuk teks media sosial divalidasi secara empiris oleh \textcite{egger2022}, yang membandingkan BERTopic dengan LDA, NMF, dan Top2Vec pada dataset 31.800 \textit{tweet}. Evaluasi mereka mendemonstrasikan superioritas BERTopic untuk teks pendek dan tidak terstruktur, khususnya dalam hal koherensi topik dan interpretabilitas.
+
+\textcite{angelov2024} mengembangkan metodologi \textit{topic modeling} lebih lanjut dengan memperkenalkan \textit{Contextual-Top2Vec}. Penelitian mereka mengusulkan penggunaan \textit{BERTScore} untuk mengevaluasi koherensi dan informativeness topik, mengatasi keterbatasan metrik evaluasi tradisional.
+
+\subsection{Integrasi \textit{Pipeline} dan Tantangannya}
+
+Integrasi \textit{pipeline} NLP multi-komponen menghadapi beberapa tantangan teknis. Pertama, **manajemen dependensi antar komponen**: beberapa komponen mungkin memerlukan output dari komponen lain sebagai input. Kedua, **penanganan kegagalan parsial**: jika satu komponen gagal, sistem harus dapat melanjutkan pemrosesan. Ketiga, **konsistensi temporal**: semua komponen harus memproses data dari periode waktu yang sama untuk memastikan rangkuman yang koheren.
+
+Dalam arsitektur \textit{event-driven}, setiap komponen NLP dapat dipandang sebagai \textit{event handler} yang independen. Pendekatan ini memungkinkan setiap komponen untuk beroperasi secara paralel ketika memungkinkan, sambil mempertahankan dependensi yang diperlukan.
+
+Tantangan khusus yang diidentifikasi adalah **koordinasi antara pemrosesan \textit{batch} periodik dan arsitektur \textit{event-driven}**. Solusi yang umum digunakan adalah menggunakan \textit{temporal windowing}: pesan dikumpulkan dalam jendela waktu, dan pada akhir jendela, \textit{event} pemicu dihasilkan untuk memulai \textit{pipeline} pemrosesan.
+
+Integrasi dengan API inferensi LLM menambahkan dimensi lain: **penanganan layanan eksternal asinkron**. Panggilan API bersifat asinkron dan dapat mengalami latensi variabel. Sistem harus dirancang dengan mekanisme \textit{timeout}, \textit{retry logic}, dan fallback untuk menangani kegagalan sementara atau latensi tinggi.
+
+**Observabilitas dan monitoring \textit{pipeline}** menjadi kritis dalam sistem produksi. Setiap komponen harus menghasilkan metrik dan log yang memungkinkan operator untuk memahami performa sistem, mengidentifikasi bottleneck, dan mendiagnosis kegagalan.
+
+
+% ==========================================
+\section{Kesenjangan Penelitian dan Kontribusi}
+\label{sec:research-gaps}
+
+Tinjauan literatur komprehensif mengidentifikasi beberapa kesenjangan penelitian kritis. Pertama, tidak ada penelitian yang mengintegrasikan NLP bahasa Indonesia dengan analisis domain finansial untuk konteks media sosial. Sebagian besar penelitian analisis sentimen finansial fokus pada bahasa Inggris atau Tiongkok, sementara penelitian NLP Indonesia cenderung menggunakan domain umum.
+
+Kedua, meskipun terdapat penelitian ekstensif tentang komunitas Telegram dan peringkasan media sosial secara terpisah, sangat sedikit penelitian yang menangani sistem peringkasan otomatis khusus untuk aplikasi bot Telegram. Penelitian tentang bot Telegram cenderung fokus pada interaksi percakapan sederhana atau otomasi tugas administratif.
+
+Ketiga, penelitian tentang \textit{pipeline} NLP \textit{real-time} yang mengintegrasikan multiple model dalam arsitektur \textit{event-driven} untuk platform \textit{messaging} masih terbatas. Sebagian besar penelitian mengevaluasi model-model ini secara terpisah atau dalam konteks dataset benchmark offline.
+
+Keempat, tidak ada penelitian yang menangani aliran informasi hierarkis dan sintesis lintas grup dalam komunitas berjenjang. Sebagian besar penelitian peringkasan media sosial mengasumsikan satu sumber data atau agregasi horizontal dari multiple sumber yang setara.
+
+Kelima, pendekatan rangkuman periodik untuk diskusi finansial dengan \textit{weighted sentiment} berbasis peran pengguna merupakan area yang belum banyak dieksplorasi. Sementara penelitian sebelumnya mengeksplorasi pemanfaatan sinyal popularitas atau metrik keterlibatan, implementasi \textit{weighting} eksplisit berdasarkan struktur peran komunitas masih terbatas.
+
+Secara keseluruhan, integrasi teori \textit{information overload}, metodologi NLP terkini untuk bahasa Indonesia dan domain finansial, arsitektur pemrosesan \textit{event-driven}, dan pemahaman tentang dinamika komunitas Telegram membuka peluang untuk mengembangkan solusi yang mengatasi tantangan praktis dalam komunitas finansial Indonesia. Sistem otomatis berbasis \textit{AI} dapat secara efektif mereduksi \textit{information overload} melalui sintesis intelijen multi-sumber yang disesuaikan dengan konteks spesifik ekosistem informasi komunitas.
