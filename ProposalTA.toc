@@ -21,9 +21,9 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {chapter}{DAFTAR GAMBAR}{v}{figure.caption.1}%
-\contentsline {chapter}{DAFTAR TABEL}{vi}{figure.caption.1}%
-\contentsline {chapter}{\centering \normalsize DAFTAR KODE}{vii}{chapter*.2}%
+\contentsline {chapter}{DAFTAR GAMBAR}{iv}{figure.caption.1}%
+\contentsline {chapter}{DAFTAR TABEL}{v}{figure.caption.1}%
+\contentsline {chapter}{\centering \normalsize DAFTAR KODE}{vi}{chapter*.2}%
 \contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {I.1}Latar Belakang}{1}{section.1.1}%
 \babel@toc {english}{}\relax 
@@ -150,6 +150,14 @@
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \contentsline {subsection}{\numberline {II.2.4}Evolusi Menuju \textit {Large Language Models}}{13}{subsection.2.2.4}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
 \contentsline {section}{\numberline {II.3}\textit {Text Summarization} dengan \textit {Large Language Models}}{13}{section.2.3}%
 \contentsline {subsection}{\numberline {II.3.1}Peringkasan Berbasis \textit {Transformer}}{14}{subsection.2.3.1}%
 \babel@toc {english}{}\relax 
@@ -293,27 +301,29 @@
 \contentsline {section}{\numberline {III.1}Analisis Kondisi Saat Ini}{25}{section.3.1}%
 \contentsline {subsection}{\numberline {III.1.1}Model Konseptual Komunitas Telegram Eksisting}{25}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {III.1.2}Identifikasi Masalah Sistem Saat Ini}{28}{subsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {III.1.2.1}\textit {Information Overload} Ekstrim di Grup PIRANHA}{28}{subsubsection.3.1.2.1}%
-\contentsline {subsubsection}{\numberline {III.1.2.2}\textit {Information Overload} Tinggi di Grup Advanced dengan \textit {Coverage Gap}}{29}{subsubsection.3.1.2.2}%
-\contentsline {subsubsection}{\numberline {III.1.2.3}Fragmentasi Informasi Lintas Struktur Hierarkis}{30}{subsubsection.3.1.2.3}%
-\contentsline {subsubsection}{\numberline {III.1.2.4}Keterbatasan Kapasitas Kognitif dan Dampaknya terhadap Kualitas Keputusan}{31}{subsubsection.3.1.2.4}%
-\contentsline {section}{\numberline {III.2}Analisis Kebutuhan}{32}{section.3.2}%
-\contentsline {subsection}{\numberline {III.2.1}Identifikasi \textit {Stakeholder} dan \textit {Pain Points}}{32}{subsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {III.2.1.1}Anggota Grup PIRANHA (Target Primer)}{32}{subsubsection.3.2.1.1}%
-\contentsline {subsubsection}{\numberline {III.2.1.2}Anggota Grup Advanced (Target Sekunder)}{33}{subsubsection.3.2.1.2}%
-\contentsline {subsubsection}{\numberline {III.2.1.3}Anggota Cuap Cuap dan Swing Plan}{33}{subsubsection.3.2.1.3}%
-\contentsline {subsubsection}{\numberline {III.2.1.4}Michael Yeoh dan Tim Administrator}{33}{subsubsection.3.2.1.4}%
-\contentsline {subsection}{\numberline {III.2.2}Kebutuhan Fungsional}{34}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {III.2.3}Kebutuhan Non-Fungsional}{35}{subsection.3.2.3}%
-\contentsline {section}{\numberline {III.3}Analisis Alternatif Solusi}{37}{section.3.3}%
-\contentsline {subsection}{\numberline {III.3.1}Alternatif Pendekatan untuk Mereduksi \textit {Information Overload}}{38}{subsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {III.3.1.1}Alternatif 1: Ekspansi \textit {Manual Curation} (Status Quo yang Ditingkatkan)}{38}{subsubsection.3.3.1.1}%
-\contentsline {subsubsection}{\numberline {III.3.1.2}Alternatif 2: Bot Filter Berbasis Aturan (\textit {Rule-Based Keyword Bot})}{38}{subsubsection.3.3.1.2}%
-\contentsline {subsubsection}{\numberline {III.3.1.3}Alternatif 3: Bot Rangkuman Berbasis \textit {AI} dengan NLP Khusus Domain (DIUSULKAN)}{39}{subsubsection.3.3.1.3}%
-\contentsline {subsubsection}{\numberline {III.3.1.4}Alternatif 4: Solusi SaaS \textit {Generic} dengan LLM \textit {Third-Party}}{40}{subsubsection.3.3.1.4}%
-\contentsline {subsection}{\numberline {III.3.2}Analisis Pemilihan Solusi}{41}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {IV}DESAIN KONSEP SOLUSI}{44}{chapter.4}%
-\contentsline {chapter}{\numberline {V}RENCANA SELANJUTNYA}{45}{chapter.5}%
+\contentsline {subsubsection}{\numberline {III.1.2.1}\textit {Information Overload} di Grup Premium}{28}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {III.1.2.2}Fragmentasi Informasi dan Keterbatasan Kognitif}{28}{subsubsection.3.1.2.2}%
+\contentsline {section}{\numberline {III.2}Analisis Kebutuhan}{29}{section.3.2}%
+\contentsline {subsection}{\numberline {III.2.1}Identifikasi \textit {Stakeholder} dan \textit {Pain Points}}{29}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {III.2.1.1}Anggota Grup PIRANHA (Target Primer)}{29}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {III.2.1.2}Anggota Grup Advanced (Target Sekunder)}{30}{subsubsection.3.2.1.2}%
+\contentsline {subsubsection}{\numberline {III.2.1.3}Anggota Cuap Cuap dan Swing Plan}{30}{subsubsection.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {III.2.1.4}Michael Yeoh dan Tim Administrator}{31}{subsubsection.3.2.1.4}%
+\contentsline {subsection}{\numberline {III.2.2}Kebutuhan Fungsional}{31}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {III.2.3}Kebutuhan Non-Fungsional}{33}{subsection.3.2.3}%
+\contentsline {section}{\numberline {III.3}Analisis Alternatif Solusi}{35}{section.3.3}%
+\contentsline {subsection}{\numberline {III.3.1}Alternatif Pendekatan untuk Mereduksi \textit {Information Overload}}{35}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {III.3.1.1}Alternatif 1: Ekspansi \textit {Manual Curation} (Status Quo yang Ditingkatkan)}{35}{subsubsection.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {III.3.1.2}Alternatif 2: Bot Filter Berbasis Aturan (\textit {Rule-Based Keyword Bot})}{36}{subsubsection.3.3.1.2}%
+\contentsline {subsubsection}{\numberline {III.3.1.3}Alternatif 3: Bot Rangkuman Berbasis \textit {AI} dengan NLP Khusus Domain (DIUSULKAN)}{37}{subsubsection.3.3.1.3}%
+\contentsline {subsubsection}{\numberline {III.3.1.4}Alternatif 4: Solusi SaaS \textit {Generic} dengan LLM \textit {Third-Party}}{38}{subsubsection.3.3.1.4}%
+\contentsline {subsection}{\numberline {III.3.2}Analisis Pemilihan Solusi}{38}{subsection.3.3.2}%
+\contentsline {chapter}{\numberline {IV}DESAIN KONSEP SOLUSI}{41}{chapter.4}%
+\contentsline {chapter}{\numberline {V}RENCANA SELANJUTNYA}{42}{chapter.5}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
