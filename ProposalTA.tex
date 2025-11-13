@@ -171,6 +171,30 @@
 
 \renewcommand \cftchapdotsep{4.5}
 
+% -- Atur indentasi judul bab, subbab, dan subsubbab di daftar isi ---
+\setlength{\cftchapindent}{0em}
+\setlength{\cftsecindent}{0em}
+\setlength{\cftsubsecindent}{0em}
+\setlength{\cftsubsubsecindent}{0em}
+
+% --- Ubah nama bulan ke Bahasa Indonesia ---
+\renewcommand*{\DTMbahasaimonthname}[1]{%
+  \ifcase#1 %
+    \or Januari%  % 1st month
+    \or Februari%  % 2nd month
+    \or Maret%  % 3rd month
+    \or April%  % 4th month
+    \or Mei%  % 5th month
+    \or Juni%  % 6th month
+    \or Juli%  % 7th month
+    \or Agustus%  % 8th month
+    \or September%  % 9th month
+    \or Oktober%  % 10th month
+    \or November%  % 11th month
+    \or Desember%  % 12th month
+  \fi
+}
+
 % ==========================================
 % AWAL DOKUMEN
 % ==========================================
@@ -262,8 +286,8 @@
 % Versi 1 pembimbing (default)
 % ==========================================
 	Pembimbing  \\[3cm]
-	Dr. Ir. John Doe, M.T.   \\[0.2cm]
-	NIP. 123456789 
+	Ir. Windy Gambetta, M.B.A.   \\[0.2cm]
+	NIP. 197006091995121002 
 % ==========================================
 
 \end{center}

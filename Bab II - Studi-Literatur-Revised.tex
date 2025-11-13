@@ -256,17 +256,31 @@ Integrasi dengan API inferensi LLM menambahkan dimensi lain: \textbf{penanganan 
 
 
 % ==========================================
-\section{Kesenjangan Penelitian dan Kontribusi}
-\label{sec:research-gaps}
+\section{Penelitian Basis Utama}
+\label{sec:research-foundation}
 
-Tinjauan literatur komprehensif mengidentifikasi beberapa kesenjangan penelitian kritis. Pertama, tidak ada penelitian yang mengintegrasikan NLP bahasa Indonesia dengan analisis domain finansial untuk konteks media sosial. Sebagian besar penelitian analisis sentimen finansial fokus pada bahasa Inggris atau Tiongkok, sementara penelitian NLP Indonesia cenderung menggunakan domain umum.
+Berdasarkan tinjauan literatur yang komprehensif, penelitian ini dibangun di atas tiga fondasi metodologis utama yang dipilih karena relevansi langsung dengan karakteristik komunitas Telegram finansial Indonesia yang hierarkis dan memiliki volume pesan tinggi. Bagian ini mengidentifikasi penelitian-penelitian basis yang menjadi referensi utama beserta justifikasi pemilihannya.
 
-Kedua, meskipun terdapat penelitian ekstensif tentang komunitas Telegram dan peringkasan media sosial secara terpisah, sangat sedikit penelitian yang menangani sistem peringkasan otomatis khusus untuk aplikasi bot Telegram. Penelitian tentang bot Telegram cenderung fokus pada interaksi percakapan sederhana atau otomasi tugas administratif.
+\subsection{BERTopic untuk \textit{Topic Modeling} Teks Media Sosial}
 
-Ketiga, penelitian tentang \textit{pipeline} NLP \textit{real-time} yang mengintegrasikan multiple model dalam arsitektur \textit{event-driven} untuk platform \textit{messaging} masih terbatas. Sebagian besar penelitian mengevaluasi model-model ini secara terpisah atau dalam konteks dataset benchmark offline.
+Penelitian \textcite{grootendorst2022} tentang BERTopic dipilih sebagai fondasi untuk komponen identifikasi topik diskusi. BERTopic dirancang khusus untuk mengatasi tantangan \textit{topic modeling} pada teks pendek dan informal seperti pesan media sosial. Metodologi ini mengintegrasikan model bahasa berbasis \textit{transformer} untuk \textit{contextual embeddings}, algoritma HDBSCAN untuk \textit{clustering} adaptif, dan prosedur \textit{class-based TF-IDF} untuk ekstraksi representasi topik.
 
-Keempat, tidak ada penelitian yang menangani aliran informasi hierarkis dan sintesis lintas grup dalam komunitas berjenjang. Sebagian besar penelitian peringkasan media sosial mengasumsikan satu sumber data atau agregasi horizontal dari multiple sumber yang setara.
+Pemilihan BERTopic dijustifikasi oleh tiga alasan utama. Pertama, superioritas untuk teks pendek yang divalidasi secara empiris oleh \textcite{egger2022} yang membandingkan BERTopic dengan LDA, NMF, dan Top2Vec pada dataset 31.800 \textit{tweet}, mendemonstrasikan keunggulan BERTopic dalam hal koherensi topik dan interpretabilitas. Kedua, kemampuan menghasilkan topik yang interpretatif sangat penting untuk sistem rangkuman yang harus dipahami oleh investor ritel tanpa keahlian teknis NLP. Ketiga, \textit{clustering} berbasis kepadatan dengan HDBSCAN sesuai dengan karakteristik diskusi Telegram yang memiliki topik dengan densitas berbeda-beda.
 
-Kelima, pendekatan rangkuman periodik untuk diskusi finansial dengan \textit{weighted sentiment} berbasis peran pengguna merupakan area yang belum banyak dieksplorasi. Sementara penelitian sebelumnya mengeksplorasi pemanfaatan sinyal popularitas atau metrik keterlibatan, implementasi \textit{weighting} eksplisit berdasarkan struktur peran komunitas masih terbatas.
+\subsection{\textit{Weighted Influence System} dari Analisis Sentimen Media Sosial}
 
-Secara keseluruhan, integrasi teori \textit{information overload}, metodologi NLP terkini untuk bahasa Indonesia dan domain finansial, arsitektur pemrosesan \textit{event-driven}, dan pemahaman tentang dinamika komunitas Telegram membuka peluang untuk mengembangkan solusi yang mengatasi tantangan praktis dalam komunitas finansial Indonesia. Sistem otomatis berbasis \textit{AI} dapat secara efektif mereduksi \textit{information overload} melalui sintesis intelijen multi-sumber yang disesuaikan dengan konteks spesifik ekosistem informasi komunitas.
+Penelitian \textcite{si2014} tentang pemanfaatan sentimen media sosial untuk prediksi pergerakan saham menyediakan fondasi teoretis untuk sistem \textit{weighted influence}. Temuan kunci mereka bahwa "tidak semua opini memiliki bobot yang sama" dan bahwa pendapat dari individu yang lebih berpengaruh atau kredibel dalam jaringan sosial harus diberi bobot lebih tinggi menjadi prinsip desain fundamental sistem rangkuman.
+
+Penelitian \textcite{si2014} menggunakan metrik jaringan sosial seperti \textit{centrality} dan jumlah \textit{followers} untuk menentukan bobot pengaruh. Prinsip bahwa kontribusi dari aktor yang lebih sentral dalam jaringan harus memiliki dampak lebih besar dalam agregasi sentimen diadaptasi untuk konteks komunitas finansial hierarkis. Sistem rangkuman yang diusulkan mengeksploitasi struktur hierarkis eksplisit komunitas Telegram Michael Yeoh untuk memberikan bobot berbeda pada kontribusi dari Michael Yeoh (pemimpin komunitas), administrator, VIP members, dan regular members.
+
+\subsection{Peringkasan Percakapan \textit{Structure-Aware}}
+
+Penelitian \textcite{chen2021} tentang peringkasan percakapan abstraktif yang \textit{structure-aware} menyediakan kerangka metodologis untuk menangani kompleksitas diskusi multi-pihak dalam media sosial. Pendekatan mereka yang memodelkan relasi wacana dan \textit{action triples} ("siapa-melakukan-apa") menggunakan graf terstruktur relevan dengan tantangan meringkas diskusi finansial yang sering kali melibatkan pertukaran argumen, rekomendasi, dan analisis yang kompleks.
+
+Prinsip \textit{structure-awareness} dan konsep \textit{multi-granular decoding} yang dapat menghasilkan rangkuman pada tingkat abstraksi berbeda menginspirasi desain format rangkuman \textit{mixed} yang menggabungkan \textit{bullet points} untuk informasi terstruktur (saham, sinyal, metrik) dengan paragraf naratif untuk konteks dan analisis. Penelitian ini juga menghadapi tantangan tambahan yaitu sintesis informasi dari empat grup dengan karakteristik komunikasi berbeda, yang memerlukan adaptasi pendekatan \textit{structure-aware} untuk konteks multi-grup.
+
+\subsection{Justifikasi Pemilihan dan Integrasi}
+
+Ketiga penelitian ini dipilih karena komplementaritas metodologis mereka dalam menangani aspek-aspek kritis sistem rangkuman untuk komunitas finansial. BERTopic menangani identifikasi topik dari teks informal, \textit{weighted influence system} menangani prioritisasi berdasarkan kredibilitas sumber, dan pendekatan \textit{structure-aware} menangani generasi rangkuman yang koheren dan informatif.
+
+Integrasi ketiga fondasi ini, serta detail implementasi teknis, arsitektur sistem, dan adaptasi spesifik untuk konteks komunitas Telegram finansial Indonesia akan dijelaskan secara komprehensif dalam Bab \ref{chap:desain-konsep-solusi} tentang Desain Konsep Solusi.

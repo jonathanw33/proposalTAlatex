@@ -26,28 +26,35 @@ Komunitas investasi saham Indonesia Michael Yeoh di Telegram merupakan ekosistem
 
 Struktur hierarkis komunitas terdiri dari empat grup dengan karakteristik berbeda yang dapat dilihat pada Tabel \ref{tab:group-characteristics}.\footnote{Data jumlah anggota berdasarkan kondisi per 4 November 2025. Jumlah anggota bersifat dinamis dan terus bertambah seiring pertumbuhan komunitas.} Setiap grup memiliki fungsi spesifik dalam ekosistem informasi, dengan kompleksitas komunikasi yang meningkat seiring level hierarki.
 
-\begin{table}[H]
-\centering
+\begin{longtable}{@{\extracolsep{\fill}} p{3cm} p{2.5cm} p{2.5cm} p{3cm} p{2.5cm}}
 \caption{Karakteristik grup dalam komunitas Telegram Michael Yeoh (per 4 November 2025)}
-\label{tab:group-characteristics}
-\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{3cm}|p{2.5cm}|}
-\hline
+\label{tab:group-characteristics} \\
+\toprule
 \textbf{Aspek} & \textbf{Cuap Cuap} & \textbf{Swing Plan} & \textbf{Advanced} & \textbf{PIRANHA} \\
-\hline
+\midrule
+\endfirsthead
+
+\caption{Karakteristik grup dalam komunitas Telegram Michael Yeoh (lanjutan)} \\
+\toprule
+\textbf{Aspek} & \textbf{Cuap Cuap} & \textbf{Swing Plan} & \textbf{Advanced} & \textbf{PIRANHA} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{5}{r}{\textit{Bersambung ke halaman berikutnya}} \\
+\bottomrule
+\endfoot
+
+\bottomrule
+\endlastfoot
+
 Jumlah Anggota & 20.500 & 20.500 & 4.300 & 2.000 \\
-\hline
 Tipe Komunikasi & \textit{Broadcast} (\textit{read-only}) & Sinyal terstruktur & Interaktif dua arah & Interaktif dua arah \\
-\hline
 Volume Pesan & 100 pesan per hari (10 per jam) & 5 pesan per hari & 200 pesan per jam & Lebih dari 200 pesan per jam \\
-\hline
 Konten Utama & Edukasi umum dan berita pasar & Sinyal jual-beli terstruktur & Diskusi analisis teknikal & Debat strategi investasi \\
-\hline
 Rangkuman Manual & Tidak tersedia & Tidak tersedia & Tersedia (1 kali per hari, pukul 10:00) & Tidak tersedia \\
-\hline
 Tingkat Masalah & Rendah & Minimal & Tinggi & Sangat Tinggi \\
-\hline
-\end{tabular}
-\end{table}
+\end{longtable}
 
 Grup MY Cuap Cuap dan MY Swing Plan berfungsi sebagai kanal informasi dengan mode \textit{read-only} atau sinyal terstruktur. MY Cuap Cuap menyediakan edukasi pasar dan analisis makroekonomi dengan volume 100 pesan per hari, sementara MY Swing Plan mendistribusikan sinyal \textit{trading} terstruktur (contoh: "BGTG BUY 106-100 SL 98 porsi 5\%") dengan volume hanya 5 pesan per hari. Kedua grup ini memiliki tingkat \textit{information overload} rendah namun menjadi bagian penting dari ekosistem yang memerlukan sintesis dengan diskusi di grup premium.
 
@@ -99,11 +106,15 @@ Anggota grup Advanced, dengan sekitar 4.000 anggota premium, menghadapi \textit{
 
 Kebutuhan kelompok ini meliputi: (1) rangkuman tambahan sepanjang hari untuk melengkapi rangkuman manual eksisting, (2) informasi tentang perubahan sentimen atau topik baru yang muncul setelah jam 10:00, dan (3) sintesis lintas grup yang menghubungkan informasi dari Cuap Cuap dan Swing Plan dengan diskusi di Advanced. Kelompok ini juga akan mendapat manfaat dari standardisasi format rangkuman yang konsisten, mengingat variabilitas dalam rangkuman manual.
 
-\subsubsection{Anggota Cuap Cuap dan Swing Plan}
+\subsubsection{Anggota Cuap Cuap dan Swing Plan (Bukan Target Sistem)}
 
-Anggota grup Cuap Cuap (~18.000) dan Swing Plan (~5.000) menghadapi \textit{pain points} yang berbeda, yaitu keterbatasan akses ke diskusi mendalam yang terjadi di grup premium. Meskipun mereka tidak mengalami \textit{information overload} di grup mereka sendiri, mereka kehilangan konteks penting tentang bagaimana analisis umum atau sinyal trading diimplementasikan dan didiskusikan oleh komunitas premium.
+Anggota grup Cuap Cuap (~20.500) dan Swing Plan (~20.500) **tidak termasuk dalam target pengguna** sistem rangkuman otomatis yang diusulkan. Hal ini didasarkan pada dua pertimbangan utama yang terkait dengan desain arsitektur komunitas dan karakteristik masalah yang diidentifikasi.
 
-Kebutuhan kelompok ini meliputi: (1) akses (meskipun mungkin terbatas) ke insight dari diskusi premium tanpa harus upgrade keanggotaan, (2) pemahaman tentang sentimen komunitas secara keseluruhan terhadap saham atau kondisi pasar tertentu, dan (3) validasi bahwa sinyal yang mereka terima memiliki dukungan diskusi substantif di tingkat yang lebih tinggi. Sistem rangkuman dapat menyediakan nilai ini sambil tetap menghormati struktur premium komunitas.
+Pertama, kedua grup ini **tidak mengalami masalah \textit{information overload}** yang menjadi fokus penelitian ini. Cuap Cuap dengan volume 100 pesan per hari (10 per jam) dan Swing Plan dengan hanya 5 pesan per hari memiliki volume komunikasi yang jauh di bawah ambang batas yang menyebabkan beban kognitif berlebihan. Anggota dapat dengan mudah membaca semua pesan tanpa menghabiskan waktu yang tidak proporsional. Dengan asumsi 15 detik per pesan, membaca semua pesan Cuap Cuap memerlukan waktu hanya 25 menit per hari, sementara Swing Plan memerlukan kurang dari 2 menit—volume yang sangat dapat dikelola tanpa intervensi sistem otomatis.
+
+Kedua, anggota Cuap Cuap dan Swing Plan **tidak memiliki akses** ke grup Advanced dan PIRANHA sesuai dengan struktur premium komunitas. Sistem rangkuman yang diusulkan dirancang untuk meringkas diskusi di grup premium (Advanced dan PIRANHA), bukan untuk mendistribusikan informasi premium kepada anggota non-premium. Memberikan akses rangkuman dari grup premium kepada anggota Cuap Cuap dan Swing Plan akan melanggar model bisnis komunitas berjenjang dan mengurangi nilai proposisi keanggotaan premium. Struktur hierarkis yang ada berfungsi sebagai mekanisme monetisasi dan diferensiasi nilai, yang harus dihormati oleh solusi teknis yang dikembangkan.
+
+Meskipun anggota Cuap Cuap dan Swing Plan mungkin memiliki kebutuhan untuk memahami sentimen komunitas secara keseluruhan atau validasi sinyal trading, kebutuhan ini berada di luar \textit{scope} penelitian saat ini yang fokus pada reduksi \textit{information overload} di grup premium. Sistem rangkuman dirancang untuk melayani anggota yang **sudah memiliki akses** ke Advanced dan PIRANHA namun mengalami kesulitan memproses volume informasi yang tinggi, bukan untuk memberikan akses baru ke informasi premium.
 
 \subsubsection{Michael Yeoh dan Tim Administrator}
 

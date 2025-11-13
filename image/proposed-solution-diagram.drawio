@@ -1,0 +1,187 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="24.7.17">
+  <diagram name="Proposed Solution" id="proposed-solution-michael-yeoh">
+    <mxGraphModel dx="1434" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="Sistem Rangkuman Otomatis Berbasis AI untuk Komunitas Telegram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="40" width="600" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ========== INPUT LAYER: 4 TELEGRAM GROUPS ========== -->
+        <mxCell id="input-label" value="INPUT: Empat Grup Telegram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="250" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Cuap Cuap -->
+        <mxCell id="input-cuap" value="MY Cuap Cuap&lt;br&gt;(20.5K anggota)&lt;br&gt;100 pesan/hari" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="150" width="120" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Swing Plan -->
+        <mxCell id="input-swing" value="MY Swing Plan&lt;br&gt;(20.5K anggota)&lt;br&gt;5 pesan/hari" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="220" y="150" width="120" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Advanced -->
+        <mxCell id="input-advanced" value="MY Advanced&lt;br&gt;(4.3K anggota)&lt;br&gt;200 pesan/jam" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="360" y="150" width="120" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- PIRANHA -->
+        <mxCell id="input-piranha" value="MY PIRANHA&lt;br&gt;(2K anggota)&lt;br&gt;&gt;200 pesan/jam" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="500" y="150" width="120" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ========== TELEGRAM BOT API ========== -->
+        <mxCell id="bot-api" value="Telegram Bot API&lt;br&gt;(Real-time Message Collection)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="180" y="260" width="280" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Arrows: Groups to Bot -->
+        <mxCell id="arrow-cuap-bot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="input-cuap" target="bot-api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-swing-bot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="input-swing" target="bot-api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-advanced-bot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d79b00;" edge="1" parent="1" source="input-advanced" target="bot-api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-piranha-bot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;" edge="1" parent="1" source="input-piranha" target="bot-api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== NLP PROCESSING PIPELINE ========== -->
+        <mxCell id="pipeline-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="130" width="650" height="440" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="pipeline-title" value="NLP Processing Pipeline" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="900" y="140" width="250" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Weighted Influence System -->
+        <mxCell id="weighted-influence" value="&lt;b&gt;1. Weighted Influence System&lt;/b&gt;&lt;br&gt;&lt;br&gt;Michael Yeoh: 4×&lt;br&gt;Administrator: 3×&lt;br&gt;VIP Members: 2×&lt;br&gt;Regular: 1×" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="730" y="190" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- NER Component -->
+        <mxCell id="ner-component" value="&lt;b&gt;2. Named Entity Recognition&lt;/b&gt;&lt;br&gt;&lt;br&gt;Model: bert-base-indonesian-NER&lt;br&gt;Target: Ticker saham BEI&lt;br&gt;Akurasi: 80%+" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="930" y="190" width="200" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Emotion Analysis -->
+        <mxCell id="emotion-component" value="&lt;b&gt;3. Emotion Classification&lt;/b&gt;&lt;br&gt;&lt;br&gt;Model: indonesian-roberta-base-emotion-classifier&lt;br&gt;Output: Fear, Joy, Anger, etc." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="190" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Topic Modeling -->
+        <mxCell id="topic-component" value="&lt;b&gt;4. Topic Modeling&lt;/b&gt;&lt;br&gt;&lt;br&gt;BERTopic&lt;br&gt;- Sentence Transformer&lt;br&gt;- HDBSCAN Clustering&lt;br&gt;- c-TF-IDF" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="730" y="310" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Aggregation -->
+        <mxCell id="aggregation" value="&lt;b&gt;5. Data Aggregation&lt;/b&gt;&lt;br&gt;&lt;br&gt;- Weighted ticker frequency&lt;br&gt;- Weighted sentiment avg&lt;br&gt;- Topic relevance scoring&lt;br&gt;- Message prioritization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="930" y="310" width="200" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- LLM Generation -->
+        <mxCell id="llm-component" value="&lt;b&gt;6. Summary Generation&lt;/b&gt;&lt;br&gt;&lt;br&gt;LLM: Llama 3.1 70B&lt;br&gt;API: Groq&lt;br&gt;Format: Mixed (bullets + narrative)&lt;br&gt;Cross-group synthesis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="310" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Privacy Filter -->
+        <mxCell id="privacy-filter" value="&lt;b&gt;Privacy Filter&lt;/b&gt;&lt;br&gt;Exclude unsent messages" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=9;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="440" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Database -->
+        <mxCell id="database" value="&lt;b&gt;Database&lt;/b&gt;&lt;br&gt;Historical summaries&lt;br&gt;Metadata storage" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="440" width="120" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Arrow: Bot to Pipeline -->
+        <mxCell id="arrow-bot-pipeline" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#9673a6;" edge="1" parent="1" source="bot-api" target="pipeline-container">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========== OUTPUT CHANNELS ========== -->
+        <mxCell id="output-label" value="OUTPUT: Rangkuman Otomatis" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="875" y="620" width="250" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Output Advanced -->
+        <mxCell id="output-advanced" value="&lt;b&gt;Advanced Summary Channel&lt;/b&gt;&lt;br&gt;6× per hari&lt;br&gt;(11:00, 12:00, 14:00, 15:00, 16:00, 17:00)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="780" y="670" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Output PIRANHA -->
+        <mxCell id="output-piranha" value="&lt;b&gt;PIRANHA Summary Channel&lt;/b&gt;&lt;br&gt;6× per hari&lt;br&gt;(11:00, 12:00, 14:00, 15:00, 16:00, 17:00)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1020" y="670" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Arrow: Pipeline to Outputs -->
+        <mxCell id="arrow-pipeline-advanced" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#d79b00;" edge="1" parent="1" source="pipeline-container" target="output-advanced">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-pipeline-piranha" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#b85450;" edge="1" parent="1" source="pipeline-container" target="output-piranha">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== KEY FEATURES BOX ========== -->
+        <mxCell id="features-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="100" y="380" width="520" height="370" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="features-title" value="&lt;b&gt;Key Features&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="395" width="150" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="feature-1" value="✓ Weighted Influence: Prioritas berdasarkan kredibilitas sumber" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="430" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feature-2" value="✓ Domain-Specific NLP: Optimasi untuk bahasa Indonesia &amp; finansial" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="455" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feature-3" value="✓ Cross-Group Synthesis: Integrasi 4 grup dalam 1 rangkuman koheren" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="480" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feature-4" value="✓ Privacy Protection: Eksklusif pesan yang di-unsend" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="505" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feature-5" value="✓ Automated Scheduling: 6× per hari tanpa intervensi manual" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="530" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feature-6" value="✓ Cost Effective: ~$40/bulan vs Rp15 juta/bulan (manual)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="555" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feature-7" value="✓ Scalable: Proses 200+ pesan/jam tanpa degradasi performa" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="580" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feature-8" value="✓ Consistent Quality: Format dan kualitas stabil" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="605" width="480" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="benefits-title" value="&lt;b&gt;Target Benefits&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="640" width="150" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="benefit-1" value="→ Reduksi waktu baca: dari 50 min/jam menjadi &lt;3 menit per rangkuman" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="670" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit-2" value="→ Coverage gap tertutup: Advanced (6 jam) &amp; PIRANHA (full day)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="695" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit-3" value="→ Pengurangan cognitive load pada anggota premium" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="720" width="480" height="20" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
