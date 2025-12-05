@@ -147,6 +147,12 @@ Bottleneck arsitektural yang paling signifikan dalam sistem rangkuman otomatis b
 
 Penelitian terkini menunjukkan bahwa kecepatan inferensi LLM sangat dipengaruhi oleh tiga faktor utama: (1) ukuran model (jumlah parameter), (2) panjang konteks input, dan (3) infrastruktur komputasi yang digunakan (CPU, GPU, atau akselerator khusus seperti TPU). Model yang lebih besar seperti Llama 3.1 70B, meskipun memberikan kualitas output superior, memerlukan sumber daya komputasi yang substansial. Solusi arsitektural termasuk penggunaan akselerator khusus seperti \textit{Language Processing Unit} (LPU) yang dirancang untuk inferensi LLM dengan kecepatan ekstrem, serta strategi optimasi seperti \textit{quantization} dan \textit{batching}.
 
+\subsection{Standar Latensi dan Keterbacaan untuk Sistem Rangkuman}
+
+Penetapan target latensi sistem memerlukan pemahaman tentang karakteristik performa infrastruktur LLM modern. Penelitian empiris oleh \textcite{groq2024} mendemonstrasikan bahwa Groq LPU mencapai throughput 284 token per detik untuk Llama 3.1 70B dalam mode standar, dengan optimasi \textit{speculative decoding} meningkatkan performa hingga 1.660 token per detik, diverifikasi secara independen oleh Artificial Analysis. Untuk tugas peringkasan tipikal dengan output 2.000 token, waktu inferensi berkisar antara 7 hingga 20 detik tergantung pada konfigurasi infrastruktur dan beban sistem. Infrastruktur \textit{enterprise-grade} seperti NVIDIA HGX H200 dengan 8× Tensor Core GPUs mencapai 268 token per detik per pengguna dengan Medusa \textit{speculative decoding} \autocite{nvidia2024}, menghasilkan waktu total sekitar 15 detik untuk rangkuman 2.000 token termasuk \textit{overhead} pemrosesan. Studi independen oleh \textcite{dilmegani2024} pada lima LLM terkemuka untuk tugas peringkasan 500-token menunjukkan waktu penyelesaian berkisar 11-38 detik, mengonfirmasi bahwa target latensi 5 menit (300 detik) menyediakan margin keamanan 15-40 kali lipat untuk mengakomodasi variabilitas jaringan, antrian, dan overhead pemrosesan dalam skenario produksi.
+
+Dari perspektif konsumsi informasi, kecepatan membaca manusia rata-rata adalah 238 kata per menit untuk teks non-fiksi berdasarkan meta-analisis 190 studi yang melibatkan 18.573 partisipan dewasa \autocite{brysbaert2019}. Rentang tipikal untuk pembaca dewasa adalah 175-300 kata per menit. Durasi membaca 3 menit memungkinkan konsumsi 525-750 kata, yang mengakomodasi spektrum kemampuan pembaca sambil tetap berada dalam batasan kapasitas memori kerja manusia. Teori beban kognitif (\textit{Cognitive Load Theory}) menetapkan bahwa memori kerja manusia dapat memproses 7 ± 2 item secara simultan dengan durasi sekitar 20 detik tanpa pengulangan \autocite{cowan2001}. Rangkuman dengan panjang 600-750 kata yang dapat dibaca dalam 3 menit memastikan bahwa konten dapat diproses tanpa saturasi memori kerja, memungkinkan bandwidth kognitif yang cukup untuk pemahaman, integrasi dengan pengetahuan sebelumnya, dan retensi informasi.
+
 
 % ==========================================
 \section{Analisis Teks Finansial: Sentimen, Emosi, dan Entitas}
@@ -200,6 +206,12 @@ Konteks diskusi informal di platform seperti Telegram lebih cenderung mengekspre
 
 \textcite{shah2023} menyediakan \textit{FiNER-ORD}, dataset NER finansial \textit{open research} pertama dengan kualitas tinggi. Penelitian mereka menekankan bahwa entitas finansial sering kali memiliki representasi multipel (misalnya, "Apple Inc.", "Apple", "AAPL") yang harus dikenali sebagai entitas yang sama.
 
+\subsection{Standar Akurasi NER untuk Domain Finansial Indonesia}
+
+Penetapan target akurasi untuk NER domain finansial memerlukan pemahaman tentang baseline performa untuk bahasa Indonesia dan standar industri untuk aplikasi finansial. Penelitian oleh \textcite{dave2024} pada ekstraksi entitas finansial personal Indonesia menggunakan IndoBERT-BiGRU-CRF mencapai F1-score 73\% untuk 15 kategori entitas finansial (tipe pengeluaran, jumlah pendapatan, tipe aset). Penelitian ini menetapkan baseline performa untuk NER finansial Indonesia dengan dataset terbatas (1.138 kalimat), mendemonstrasikan bahwa akurasi 70-75\% dapat dicapai dengan model monolingual Indonesia yang dioptimalkan untuk domain finansial.
+
+Untuk NER finansial dalam bahasa Inggris, analisis industri oleh \textcite{phoenix2024} menunjukkan bahwa sistem domain-spesifik mencapai akurasi 92-95\%, jauh melampaui sistem \textit{general-purpose} yang hanya mencapai 75-80\%. Perbedaan signifikan ini menunjukkan bahwa model yang dilatih pada dataset finansial dengan kosakata domain-spesifik memberikan peningkatan akurasi 25\% dibandingkan sistem generik. Sekitar 85\% kesalahan klasifikasi berasal dari kurangnya kesadaran kontekstual, mengindikasikan pentingnya mekanisme \textit{context-aware} dalam NER finansial. Untuk NER Indonesia umum (nama orang, lokasi, organisasi), penelitian oleh \textcite{khairunnisa2020} menunjukkan bahwa model BiLSTM-CRF baseline mencapai F1-score 90,85\%, sementara IndoBERT-BiLSTM-CRF mencapai 94,90\%. Penurunan signifikan ke 73\% untuk entitas finansial mendemonstrasikan tantangan tambahan dalam ekstraksi domain finansial, menjadikan target 80\% sebagai threshold realistis antara baseline Indonesia (73\%) dan standar sistem matang (92-95\%).
+
 
 % ==========================================
 \section{Infrastruktur Sistem: Platform, Arsitektur, dan \textit{Pipeline}}
@@ -239,6 +251,8 @@ Pendekatan \textit{micro-batching} sering kali lebih praktis untuk banyak aplika
 \end{figure}
 
 Keunggulan BERTopic untuk teks media sosial divalidasi secara empiris oleh \textcite{egger2022}, yang membandingkan BERTopic dengan LDA, NMF, dan Top2Vec pada dataset 31.800 \textit{tweet}. Evaluasi mereka mendemonstrasikan superioritas BERTopic untuk teks pendek dan tidak terstruktur, khususnya dalam hal koherensi topik dan interpretabilitas.
+
+Interpretasi skor koherensi topik memerlukan pemahaman tentang skala dan ambang batas kualitas yang dapat diterima. Penelitian oleh \textcite{roeder2015} menetapkan bahwa metrik C\_v (koherensi berbasis konteks) menghasilkan korelasi terkuat dengan penilaian manusia tentang interpretabilitas topik, dengan rentang nilai 0 hingga 1. Berdasarkan meta-analisis praktisi NLP dan studi empiris yang dikompilasi oleh \textcite{hoyle2021}, konsensus muncul bahwa skor C\_v antara 0,4-0,5 merepresentasikan kualitas topik yang dapat diterima (\textit{borderline acceptable}), skor 0,5-0,6 menunjukkan kualitas baik, dan skor di atas 0,6 mengindikasikan kualitas sangat baik dengan interpretabilitas tinggi. Untuk aplikasi produksi yang melayani pengguna non-teknis, target minimum 0,5 memastikan bahwa topik yang dihasilkan dapat dipahami tanpa keahlian domain mendalam, kriteria yang esensial untuk sistem rangkuman komunitas finansial ritel.
 
 \textcite{angelov2024} mengembangkan metodologi \textit{topic modeling} lebih lanjut dengan memperkenalkan \textit{Contextual-Top2Vec}. Penelitian mereka mengusulkan penggunaan \textit{BERTScore} untuk mengevaluasi koherensi dan informativeness topik, mengatasi keterbatasan metrik evaluasi tradisional.
 
@@ -284,3 +298,73 @@ Prinsip \textit{structure-awareness} dan konsep \textit{multi-granular decoding}
 Ketiga penelitian ini dipilih karena komplementaritas metodologis mereka dalam menangani aspek-aspek kritis sistem rangkuman untuk komunitas finansial. BERTopic menangani identifikasi topik dari teks informal, \textit{weighted influence system} menangani prioritisasi berdasarkan kredibilitas sumber, dan pendekatan \textit{structure-aware} menangani generasi rangkuman yang koheren dan informatif.
 
 Integrasi ketiga fondasi ini, serta detail implementasi teknis, arsitektur sistem, dan adaptasi spesifik untuk konteks komunitas Telegram finansial Indonesia akan dijelaskan secara komprehensif dalam Bab \ref{chap:desain-konsep-solusi} tentang Desain Konsep Solusi.
+
+
+% ==========================================
+\section{Konteks Penelitian: Komunitas Telegram Michael Yeoh}
+\label{sec:konteks-penelitian}
+
+Penelitian ini dilakukan dalam konteks komunitas investasi saham Indonesia Michael Yeoh di platform Telegram, yang merupakan salah satu komunitas finansial ritel terbesar di Indonesia dengan lebih dari 47.000 anggota. Komunitas ini menyediakan wadah untuk edukasi pasar, analisis saham, dan diskusi strategi investasi yang terfokus pada pasar modal Indonesia.
+
+Komunitas Michael Yeoh mengadopsi struktur hierarkis empat tingkat yang dirancang untuk menyediakan nilai berbeda pada setiap level keanggotaan. Struktur ini terdiri dari: (1) \textbf{MY Cuap Cuap} dengan sekitar 20.500 anggota yang berfungsi sebagai kanal edukasi umum dengan mode \textit{broadcast}, (2) \textbf{MY Swing Plan} dengan sekitar 20.500 anggota yang mendistribusikan sinyal \textit{trading} terstruktur, (3) \textbf{MY Advanced Group} dengan sekitar 4.300 anggota premium yang memiliki akses ke diskusi interaktif dua arah dengan volume sekitar 200 pesan per jam selama jam perdagangan, dan (4) \textbf{MY PIRANHA} dengan sekitar 2.000 anggota ultra-premium yang mengalami volume diskusi tertinggi (lebih dari 200 pesan per jam) dengan karakteristik percakapan yang kasual namun mendalam secara konten.
+
+Struktur hierarkis ini menciptakan ekosistem informasi yang kompleks dengan aliran informasi vertikal dari puncak hierarki (Michael Yeoh dan administrator) ke berbagai level anggota. Namun, struktur ini juga menghasilkan dua tantangan signifikan yang menjadi fokus penelitian ini. Pertama, \textbf{\textit{information overload}} yang parah di grup premium (Advanced dan PIRANHA) dengan volume pesan yang mencapai 200+ pesan per jam, jauh melampaui kapasitas kognitif anggota untuk memproses informasi secara efektif. Kedua, \textbf{fragmentasi informasi} lintas empat grup yang memerlukan anggota untuk melakukan sintesis manual antara analisis makro (Cuap Cuap), sinyal konkret (Swing Plan), diskusi implementasi (Advanced), dan debat strategi (PIRANHA).
+
+Karakteristik unik komunitas ini—volume pesan ekstrim, struktur hierarkis eksplisit, konten domain finansial Indonesia, dan penggunaan Bahasa Indonesia informal—menjadikannya kasus yang ideal untuk pengembangan dan evaluasi sistem rangkuman otomatis berbasis \textit{AI} yang dioptimalkan untuk konteks lokal. Sistem yang dikembangkan dalam penelitian ini dirancang untuk mereduksi beban informasi melalui rangkuman periodik yang mensintesis intelijen lintas-grup, dengan memanfaatkan literatur tentang \textit{information overload}, \textit{cognitive load theory}, NLP finansial, dan infrastruktur sistem \textit{real-time} yang telah diulas dalam bab ini.
+
+\subsection{Model Konseptual Sistem Komunikasi Komunitas}
+
+Gambar \ref{fig:current-system} mengilustrasikan arsitektur sistem komunikasi komunitas saat ini beserta aliran informasi antar komponen. Model konseptual ini menunjukkan empat grup dengan karakteristik berbeda yang membentuk ekosistem informasi hierarkis.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{image/current-state-diagram.png}
+  \caption{Model konseptual sistem komunikasi komunitas Telegram Michael Yeoh}
+  \label{fig:current-system}
+\end{figure}
+
+Struktur hierarkis komunitas dapat dilihat secara komprehensif pada Tabel \ref{tab:group-characteristics}.\footnote{Data jumlah anggota berdasarkan kondisi per 4 November 2025. Jumlah anggota bersifat dinamis dan terus bertambah seiring pertumbuhan komunitas.} Setiap grup memiliki fungsi spesifik dalam ekosistem informasi, dengan kompleksitas komunikasi yang meningkat seiring level hierarki.
+
+\begin{longtable}{@{\extracolsep{\fill}} p{3cm} p{2.5cm} p{2.5cm} p{3cm} p{2.5cm}}
+\caption{Karakteristik grup dalam komunitas Telegram Michael Yeoh (per 4 November 2025)}
+\label{tab:group-characteristics} \\
+\toprule
+\textbf{Aspek} & \textbf{Cuap Cuap} & \textbf{Swing Plan} & \textbf{Advanced} & \textbf{PIRANHA} \\
+\midrule
+\endfirsthead
+
+\caption{Karakteristik grup dalam komunitas Telegram Michael Yeoh (lanjutan)} \\
+\toprule
+\textbf{Aspek} & \textbf{Cuap Cuap} & \textbf{Swing Plan} & \textbf{Advanced} & \textbf{PIRANHA} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{5}{r}{\textit{Bersambung ke halaman berikutnya}} \\
+\bottomrule
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+Jumlah Anggota & 20.500 & 20.500 & 4.300 & 2.000 \\
+Tipe Komunikasi & \textit{Broadcast} (\textit{read-only}) & Sinyal terstruktur & Interaktif dua arah & Interaktif dua arah \\
+Volume Pesan & 100 pesan per hari (10 per jam) & 5 pesan per hari & 200 pesan per jam & Lebih dari 200 pesan per jam \\
+Konten Utama & Edukasi umum dan berita pasar & Sinyal jual-beli terstruktur & Diskusi analisis teknikal & Debat strategi investasi \\
+Rangkuman Manual & Tidak tersedia & Tidak tersedia & Tersedia (1 kali per hari, pukul 10:00) & Tidak tersedia \\
+Tingkat Masalah & Rendah & Minimal & Tinggi & Sangat Tinggi \\
+\end{longtable}
+
+Grup MY Cuap Cuap dan MY Swing Plan berfungsi sebagai kanal informasi dengan mode \textit{read-only} atau sinyal terstruktur. MY Cuap Cuap menyediakan edukasi pasar dan analisis makroekonomi dengan volume 100 pesan per hari, sementara MY Swing Plan mendistribusikan sinyal \textit{trading} terstruktur (contoh: "BGTG BUY 106-100 SL 98 porsi 5\%") dengan volume hanya 5 pesan per hari. Kedua grup ini memiliki tingkat \textit{information overload} rendah namun menjadi bagian penting dari ekosistem yang memerlukan sintesis dengan diskusi di grup premium.
+
+Grup MY Advanced Group merupakan grup premium pertama dengan komunikasi interaktif dua arah untuk 4.300 anggota. Volume pesan mencapai 200 pesan per jam selama jam perdagangan (09:00-16:00), menghasilkan sekitar 1.400 pesan per hari. Grup ini memiliki satu rangkuman manual oleh asisten Richy Matthew Ashari setiap pukul 10:00, namun hanya mencakup jam pertama perdagangan (09:00-10:00), meninggalkan gap enam jam berikutnya.
+
+Grup MY PIRANHA, sebagai grup ultra-premium dengan 2.000 anggota elite, mengalami volume pesan tertinggi (lebih dari 200 pesan per jam) namun tanpa rangkuman manual sama sekali. Diskusi cenderung kasual dalam gaya namun sangat mendalam secara konten, menciptakan tantangan ekstraksi sinyal karena informasi penting sering tersembunyi dalam percakapan informal tanpa penanda eksplisit.
+
+Aliran informasi bersifat hierarkis dengan fragmentasi sistemik. Michael Yeoh dan administrator dapat memposting di semua grup, menciptakan aliran vertikal dari puncak hierarki. Namun, anggota di level berbeda tidak dapat mengakses grup yang lebih tinggi, menciptakan fragmentasi informasi antara analisis makro (Cuap Cuap), sinyal konkret (Swing Plan), diskusi implementasi (Advanced), dan debat strategi (PIRANHA). Anggota yang mengikuti multiple grup harus melakukan sintesis manual lintas grup, yang memerlukan waktu dan kemampuan analisis signifikan.
+
+\subsection{Implikasi untuk Desain Sistem Rangkuman Otomatis}
+
+Karakteristik unik komunitas ini—volume pesan ekstrim, struktur hierarkis eksplisit, konten domain finansial Indonesia, dan penggunaan Bahasa Indonesia informal—menjadikannya kasus yang ideal untuk pengembangan dan evaluasi sistem rangkuman otomatis berbasis \textit{AI} yang dioptimalkan untuk konteks lokal. Sistem yang dikembangkan dalam penelitian ini dirancang untuk mereduksi beban informasi melalui rangkuman periodik yang mensintesis intelijen lintas-grup, dengan memanfaatkan literatur tentang \textit{information overload}, \textit{cognitive load theory}, NLP finansial, dan infrastruktur sistem \textit{real-time} yang telah diulas dalam bab ini.
+
+Analisis mendalam terhadap identifikasi masalah spesifik, kebutuhan sistem, dan alternatif solusi akan diuraikan secara komprehensif dalam Bab \ref{chap:analisis-masalah}.

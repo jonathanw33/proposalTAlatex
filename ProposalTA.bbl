@@ -444,6 +444,38 @@
       \verb https://arxiv.org/abs/2005.14165
       \endverb
     \endentry
+    \entry{brysbaert2019}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e3152eed8807c888523aca56d00e896a}{%
+           family={Brysbaert},
+           familyi={B\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e3152eed8807c888523aca56d00e896a}
+      \strng{fullhash}{e3152eed8807c888523aca56d00e896a}
+      \strng{bibnamehash}{e3152eed8807c888523aca56d00e896a}
+      \strng{authorbibnamehash}{e3152eed8807c888523aca56d00e896a}
+      \strng{authornamehash}{e3152eed8807c888523aca56d00e896a}
+      \strng{authorfullhash}{e3152eed8807c888523aca56d00e896a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{Journal of Memory and Language}
+      \field{note}{Meta-analysis of 190 studies with 18,573 participants showing 238 WPM average for non-fiction}
+      \field{title}{How many words do we read per minute? A review and meta-analysis of reading rate}
+      \field{volume}{109}
+      \field{year}{2019}
+      \field{pages}{104047}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jml.2019.104047
+      \endverb
+    \endentry
     \entry{bei2024}{report}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=91938db14880cbfc82ed43d592af44f8}{%
@@ -627,6 +659,77 @@
       \verb 10.1016/j.jfineco.2022.12.003
       \endverb
     \endentry
+    \entry{cowan2001}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=48e09c307747472c424dcc6ffd53405f}{%
+           family={Cowan},
+           familyi={C\bibinitperiod},
+           given={Nelson},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{48e09c307747472c424dcc6ffd53405f}
+      \strng{fullhash}{48e09c307747472c424dcc6ffd53405f}
+      \strng{bibnamehash}{48e09c307747472c424dcc6ffd53405f}
+      \strng{authorbibnamehash}{48e09c307747472c424dcc6ffd53405f}
+      \strng{authornamehash}{48e09c307747472c424dcc6ffd53405f}
+      \strng{authorfullhash}{48e09c307747472c424dcc6ffd53405f}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{Behavioral and Brain Sciences}
+      \field{note}{Established working memory capacity limits: 7±2 items for ~20 seconds without rehearsal}
+      \field{number}{1}
+      \field{title}{The magical number 4 in short-term memory: A reconsideration of mental storage capacity}
+      \field{volume}{24}
+      \field{year}{2001}
+      \field{pages}{87\bibrangedash 114}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1017/S0140525X01003922
+      \endverb
+    \endentry
+    \entry{dave2024}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f1f4a6b17ebf2d6a5f767aec5e3a0fc1}{%
+           family={Dave},
+           familyi={D\bibinitperiod},
+           given={Emmanuel},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11a3a5c9d0ac07535e36ca8f8ab6e990}{%
+           family={Chowanda},
+           familyi={C\bibinitperiod},
+           given={Andry},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3ff57a6fc35e55ce8c336edeba51e4c8}
+      \strng{fullhash}{3ff57a6fc35e55ce8c336edeba51e4c8}
+      \strng{bibnamehash}{3ff57a6fc35e55ce8c336edeba51e4c8}
+      \strng{authorbibnamehash}{3ff57a6fc35e55ce8c336edeba51e4c8}
+      \strng{authornamehash}{3ff57a6fc35e55ce8c336edeba51e4c8}
+      \strng{authorfullhash}{3ff57a6fc35e55ce8c336edeba51e4c8}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{Journal of Big Data}
+      \field{note}{Achieved 73\% F1-score for Indonesian financial NER using IndoBERT-BiGRU-CRF}
+      \field{title}{IPerFEX-2023: Indonesian personal financial entity extraction using indoBERT-BiGRU-CRF model}
+      \field{volume}{11}
+      \field{year}{2024}
+      \field{pages}{139}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/s40537-024-00987-6
+      \endverb
+    \endentry
     \entry{devlin2019}{inproceedings}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=13202969e372bc82318f9629cbdd199b}{%
@@ -748,6 +851,46 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2301.13844
+      \endverb
+    \endentry
+    \entry{dilmegani2024}{online}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c6996972108b0b0fd4a6e33b99346476}{%
+           family={Dilmegani},
+           familyi={D\bibinitperiod},
+           given={Cem},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3995f9740942717b5f0b5cd0b92ece72}{%
+           family={Şipi},
+           familyi={Ş\bibinitperiod},
+           given={Nane},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {AIMultiple Research}%
+      }
+      \strng{namehash}{774ee28ae7c774765e7769ff19aa190e}
+      \strng{fullhash}{774ee28ae7c774765e7769ff19aa190e}
+      \strng{bibnamehash}{774ee28ae7c774765e7769ff19aa190e}
+      \strng{authorbibnamehash}{774ee28ae7c774765e7769ff19aa190e}
+      \strng{authornamehash}{774ee28ae7c774765e7769ff19aa190e}
+      \strng{authorfullhash}{774ee28ae7c774765e7769ff19aa190e}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Independent benchmarking showing 11-38 second completion times for summarization tasks}
+      \field{title}{LLM Latency Benchmark by Use Cases}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://research.aimultiple.com/llm-latency-benchmark/
+      \endverb
+      \verb{url}
+      \verb https://research.aimultiple.com/llm-latency-benchmark/
       \endverb
     \endentry
     \entry{edmunds2000}{article}{}
@@ -1002,6 +1145,35 @@
       \verb https://arxiv.org/abs/2203.05794
       \endverb
     \endentry
+    \entry{groq2024}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e5435a111a13df2de27a12f988b73383}{%
+           family={{Groq Inc.}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{e5435a111a13df2de27a12f988b73383}
+      \strng{fullhash}{e5435a111a13df2de27a12f988b73383}
+      \strng{bibnamehash}{e5435a111a13df2de27a12f988b73383}
+      \strng{authorbibnamehash}{e5435a111a13df2de27a12f988b73383}
+      \strng{authornamehash}{e5435a111a13df2de27a12f988b73383}
+      \strng{authorfullhash}{e5435a111a13df2de27a12f988b73383}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{Official performance data: 284 tokens/second base, 1,660 tokens/second with speculative decoding}
+      \field{title}{Groq Deploys Llama 3.1 Instruct Models on LPU Inference Engine}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://groq.com/blog/
+      \endverb
+      \verb{url}
+      \verb https://groq.com/blog/
+      \endverb
+    \endentry
     \entry{hamidi2021}{inproceedings}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=d706f4059f8cf018a1da3434a0be3705}{%
@@ -1120,6 +1292,71 @@
       \range{pages}{12}
       \verb{doi}
       \verb 10.1093/iwc/iwae035
+      \endverb
+    \endentry
+    \entry{hoyle2021}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=b28ef408c12b6887023d8f4d03cb551c}{%
+           family={Hoyle},
+           familyi={H\bibinitperiod},
+           given={Alexander\bibnamedelima Miserlis},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=03b7496fb2c2cbd8ea823fda6c8b5af7}{%
+           family={Goel},
+           familyi={G\bibinitperiod},
+           given={Pranav},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=75cd9a8ad56d8c0621cab52c9e08e10b}{%
+           family={Peskov},
+           familyi={P\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1077b31b7bd2508b471e9843501817a6}{%
+           family={Hian-Cheong},
+           familyi={H\bibinithyphendelim C\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4f042894bd8d9a67882ad8fe0c379ce}{%
+           family={Boyd-Graber},
+           familyi={B\bibinithyphendelim G\bibinitperiod},
+           given={Jordan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ba57143778a42bc76658900fe675e760}{%
+           family={Resnik},
+           familyi={R\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d261f24b431e457fa205e49b37fd7bde}
+      \strng{fullhash}{c45e042521ac47e34e51aa5876dcca9b}
+      \strng{bibnamehash}{c45e042521ac47e34e51aa5876dcca9b}
+      \strng{authorbibnamehash}{c45e042521ac47e34e51aa5876dcca9b}
+      \strng{authornamehash}{d261f24b431e457fa205e49b37fd7bde}
+      \strng{authorfullhash}{c45e042521ac47e34e51aa5876dcca9b}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{Advances in Neural Information Processing Systems}
+      \field{note}{Meta-analysis establishing C\_v score 0.5-0.6 as good quality threshold}
+      \field{title}{Is Automated Topic Model Evaluation Broken? The Incoherence of Coherence}
+      \field{volume}{34}
+      \field{year}{2021}
+      \field{pages}{2018\bibrangedash 2033}
+      \range{pages}{16}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2107.02173
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2107.02173
       \endverb
     \endentry
     \entry{idc2025}{report}{}
@@ -1627,6 +1864,35 @@
       \verb https://arxiv.org/abs/2107.06802
       \endverb
     \endentry
+    \entry{nvidia2024}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9ad14fae09b617d96cb4af76c555b394}{%
+           family={{NVIDIA Corporation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ad14fae09b617d96cb4af76c555b394}
+      \strng{fullhash}{9ad14fae09b617d96cb4af76c555b394}
+      \strng{bibnamehash}{9ad14fae09b617d96cb4af76c555b394}
+      \strng{authorbibnamehash}{9ad14fae09b617d96cb4af76c555b394}
+      \strng{authornamehash}{9ad14fae09b617d96cb4af76c555b394}
+      \strng{authorfullhash}{9ad14fae09b617d96cb4af76c555b394}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{note}{Enterprise GPU performance: 268 tokens/second/user with Medusa speculative decoding}
+      \field{title}{Low Latency Inference Chapter 1: Up to 1.9x Higher Llama 3.1 Performance with Medusa on NVIDIA HGX H200 with NVLink Switch}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://developer.nvidia.com/blog/
+      \endverb
+      \verb{url}
+      \verb https://developer.nvidia.com/blog/
+      \endverb
+    \endentry
     \entry{ojk2022}{report}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=3020e9d6de890679b509375196f05422}{%
@@ -1781,6 +2047,34 @@
       \verb 10.1145/3701716.3717506
       \endverb
     \endentry
+    \entry{phoenix2024}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f388f8f6ba0ae1ccd73095f1ea83c1de}{%
+           family={{Phoenix Strategy Group}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f388f8f6ba0ae1ccd73095f1ea83c1de}
+      \strng{fullhash}{f388f8f6ba0ae1ccd73095f1ea83c1de}
+      \strng{bibnamehash}{f388f8f6ba0ae1ccd73095f1ea83c1de}
+      \strng{authorbibnamehash}{f388f8f6ba0ae1ccd73095f1ea83c1de}
+      \strng{authornamehash}{f388f8f6ba0ae1ccd73095f1ea83c1de}
+      \strng{authorfullhash}{f388f8f6ba0ae1ccd73095f1ea83c1de}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Industry analysis showing domain-specific financial NER achieves 92-95\% accuracy}
+      \field{title}{How NER Identifies Key Financial Entities}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.phoenixstrategy.group/blog/how-ner-identifies-key-financial-entities
+      \endverb
+      \verb{url}
+      \verb https://www.phoenixstrategy.group/blog/how-ner-identifies-key-financial-entities
+      \endverb
+    \endentry
     \entry{pilault2020}{inproceedings}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=31c30011560f7b2cbd840fff5253743b}{%
@@ -1871,6 +2165,55 @@
       \field{year}{2024}
       \verb{doi}
       \verb 10.18653/v1/2024.acl-long.153
+      \endverb
+    \endentry
+    \entry{roeder2015}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=46b2f13d42748a566e9d8a5fe6452afd}{%
+           family={Röder},
+           familyi={R\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6d2e01ab11db6116a1c8dbeef352f788}{%
+           family={Both},
+           familyi={B\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=498e97a23d4417319e95a6af6af725b6}{%
+           family={Hinneburg},
+           familyi={H\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Shanghai, China}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{d2e5402a560547ce0e443913892959d2}
+      \strng{fullhash}{d2e5402a560547ce0e443913892959d2}
+      \strng{bibnamehash}{d2e5402a560547ce0e443913892959d2}
+      \strng{authorbibnamehash}{d2e5402a560547ce0e443913892959d2}
+      \strng{authornamehash}{d2e5402a560547ce0e443913892959d2}
+      \strng{authorfullhash}{d2e5402a560547ce0e443913892959d2}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Eighth ACM International Conference on Web Search and Data Mining (WSDM '15)}
+      \field{note}{Established C\_v metric as having strongest correlation with human judgment of topic interpretability}
+      \field{title}{Exploring the Space of Topic Coherence Measures}
+      \field{year}{2015}
+      \field{pages}{399\bibrangedash 408}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/2684822.2685324
       \endverb
     \endentry
     \entry{rubert2023}{article}{}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.10.21)  8 NOV 2025 08:22
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.10.21)  26 NOV 2025 19:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1123,14 +1123,7 @@ Package biblatex Info: Reference section=0 on input line 201.
 Package biblatex Info: Reference segment=0 on input line 201.
 File: image/ganesha.jpg Graphic file (type bmp)
 <image/ganesha.jpg>
-
-
-Package datetime2 Warning: Region `bahasai' has ignored 
-(datetime2)                the following settings:
-(datetime2)                showmonthname=true
- on input line 243.
-
-[1
+ [1
 
 
 ] [1] (ProposalTA.toc
@@ -1148,11 +1141,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [2
 
-] [3])
+] [3] [4])
 \tf@toc=\write5
 \openout5 = `ProposalTA.toc'.
 
- [4] (ProposalTA.lof
+ [5] (ProposalTA.lof
 Overfull \hbox (11.30385pt too wide) in paragraph at lines 126--126
  [][] [][][]\TU/TimesNewRoman(0)/m/n/12 Arsitektur BERT menunjukkan mekanisme \
 TU/TimesNewRoman(0)/m/it/12 bidirectional self-attention 
@@ -1168,68 +1161,68 @@ enunjukkan \TU/TimesNewRoman(0)/m/it/12 trade-
 \tf@lof=\write6
 \openout6 = `ProposalTA.lof'.
 
- [5] [6] (ProposalTA.lot)
+ [6] [7] (ProposalTA.lot)
 \tf@lot=\write7
 \openout7 = `ProposalTA.lot'.
 
- [7] (ProposalTA.lol)
+ [8] (ProposalTA.lol)
 \tf@lol=\write8
 \openout8 = `ProposalTA.lol'.
 
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 356.
+(hyperref)                removing `\<let>-command' on input line 368.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 356.
+(hyperref)                removing `\\' on input line 368.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 356.
+(hyperref)                removing `\@centercr' on input line 368.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 356.
+(hyperref)                removing `\rightskip' on input line 368.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 356.
+(hyperref)                removing `\@flushglue' on input line 368.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 356.
+(hyperref)                removing `\leftskip' on input line 368.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 356.
+(hyperref)                removing `\@flushglue' on input line 368.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 356.
+(hyperref)                removing `\finalhyphendemerits' on input line 368.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 356.
+(hyperref)                removing `\z@' on input line 368.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 356.
+(hyperref)                removing `\parindent' on input line 368.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 356.
+(hyperref)                removing `\z@' on input line 368.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 356.
+(hyperref)                removing `\parfillskip' on input line 368.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 356.
+(hyperref)                removing `\z@skip' on input line 368.
 
-[8
+[9
 
 ] (Bab I - Pendahuluan.tex
 Bab I.
@@ -1288,516 +1281,461 @@ File: image/bert-architecture-diagram.png Graphic file (type bmp)
  [11] [12] [13]
 File: image/extractive-vs-abstractive.png Graphic file (type bmp)
 <image/extractive-vs-abstractive.png>
- [14] [15] [16] [17]
+ [14] [15] [16] [17] [18]
 File: image/sentiment-analysis-example.jpg Graphic file (type bmp)
 <image/sentiment-analysis-example.jpg>
- [18]
+ [19]
 File: image/ner-example.png Graphic file (type bmp)
 <image/ner-example.png>
- [19] [20]
-Overfull \hbox (3.64919pt too wide) in paragraph at lines 218--219
+ [20] [21]
+Overfull \hbox (3.64919pt too wide) in paragraph at lines 230--231
 [][][][][][]\TU/TimesNewRoman(0)/m/n/12 Perlo dkk. ([][]2025[][])[] []menyediak
 an analisis per-topik pertama dari grup Telegram, meng-
  []
 
-[21]
+[22]
 File: image/bertopic-workflow.png Graphic file (type bmp)
 <image/bertopic-workflow.png>
- [22]
-Overfull \hbox (2.63568pt too wide) in paragraph at lines 247--248
+ [23]
+Overfull \hbox (2.63568pt too wide) in paragraph at lines 261--262
 \TU/TimesNewRoman(0)/m/n/12 Integrasi \TU/TimesNewRoman(0)/m/it/12 pipeline \TU
 /TimesNewRoman(0)/m/n/12 NLP multi-komponen menghadapi beberapa tantangan tekni
 s. Per-
  []
 
-[23]
-Overfull \hbox (3.36258pt too wide) in paragraph at lines 266--267
+[24]
+Overfull \hbox (3.36258pt too wide) in paragraph at lines 280--281
 \TU/TimesNewRoman(0)/m/n/12 Penelitian [][][][][]Grootendorst ([][]2022[][])[] 
 []tentang BERTopic dipilih sebagai fondasi untuk kom-
  []
 
-[24]) (Bab III - Analisis-Masalah.tex [25]
-Bab III.
+[25] [26] [27]
+Overfull \hbox (3.95596pt too wide) in paragraph at lines 313--314
+\TU/TimesNewRoman(0)/m/n/12 sit, konten domain finansial Indonesia, dan penggun
+aan Bahasa Indonesia informal—
+ []
+
 File: image/current-state-diagram.png Graphic file (type bmp)
 <image/current-state-diagram.png>
-[26
-
-]
-Overfull \hbox (39.77357pt too wide) in alignment at lines 29--35
+[28]
+Overfull \hbox (39.77357pt too wide) in alignment at lines 328--334
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (39.77357pt too wide) in alignment at lines 35--41
+Overfull \hbox (39.77357pt too wide) in alignment at lines 334--340
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (39.77357pt too wide) in alignment at lines 41--46
+Overfull \hbox (39.77357pt too wide) in alignment at lines 340--345
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (39.77357pt too wide) in alignment at lines 46--49
+Overfull \hbox (39.77357pt too wide) in alignment at lines 345--348
  [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--52
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
 []|\TU/TimesNewRoman(0)/m/it/12 Broadcast
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--52
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
 []|\TU/TimesNewRoman(0)/m/n/12 Sinyal ters-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--52
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
 []|\TU/TimesNewRoman(0)/m/n/12 Interaktif dua
  []
 
 
-Underfull \hbox (badness 6927) in paragraph at lines 52--53
+Underfull \hbox (badness 6927) in paragraph at lines 351--352
 []|\TU/TimesNewRoman(0)/m/n/12 Interaktif dua
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--53
+Underfull \hbox (badness 10000) in paragraph at lines 352--352
 \TU/TimesNewRoman(0)/m/n/12 hari (10 per
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
 []|\TU/TimesNewRoman(0)/m/n/12 Edukasi
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
 \TU/TimesNewRoman(0)/m/n/12 umum dan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
 []|\TU/TimesNewRoman(0)/m/n/12 Sinyal jual-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
 []|\TU/TimesNewRoman(0)/m/n/12 Diskusi analisis
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 54--55
+Underfull \hbox (badness 2126) in paragraph at lines 353--354
 []|\TU/TimesNewRoman(0)/m/n/12 Debat strategi
  []
 
 
-Underfull \hbox (badness 2478) in paragraph at lines 55--55
+Underfull \hbox (badness 2478) in paragraph at lines 354--354
 []|\TU/TimesNewRoman(0)/m/n/12 Rangkuman Ma-
  []
 
 
-Underfull \hbox (badness 4779) in paragraph at lines 55--55
+Underfull \hbox (badness 4779) in paragraph at lines 354--354
 []|\TU/TimesNewRoman(0)/m/n/12 Tersedia (1 kali
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
+Underfull \hbox (badness 10000) in paragraph at lines 354--354
 \TU/TimesNewRoman(0)/m/n/12 per hari, pukul
  []
 
 
-Overfull \hbox (39.77357pt too wide) in alignment at lines 49--57
+Overfull \hbox (39.77357pt too wide) in alignment at lines 348--356
  [] [] [] [] [] 
  []
 
-[27]
-Overfull \hbox (3.43465pt too wide) in paragraph at lines 63--64
+[29]
+Overfull \hbox (3.43465pt too wide) in paragraph at lines 362--363
 []\TU/TimesNewRoman(0)/m/n/12 Grup MY PIRANHA, sebagai grup ultra-premium denga
 n 2.000 anggota elite, meng-
  []
 
-[28] [29]
-Overfull \hbox (2.4036pt too wide) in paragraph at lines 101--102
+
+Overfull \hbox (3.95596pt too wide) in paragraph at lines 368--369
+\TU/TimesNewRoman(0)/m/n/12 sit, konten domain finansial Indonesia, dan penggun
+aan Bahasa Indonesia informal—
+ []
+
+[30]) (Bab III - Analisis-Masalah.tex [31]
+Bab III.
+[32
+
+] [33]
+Overfull \hbox (2.4036pt too wide) in paragraph at lines 48--49
 []\TU/TimesNewRoman(0)/m/n/12 Kebutuhan spesifik kelompok ini meliputi: (1) ran
 gkuman periodik yang dapat mem-
  []
 
-[30] [31]
-Overfull \hbox (4.7872pt too wide) in paragraph at lines 115--116
-[]\TU/TimesNewRoman(0)/m/n/12 Kedua, anggota Cuap Cuap dan Swing Plan **tidak m
-emiliki akses** ke grup Advan-
- []
-
-
-Overfull \hbox (56.22633pt too wide) in alignment at lines 129--135
+[34]
+Overfull \hbox (56.22633pt too wide) in alignment at lines 72--78
  [] [] [] [] 
  []
 
 
-Overfull \hbox (56.22633pt too wide) in alignment at lines 135--141
+Overfull \hbox (56.22633pt too wide) in alignment at lines 78--85
  [] [] [] [] 
  []
 
 
-Overfull \hbox (56.22633pt too wide) in alignment at lines 141--146
+Overfull \hbox (56.22633pt too wide) in alignment at lines 85--89
  [] [] [] [] 
  []
 
 
-Overfull \hbox (56.22633pt too wide) in alignment at lines 146--149
+Overfull \hbox (56.22633pt too wide) in alignment at lines 89--92
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 []|\TU/TimesNewRoman(0)/m/n/12 Fondasi sistem
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 \TU/TimesNewRoman(0)/m/n/12 untuk akuisisi
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 153--153
+Underfull \hbox (badness 3271) in paragraph at lines 95--95
 []|\TU/TimesNewRoman(0)/m/n/12 Sistem harus dapat mengekstrak entitas fi-
  []
 
 
-Underfull \hbox (badness 4036) in paragraph at lines 153--153
+Underfull \hbox (badness 4036) in paragraph at lines 95--95
 \TU/TimesNewRoman(0)/m/n/12 nansial (nama perusahaan, kode ticker sa-
  []
 
 
-Underfull \hbox (badness 3965) in paragraph at lines 153--153
+Underfull \hbox (badness 3965) in paragraph at lines 95--95
 \TU/TimesNewRoman(0)/m/n/12 ham) menggunakan model \TU/TimesNewRoman(0)/m/it/12
  cahya/bert-base-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 []|\TU/TimesNewRoman(0)/m/n/12 Identifikasi aset
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
 \TU/TimesNewRoman(0)/m/n/12 menggunakan \TU/TimesNewRoman(0)/m/it/12 indonesian
 -roberta-base-
  []
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 157--158
+Underfull \hbox (badness 2469) in paragraph at lines 97--98
 []|\TU/TimesNewRoman(0)/m/n/12 Pemodelan topik
  []
 
 
-Underfull \hbox (badness 2547) in paragraph at lines 159--159
+Underfull \hbox (badness 2547) in paragraph at lines 98--98
 []|\TU/TimesNewRoman(0)/m/n/12 Sistem harus menerapkan \TU/TimesNewRoman(0)/m/i
 t/12 weighted influen-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
 []|\TU/TimesNewRoman(0)/m/n/12 Filter intelijen
  []
 
 
-Underfull \hbox (badness 1014) in paragraph at lines 163--163
+Underfull \hbox (badness 1014) in paragraph at lines 100--100
 []|\TU/TimesNewRoman(0)/m/n/12 Rangkuman harus merupakan sintesis lintas-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 []|\TU/TimesNewRoman(0)/m/n/12 Readability dan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 \TU/TimesNewRoman(0)/m/n/12 comprehensive-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 []|\TU/TimesNewRoman(0)/m/n/12 Persistensi data
  []
 
 
-Overfull \hbox (56.22633pt too wide) in alignment at lines 149--174
+Overfull \hbox (56.22633pt too wide) in alignment at lines 92--106
  [] [] [] [] 
  []
 
-[32] [33]
-Overfull \hbox (14.70699pt too wide) in paragraph at lines 178--179
+[35] [36]
+Overfull \hbox (14.70699pt too wide) in paragraph at lines 110--111
 \TU/TimesNewRoman(0)/m/it/12 world \TU/TimesNewRoman(0)/m/n/12 komunitas Telegr
-am finansial. Tabel [][]III.3[][] merangkum kebutuhan non-fungsional
+am finansial. Tabel [][]III.2[][] merangkum kebutuhan non-fungsional
  []
 
 
-Overfull \hbox (27.77359pt too wide) in alignment at lines 180--186
+Overfull \hbox (41.99995pt too wide) in alignment at lines 114--120
  [] [] [] [] 
  []
 
 
-Overfull \hbox (27.77359pt too wide) in alignment at lines 186--192
+Overfull \hbox (41.99995pt too wide) in alignment at lines 120--127
  [] [] [] [] 
  []
 
 
-Overfull \hbox (27.77359pt too wide) in alignment at lines 192--197
+Overfull \hbox (41.99995pt too wide) in alignment at lines 127--131
  [] [] [] [] 
  []
 
 
-Overfull \hbox (27.77359pt too wide) in alignment at lines 197--200
+Overfull \hbox (41.99995pt too wide) in alignment at lines 131--134
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--202
-[]|\TU/TimesNewRoman(0)/m/n/12 Rangkuman harus
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+[]|\TU/TimesNewRoman(0)/m/n/12 Response
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--202
-\TU/TimesNewRoman(0)/m/n/12 selesai dihasilkan
+Underfull \hbox (badness 3514) in paragraph at lines 136--136
+[]|\TU/TimesNewRoman(0)/m/n/12 Rangkuman harus se-
  []
 
 
-Underfull \hbox (badness 4441) in paragraph at lines 202--202
-\TU/TimesNewRoman(0)/m/n/12 dari 5 menit sete-
+Underfull \hbox (badness 1365) in paragraph at lines 136--136
+\TU/TimesNewRoman(0)/m/n/12 lesai dihasilkan dalam
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--202
-\TU/TimesNewRoman(0)/m/n/12 lah akhir periode
+Underfull \hbox (badness 5878) in paragraph at lines 136--136
+\TU/TimesNewRoman(0)/m/n/12 waktu kurang dari 5
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
-[]|\TU/TimesNewRoman(0)/m/n/12 Relevansi temporal untuk
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
+[]|\TU/TimesNewRoman(0)/m/n/12 Precision dan Recall
  []
 
 
-Underfull \hbox (badness 4859) in paragraph at lines 204--204
-\TU/TimesNewRoman(0)/m/n/12 ham Indonesia ha-
+Underfull \hbox (badness 4634) in paragraph at lines 138--139
+[]|\TU/TimesNewRoman(0)/m/n/12 Target antara baseline Indonesia
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 204--204
-\TU/TimesNewRoman(0)/m/n/12 rus mencapai mini-
+Underfull \hbox (badness 1688) in paragraph at lines 138--139
+\TU/TimesNewRoman(0)/m/n/12 73% dan sistem matang 92-95%
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 206--206
-[]|\TU/TimesNewRoman(0)/m/n/12 Kualitas \TU/TimesNewRoman(0)/m/it/12 Topic Mo-
+Underfull \hbox (badness 2426) in paragraph at lines 140--140
+\TU/TimesNewRoman(0)/m/n/12 Topic harus mencapai
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--206
-[]|\TU/TimesNewRoman(0)/m/it/12 Coherence score
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]|\TU/TimesNewRoman(0)/m/n/12 System Upti-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--206
-\TU/TimesNewRoman(0)/m/n/12 BERTopic harus
+Underfull \hbox (badness 1365) in paragraph at lines 142--142
+\TU/TimesNewRoman(0)/m/n/12 rus mencapai minimal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--206
-\TU/TimesNewRoman(0)/m/n/12 mencapai minimal
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem harus mampu
  []
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 208--208
-[]|\TU/TimesNewRoman(0)/m/n/12 Ketersediaan sistem
+Underfull \hbox (badness 7238) in paragraph at lines 144--144
+\TU/TimesNewRoman(0)/m/n/12 menangani lebih dari
  []
 
 
-Underfull \hbox (badness 4846) in paragraph at lines 208--208
-\TU/TimesNewRoman(0)/m/n/12 nimal 95% selama
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\TU/TimesNewRoman(0)/m/n/12 grup tanpa degradasi
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--208
-\TU/TimesNewRoman(0)/m/n/12 jam perdagangan
+Underfull \hbox (badness 6173) in paragraph at lines 146--146
+[]|\TU/TimesNewRoman(0)/m/n/12 Zero kebocoran data;
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 210--210
-\TU/TimesNewRoman(0)/m/n/12 per grup tanpa de-
+Underfull \hbox (badness 3514) in paragraph at lines 146--146
+\TU/TimesNewRoman(0)/m/n/12 pesan yang di-unsend
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 210--211
-[]|\TU/TimesNewRoman(0)/m/it/12 Future-proof \TU/TimesNewRoman(0)/m/n/12 untuk 
-pertum-
+Underfull \hbox (badness 2277) in paragraph at lines 148--148
+[]|\TU/TimesNewRoman(0)/m/n/12 Rangkuman harus da-
  []
 
 
-Underfull \hbox (badness 2150) in paragraph at lines 212--212
-\TU/TimesNewRoman(0)/m/n/12 ta; pesan yang di-
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
+[]|\TU/TimesNewRoman(0)/m/n/12 Semua output rang-
  []
 
 
-Underfull \hbox (badness 2229) in paragraph at lines 212--212
-\TU/TimesNewRoman(0)/m/it/12 unsend \TU/TimesNewRoman(0)/m/n/12 harus dike-
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
+\TU/TimesNewRoman(0)/m/n/12 kuman harus dalam
  []
 
 
-Underfull \hbox (badness 3312) in paragraph at lines 212--213
-[]|\TU/TimesNewRoman(0)/m/n/12 Kepatuhan terhadap prinsip
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--214
-[]|\TU/TimesNewRoman(0)/m/n/12 Rangkuman harus
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--214
-\TU/TimesNewRoman(0)/m/n/12 dapat dibaca dan
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--214
-\TU/TimesNewRoman(0)/m/n/12 dipahami dalam
- []
-
-
-Underfull \hbox (badness 1629) in paragraph at lines 214--214
-\TU/TimesNewRoman(0)/m/n/12 menit oleh anggota
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--216
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
 \TU/TimesNewRoman(0)/m/n/12 Bahasa Indonesia
  []
 
 
-Underfull \hbox (badness 6204) in paragraph at lines 216--216
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
 \TU/TimesNewRoman(0)/m/n/12 dengan terminologi
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--218
-[]|\TU/TimesNewRoman(0)/m/n/12 Biaya operasional
+Underfull \hbox (badness 4859) in paragraph at lines 152--152
+[]|\TU/TimesNewRoman(0)/m/n/12 Efisiensi Bia-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--218
-\TU/TimesNewRoman(0)/m/n/12 Groq API untuk
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
+\TU/TimesNewRoman(0)/m/n/12 API untuk inferensi
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--218
-\TU/TimesNewRoman(0)/m/n/12 kurang dari $50
- []
-
-
-Overfull \hbox (27.77359pt too wide) in alignment at lines 200--219
+Overfull \hbox (41.99995pt too wide) in alignment at lines 134--153
  [] [] [] [] 
  []
 
-[34] [35] [36]
-Overfull \hbox (1.53055pt too wide) in paragraph at lines 248--249
+[37] [38]
+Overfull \hbox (1.53055pt too wide) in paragraph at lines 182--183
 []\TU/TimesNewRoman(0)/m/n/12 Ketidakmampuan untuk menerapkan \TU/TimesNewRoman
 (0)/m/it/12 weighted influence \TU/TimesNewRoman(0)/m/n/12 secara algoritmik da
 n
  []
 
-[37]
-Overfull \hbox (3.1536pt too wide) in paragraph at lines 274--275
+[39]
+Overfull \hbox (3.1536pt too wide) in paragraph at lines 208--209
 \TU/TimesNewRoman(0)/m/it/12 indonesian-NER\TU/TimesNewRoman(0)/m/n/12 , analis
 is emosi dengan \TU/TimesNewRoman(0)/m/it/12 indonesian-roberta-base-emotion-cl
 assifier\TU/TimesNewRoman(0)/m/n/12 ,
  []
 
-[38]
-Overfull \hbox (5.28836pt too wide) in paragraph at lines 303--304
+[40] [41]
+Overfull \hbox (5.28836pt too wide) in paragraph at lines 237--238
 []\TU/TimesNewRoman(0)/m/n/12 Deployment cepat: dapat diimplementasikan dalam 1
 -2 minggu dengan \TU/TimesNewRoman(0)/m/it/12 prompt
  []
 
-[39]
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
-[]|\TU/TimesNewRoman(0)/b/n/12 Alt 1:
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
+[]\TU/TimesNewRoman(0)/b/n/12 Alt 1:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
 \TU/TimesNewRoman(0)/b/n/12 Manu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
-[]|\TU/TimesNewRoman(0)/b/n/12 Alt 2:
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
+[]\TU/TimesNewRoman(0)/b/n/12 Alt 2:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
-[]|\TU/TimesNewRoman(0)/b/n/12 Alt
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
+[]\TU/TimesNewRoman(0)/b/n/12 Alt
  []
 
 
-Underfull \hbox (badness 3333) in paragraph at lines 325--325
+Underfull \hbox (badness 3333) in paragraph at lines 261--261
 \TU/TimesNewRoman(0)/b/n/12 3: AI
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
-[]|\TU/TimesNewRoman(0)/b/n/12 Alt 4:
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
+[]\TU/TimesNewRoman(0)/b/n/12 Alt 4:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--331
-[]|\TU/TimesNewRoman(0)/b/n/12 Alt 1:
+Underfull \hbox (badness 2096) in paragraph at lines 263--263
+[]\TU/TimesNewRoman(0)/m/n/12 Skalabilitas (24 re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--331
-\TU/TimesNewRoman(0)/b/n/12 Manu-
+Underfull \hbox (badness 10000) in paragraph at lines 273--273
+[]\TU/TimesNewRoman(0)/m/n/12 Kecepatan Deplo-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 331--331
-[]|\TU/TimesNewRoman(0)/b/n/12 Alt 2:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 331--331
-[]|\TU/TimesNewRoman(0)/b/n/12 Alt
- []
-
-
-Underfull \hbox (badness 3333) in paragraph at lines 331--331
-\TU/TimesNewRoman(0)/b/n/12 3: AI
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
-[]|\TU/TimesNewRoman(0)/b/n/12 Alt 4:
- []
-
-
-Underfull \hbox (badness 2096) in paragraph at lines 343--343
-[]|\TU/TimesNewRoman(0)/m/n/12 Skalabilitas (24 re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
-[]|\TU/TimesNewRoman(0)/m/n/12 Kecepatan Deplo-
- []
-
-[40] [41]) (Bab IV - Desain-Konsep-Solusi.tex [42]
+[42] [43]) (Bab IV - Desain-Konsep-Solusi.tex [44]
 Bab IV.
-[43
+[45
 
 ]
 File: image/proposed-solution-diagram.png Graphic file (type bmp)
 <image/proposed-solution-diagram.png>
- [44]
+ [46]
 Overfull \hbox (3.92899pt too wide) in paragraph at lines 60--61
 []\TU/TimesNewRoman(0)/b/n/12 Administrator (Bobot 3×): \TU/TimesNewRoman(0)/m/
 n/12 Dua administrator dengan kredibilitas tinggi men-
@@ -1809,7 +1747,7 @@ Overfull \hbox (4.76181pt too wide) in paragraph at lines 73--74
  sistem menggunakan \TU/TimesNewRoman(0)/m/it/12 indonesian-
  []
 
-[45]
+[47]
 Overfull \hbox (0.4454pt too wide) in paragraph at lines 89--90
 \TU/TimesNewRoman(0)/m/n/12 Komponen agregasi mengintegrasikan output dari NER,
  klasifikasi emosi, dan BER-
@@ -1821,7 +1759,7 @@ Overfull \hbox (12.90945pt too wide) in paragraph at lines 113--114
 rivasi eksplisit dengan meng-
  []
 
-[46] [47]
+[48] [49]
 Overfull \hbox (29.99998pt too wide) in alignment at lines 160--166
  [] [] [] 
  []
@@ -1913,78 +1851,589 @@ Overfull \hbox (29.99998pt too wide) in alignment at lines 180--194
  [] [] [] 
  []
 
-[48] [49]) (Bab V - Rencana-Selanjutnya.tex [50]
+[50] [51]) (Bab V - Rencana-Selanjutnya.tex [52]
 Bab V.
-) [51
+[53
 
-]
-Overfull \hbox (1.1197pt too wide) in paragraph at lines 401--401
+] [54] [55]
+Overfull \hbox (5.55789pt too wide) in paragraph at lines 101--102
+\TU/TimesNewRoman(0)/m/n/12 Fase ini berfokus pada pembangunan komponen-kompone
+n fundamental sistem rang-
+ []
+
+
+Overfull \hbox (5.5989pt too wide) in paragraph at lines 106--108
+[]\TU/TimesNewRoman(0)/b/n/12 Integrasi Komponen NLP\TU/TimesNewRoman(0)/m/n/12
+ : Implementasi \TU/TimesNewRoman(0)/m/it/12 pipeline \TU/TimesNewRoman(0)/m/n/
+12 pemrosesan teks yang men-
+ []
+
+
+Overfull \hbox (3.28012pt too wide) in paragraph at lines 111--112
+[]\TU/TimesNewRoman(0)/m/n/12 Implementasi sistem \TU/TimesNewRoman(0)/m/it/12 
+weighted influence \TU/TimesNewRoman(0)/m/n/12 berdasarkan peran pengirim pes-
+ []
+
+[56]
+Overfull \hbox (4.88016pt too wide) in paragraph at lines 159--160
+[]\TU/TimesNewRoman(0)/m/n/12 Sistem akan dijalankan secara konsisten selama pe
+riode pengujian untuk meng-
+ []
+
+[57]
+Overfull \hbox (0.23367pt too wide) in paragraph at lines 162--163
+[]\TU/TimesNewRoman(0)/m/n/12 Data kualitatif dan kuantitatif akan dikumpulkan 
+melalui survei \TU/TimesNewRoman(0)/m/it/12 Google Forms
+ []
+
+[58] [59]
+Overfull \hbox (10.21219pt too wide) in paragraph at lines 247--248
+[]\TU/TimesNewRoman(0)/m/n/12 Survei evaluasi akan didistribusikan melalui \TU/
+TimesNewRoman(0)/m/it/12 Google Forms \TU/TimesNewRoman(0)/m/n/12 dan mencakup 
+pertanyaan-
+ []
+
+[60] [61]
+Overfull \hbox (5.54958pt too wide) in paragraph at lines 337--337
+[]|\TU/TimesNewRoman(0)/b/n/12 Probabilitas| 
+ []
+
+
+Overfull \hbox (45.77357pt too wide) in alignment at lines 333--339
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (5.54958pt too wide) in paragraph at lines 344--344
+[]|\TU/TimesNewRoman(0)/b/n/12 Probabilitas| 
+ []
+
+
+Overfull \hbox (45.77357pt too wide) in alignment at lines 339--346
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (45.77357pt too wide) in alignment at lines 346--349
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (45.77357pt too wide) in alignment at lines 349--352
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--354
+[]|\TU/TimesNewRoman(0)/m/n/12 RT-
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 354--354
+\TU/TimesNewRoman(0)/m/n/12 hi ekspektasi peng-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+[]|\TU/TimesNewRoman(0)/b/n/12 Mitigasi Utama\TU/TimesNewRoman(0)/m/n/12 : Iter
+asi
+ []
+
+
+Underfull \hbox (badness 3503) in paragraph at lines 354--355
+\TU/TimesNewRoman(0)/m/it/12 prompt engineering \TU/TimesNewRoman(0)/m/n/12 den
+gan
+ []
+
+
+Underfull \hbox (badness 4048) in paragraph at lines 354--355
+\TU/TimesNewRoman(0)/m/n/12 pengujian berbagai struktur
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+\TU/TimesNewRoman(0)/m/it/12 prompt\TU/TimesNewRoman(0)/m/n/12 , \TU/TimesNewRo
+man(0)/m/it/12 temperature set-
+ []
+
+
+Underfull \hbox (badness 5260) in paragraph at lines 354--355
+\TU/TimesNewRoman(0)/m/it/12 ting\TU/TimesNewRoman(0)/m/n/12 , dan strategi \TU
+/TimesNewRoman(0)/m/it/12 few-shot
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+\TU/TimesNewRoman(0)/m/it/12 learning\TU/TimesNewRoman(0)/m/n/12 . \TU/TimesNew
+Roman(0)/b/n/12 Kontinjensi\TU/TimesNewRoman(0)/m/n/12 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+\TU/TimesNewRoman(0)/m/n/12 Jika iterasi tidak berhasil,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+\TU/TimesNewRoman(0)/m/n/12 kombinasikan pendekatan
+ []
+
+
+Underfull \hbox (badness 4872) in paragraph at lines 354--355
+\TU/TimesNewRoman(0)/m/n/12 ekstraktif (memilih kalimat
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+\TU/TimesNewRoman(0)/m/n/12 penting) dengan abstrak-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+\TU/TimesNewRoman(0)/m/n/12 tif untuk meningkatkan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--357
+[]|\TU/TimesNewRoman(0)/m/n/12 RT-
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 357--357
+[]|\TU/TimesNewRoman(0)/m/n/12 Akurasi NER tidak
+ []
+
+
+Underfull \hbox (badness 2980) in paragraph at lines 357--358
+[]|\TU/TimesNewRoman(0)/b/n/12 Mitigasi\TU/TimesNewRoman(0)/m/n/12 : Gunakan pe
+nde-
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 357--358
+\TU/TimesNewRoman(0)/m/n/12 emiten). \TU/TimesNewRoman(0)/b/n/12 Kontinjensi\TU
+/TimesNewRoman(0)/m/n/12 : Ji-
+ []
+
+
+Underfull \hbox (badness 1286) in paragraph at lines 357--358
+\TU/TimesNewRoman(0)/m/n/12 sis \TU/TimesNewRoman(0)/m/it/12 regex \TU/TimesNew
+Roman(0)/m/n/12 dengan pola khu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+[]|\TU/TimesNewRoman(0)/m/n/12 RT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+[]|\TU/TimesNewRoman(0)/m/n/12 Groq API menga-
+ []
+
+
+Underfull \hbox (badness 1484) in paragraph at lines 360--361
+[]|\TU/TimesNewRoman(0)/b/n/12 Mitigasi\TU/TimesNewRoman(0)/m/n/12 : Implementa
+si \TU/TimesNewRoman(0)/m/it/12 re-
+ []
+
+
+Underfull \hbox (badness 1320) in paragraph at lines 360--361
+\TU/TimesNewRoman(0)/m/it/12 try logic \TU/TimesNewRoman(0)/m/n/12 dengan \TU/T
+imesNewRoman(0)/m/it/12 exponenti-
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 360--361
+\TU/TimesNewRoman(0)/m/it/12 al backoff \TU/TimesNewRoman(0)/m/n/12 (tunggu 2s,
+ 4s,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--363
+[]|\TU/TimesNewRoman(0)/m/n/12 RT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+\TU/TimesNewRoman(0)/m/n/12 ter \TU/lmtt/m/n/12 min_cluster_size
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+\TU/TimesNewRoman(0)/m/n/12 (lebih konservatif),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+\TU/lmtt/m/n/12 n_gram_range\TU/TimesNewRoman(0)/m/n/12 , dan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+\TU/lmtt/m/n/12 nr_topics\TU/TimesNewRoman(0)/m/n/12 . Eksperimen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+\TU/TimesNewRoman(0)/m/n/12 dengan model \TU/TimesNewRoman(0)/m/it/12 embedding
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+\TU/TimesNewRoman(0)/m/n/12 alternatif (IndoBERT vs
+ []
+
+
+Underfull \hbox (badness 5652) in paragraph at lines 363--364
+\TU/TimesNewRoman(0)/m/n/12 multilingual-e5). \TU/TimesNewRoman(0)/b/n/12 Konti
+n-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+\TU/TimesNewRoman(0)/b/n/12 jensi\TU/TimesNewRoman(0)/m/n/12 : Gunakan kategori
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+\TU/TimesNewRoman(0)/m/n/12 sebelumnya (\TU/TimesNewRoman(0)/m/it/12 supervised
+
+ []
+
+
+Underfull \hbox (badness 5460) in paragraph at lines 363--364
+\TU/TimesNewRoman(0)/m/it/12 clustering\TU/TimesNewRoman(0)/m/n/12 ) jika pende
+katan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+[]|\TU/TimesNewRoman(0)/m/n/12 RT-
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 366--366
+[]|\TU/TimesNewRoman(0)/m/n/12 Waktu respons sis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
+[]|\TU/TimesNewRoman(0)/b/n/12 Mitigasi\TU/TimesNewRoman(0)/m/n/12 : Profiling 
+kode
+ []
+
+
+Underfull \hbox (badness 6348) in paragraph at lines 366--367
+\TU/TimesNewRoman(0)/m/n/12 Optimasi \TU/TimesNewRoman(0)/m/it/12 query \TU/Tim
+esNewRoman(0)/m/n/12 basis data
+ []
+
+
+Underfull \hbox (badness 7576) in paragraph at lines 366--367
+\TU/TimesNewRoman(0)/m/n/12 Gunakan \TU/TimesNewRoman(0)/m/it/12 batch API \TU/
+TimesNewRoman(0)/m/n/12 Groq
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
+\TU/TimesNewRoman(0)/m/n/12 pertimbangkan pemrosesan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
+\TU/TimesNewRoman(0)/m/n/12 asinkron dengan notifikasi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
+\TU/TimesNewRoman(0)/m/n/12 kepada pengguna ketika
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
+[]|\TU/TimesNewRoman(0)/m/n/12 RT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+[]|\TU/TimesNewRoman(0)/b/n/12 Mitigasi\TU/TimesNewRoman(0)/m/n/12 : Implementa
+si
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+\TU/TimesNewRoman(0)/m/it/12 comprehensive error han-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+\TU/TimesNewRoman(0)/m/it/12 dling \TU/TimesNewRoman(0)/m/n/12 dengan \TU/Times
+NewRoman(0)/m/it/12 try-catch
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+\TU/TimesNewRoman(0)/m/n/12 debugging, dan \TU/TimesNewRoman(0)/m/it/12 gracefu
+l
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 369--370
+\TU/TimesNewRoman(0)/m/n/12 fase pengujian dan lakukan
+ []
+
+
+Underfull \hbox (badness 1881) in paragraph at lines 369--370
+\TU/TimesNewRoman(0)/m/it/12 hotfix \TU/TimesNewRoman(0)/m/n/12 cepat jika dite
+mukan
+ []
+
+
+Overfull \hbox (45.77357pt too wide) in alignment at lines 352--371
+ [] [] [] [] [] 
+ []
+
+[62] [63] [64]
+Overfull \hbox (5.54958pt too wide) in paragraph at lines 379--379
+[]|\TU/TimesNewRoman(0)/b/n/12 Probabilitas| 
+ []
+
+
+Overfull \hbox (45.77357pt too wide) in alignment at lines 375--381
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (5.54958pt too wide) in paragraph at lines 386--386
+[]|\TU/TimesNewRoman(0)/b/n/12 Probabilitas| 
+ []
+
+
+Overfull \hbox (45.77357pt too wide) in alignment at lines 381--388
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (45.77357pt too wide) in alignment at lines 388--391
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (45.77357pt too wide) in alignment at lines 391--394
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
+[]|\TU/TimesNewRoman(0)/m/n/12 RN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
+[]|\TU/TimesNewRoman(0)/m/n/12 Adopsi pengguna
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
+\TU/TimesNewRoman(0)/m/n/12 rendah (anggota
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
+\TU/TimesNewRoman(0)/m/n/12 tidak membaca
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 396--397
+\TU/TimesNewRoman(0)/m/it/12 arding \TU/TimesNewRoman(0)/m/n/12 dengan demo lan
+g-
+ []
+
+
+Underfull \hbox (badness 1320) in paragraph at lines 396--397
+\TU/TimesNewRoman(0)/m/n/12 sung kepada calon partisip-
+ []
+
+
+Underfull \hbox (badness 1314) in paragraph at lines 396--397
+\TU/TimesNewRoman(0)/m/n/12 nakan kanal distribusi yang
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--399
+[]|\TU/TimesNewRoman(0)/m/n/12 RN-
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 399--399
+\TU/TimesNewRoman(0)/m/n/12 si dari anggota ko-
+ []
+
+
+Underfull \hbox (badness 3942) in paragraph at lines 399--400
+\TU/TimesNewRoman(0)/m/n/12 cara transparan bahwa sis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--402
+[]|\TU/TimesNewRoman(0)/m/n/12 RN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--402
+\TU/TimesNewRoman(0)/m/n/12 menyetujui deplo-
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 402--403
+\TU/TimesNewRoman(0)/m/n/12 jukkan hasil evaluasi teknis
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
+[]|\TU/TimesNewRoman(0)/m/n/12 RN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
+[]|\TU/TimesNewRoman(0)/m/n/12 Jumlah partisipan
+ []
+
+
+Underfull \hbox (badness 3872) in paragraph at lines 405--405
+\TU/TimesNewRoman(0)/m/n/12 kupi (target 20-30,
+ []
+
+
+Underfull \hbox (badness 4454) in paragraph at lines 405--406
+[]|\TU/TimesNewRoman(0)/b/n/12 Mitigasi\TU/TimesNewRoman(0)/m/n/12 : Berikan in
+sentif
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 405--406
+\TU/TimesNewRoman(0)/m/n/12 partisipasi (voucher Google
+ []
+
+
+Underfull \hbox (badness 4254) in paragraph at lines 405--406
+\TU/TimesNewRoman(0)/m/n/12 ningkatkan motivasi. La-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--408
+[]|\TU/TimesNewRoman(0)/m/n/12 RN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--408
+[]|\TU/TimesNewRoman(0)/m/n/12 Biaya operasional
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 408--408
+\TU/TimesNewRoman(0)/m/n/12 Groq API melebihi
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 408--409
+\TU/TimesNewRoman(0)/m/n/12 kati batas. Gunakan \TU/TimesNewRoman(0)/m/it/12 ba
+tch
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--411
+[]|\TU/TimesNewRoman(0)/m/n/12 RN-
+ []
+
+
+Overfull \hbox (45.77357pt too wide) in alignment at lines 394--413
+ [] [] [] [] [] 
+ []
+
+[65] [66] [67] [68]
+Overfull \hbox (3.42978pt too wide) in paragraph at lines 433--434
+[]\TU/TimesNewRoman(0)/m/n/12 Meskipun target metrik telah ditetapkan, peneliti
+an ini mengakui bahwa sistem \TU/TimesNewRoman(0)/m/it/12 proof-
+ []
+
+) [69]
+Overfull \hbox (1.1197pt too wide) in paragraph at lines 413--413
 [][]\TU/TimesNewRoman(0)/m/n/12 AppMagic. 2024. \TU/TimesNewRoman(0)/m/it/12 Nu
 mber of Telegram App Downloads Worldwide in 2023, by Coun-
  []
 
+[70
 
-Overfull \hbox (0.78575pt too wide) in paragraph at lines 401--401
+
+]
+Overfull \hbox (0.78575pt too wide) in paragraph at lines 413--413
 \TU/TimesNewRoman(0)/m/it/12 paui 6 Juta SID. \TU/TimesNewRoman(0)/m/n/12 Siara
 n Pers 2224. Total investor: 6.001.573 SID per 25 Septem-
  []
 
-[52
+
+Overfull \hbox (10.10878pt too wide) in paragraph at lines 413--413
+\TU/TimesNewRoman(0)/m/n/12 sonal financial entity extraction using indoBERT-Bi
+GRU-CRF model”. Achieved
+ []
 
 
-]
-Overfull \hbox (1.80646pt too wide) in paragraph at lines 401--401
+Overfull \hbox (1.80646pt too wide) in paragraph at lines 413--413
 [][]\TU/TimesNewRoman(0)/m/n/12 Devlin, Jacob, Ming-Wei Chang, Kenton Lee, dan 
 Kristina Toutanova. 2019. “  BERT:
  []
 
-[53]
-Overfull \hbox (3.95685pt too wide) in paragraph at lines 401--401
+[71]
+Overfull \hbox (3.95685pt too wide) in paragraph at lines 413--413
 [][]\TU/TimesNewRoman(0)/m/n/12 Gliwa, Bogdan, Iwona Mochol, Maciej Biesek, dan
  Aleksander Wawer. 2019. “  SAM-
  []
 
-[54]
-Overfull \hbox (10.79628pt too wide) in paragraph at lines 401--401
+[72] [73]
+Overfull \hbox (10.79628pt too wide) in paragraph at lines 413--413
 \TU/TimesNewRoman(0)/m/n/12 tractive Summarization of Online Conversations”. Da
 lam \TU/TimesNewRoman(0)/m/it/12 Proceedings of EMNLP
  []
 
 
-Overfull \hbox (3.88417pt too wide) in paragraph at lines 401--401
+Overfull \hbox (3.88417pt too wide) in paragraph at lines 413--413
 \TU/TimesNewRoman(0)/m/n/12 wards a Standardized Dataset on Indonesian Named En
 tity Recognition”. Dalam
  []
 
-[55] [56] [57]
-Overfull \hbox (16.67253pt too wide) in paragraph at lines 401--401
+[74] [75] [76]
+Overfull \hbox (16.67253pt too wide) in paragraph at lines 413--413
 [][]\TU/TimesNewRoman(0)/m/n/12 Touvron, Hugo, Thibaut Lavril, Gautier Izacard,
  Xavier Martinet, Marie-Anne Lachaux,
  []
 
 
-Overfull \hbox (3.55124pt too wide) in paragraph at lines 401--401
+Overfull \hbox (3.55124pt too wide) in paragraph at lines 413--413
 \TU/TimesNewRoman(0)/m/n/12 Foundation Language Models”. Introduced LLaMA, a co
 llection of open-source
  []
 
 
-Overfull \hbox (54.13902pt too wide) in paragraph at lines 401--401
+Overfull \hbox (54.13902pt too wide) in paragraph at lines 413--413
 \TU/TimesNewRoman(0)/m/n/12 foundation language models from 7B to 65B parameter
 s, \TU/TimesNewRoman(0)/m/it/12 arXiv preprint arXiv:2302.13971,
  []
 
-
-Overfull \hbox (15.86453pt too wide) in paragraph at lines 401--401
+[77]
+Overfull \hbox (15.86453pt too wide) in paragraph at lines 413--413
 \TU/TimesNewRoman(0)/m/n/12 Recognition Using BERT Under the Machine Reading Co
 mprehension Paradigm”.
  []
 
 
-Package caption Warning: Unused \captionsetup[lstlisting] on input line 381.
+Package caption Warning: Unused \captionsetup[lstlisting] on input line 393.
 See the caption package documentation for explanation.
 
-[58] (ProposalTA.aux)
+[78] (ProposalTA.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1994,7 +2443,7 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `ProposalTA.out' has not changed.
-(rerunfilecheck)             Checksum: 7EA9568FCD6FD1F9B861B02A01EF8167;21400.
+(rerunfilecheck)             Checksum: 876F37CF856A989F10D544884B886AAB;26951.
 
 Package biblatex Warning: Please rerun LaTeX.
 
@@ -2003,12 +2452,12 @@ Package logreq Info: Writing requests to 'ProposalTA.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31625 strings out of 409617
- 624126 string characters out of 5774215
- 1983638 words of memory out of 5000000
- 53379 multiletter control sequences out of 15000+600000
- 563274 words of font info for 80 fonts, out of 8000000 for 9000
+ 31699 strings out of 409617
+ 626011 string characters out of 5774215
+ 1992401 words of memory out of 5000000
+ 53451 multiletter control sequences out of 15000+600000
+ 563282 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 79i,9n,95p,1402b,8317s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,10n,95p,1402b,8317s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on ProposalTA.pdf (67 pages).
+Output written on ProposalTA.pdf (88 pages).

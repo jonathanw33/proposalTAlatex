@@ -3,9 +3,433 @@
 % ==========================================
 \chapter{RENCANA SELANJUTNYA}
 \label{chap:rencana-selanjutnya}
-Jelaskan secara detail langkah-langkah rencana selanjutnya, hal-hal yang diperlukan atau akan disiapkan, dan risiko dan mitigasinya, yang meliputi:
-\begin{enumerate}
-\item	Rencana implementasi, termasuk alat dan bahan yang diperlukan, lingkungan, konfigurasi, biaya, dan sebagainya.
-\item	Desain pengujian dan evaluasi, misalnya metode verifikasi dan validasi.
-\item	Analisis risiko dan mitigasi, misalnya tindakan selanjutnya jika ada yang tidak berjalan sesuai rencana.
-\end{enumerate}
+
+Bab ini menjabarkan rencana implementasi, pengujian, dan evaluasi sistem rangkuman otomatis berbasis \textit{AI} yang akan dilaksanakan pada semester berikutnya. Rencana mencakup lingkungan pengembangan, alat dan bahan yang diperlukan, metodologi pengujian teknis dan evaluasi pengguna, serta analisis risiko beserta strategi mitigasinya.
+
+% ==========================================
+\section{Rencana Implementasi Sistem}
+\label{sec:rencana-implementasi}
+
+\subsection{Lingkungan Pengembangan}
+
+Sistem rangkuman otomatis akan dikembangkan dan dioperasikan secara lokal pada komputer pribadi peneliti. Pemilihan pendekatan \textit{local deployment} didasarkan pada pertimbangan kontrol operasional yang lebih baik, kemudahan \textit{debugging}, dan fleksibilitas dalam melakukan iterasi perbaikan sistem berdasarkan \textit{feedback} pengguna. Sistem akan dijalankan secara manual oleh peneliti selama jam perdagangan (09:00-16:00) pada hari kerja pasar modal Indonesia.
+
+\textbf{Spesifikasi \textit{Hardware}}
+
+Komputer yang akan digunakan untuk menjalankan sistem memiliki spesifikasi sebagai berikut:
+\begin{itemize}
+\item \textit{Processor}: AMD Ryzen 9 9900X (16-core, 32-thread)
+\item \textit{Graphics Card}: NVIDIA GeForce RTX 3080 Ti (12GB VRAM)
+\item \textit{Memory}: 64GB DDR5 RAM
+\item \textit{Storage}: 2TB NVMe SSD
+\item \textit{Operating System}: Windows 11 Professional
+\end{itemize}
+
+Spesifikasi \textit{hardware} di atas memenuhi persyaratan komputasi untuk menjalankan model NLP berbasis \textit{transformer} secara lokal, meskipun inferensi utama untuk generasi rangkuman akan memanfaatkan Groq API yang berbasis \textit{cloud}. GPU RTX 3080 Ti akan digunakan untuk mempercepat komputasi lokal pada komponen NER dan \textit{topic modeling} jika diperlukan.
+
+\textbf{Spesifikasi \textit{Software}}
+
+\textit{Stack} teknologi yang akan digunakan mencakup:
+\begin{itemize}
+\item \textbf{Bahasa Pemrograman}: Python 3.11 dengan \textit{type hints} untuk kejelasan kode
+\item \textbf{Basis Data}: PostgreSQL 15 (dijalankan melalui Docker container)
+\item \textbf{\textit{Message Broker}}: Redis (untuk Celery task queue)
+\item \textbf{\textit{Task Scheduler}}: Celery dengan \textit{beat scheduler} untuk otomasi periodik
+\item \textbf{\textit{Containerization}}: Docker dan Docker Compose untuk orkestrasi layanan
+\item \textbf{\textit{Version Control}}: Git untuk manajemen kode sumber
+\end{itemize}
+
+Penggunaan Docker memastikan konsistensi lingkungan pengembangan dan memudahkan manajemen dependensi, khususnya untuk PostgreSQL dan Redis yang akan berjalan sebagai \textit{container} terpisah.
+
+\subsection{Alat dan Bahan yang Diperlukan}
+
+\subsubsection{API dan Layanan Eksternal}
+
+\textbf{Telegram Bot API}
+
+Sistem akan menggunakan Telegram Bot API untuk:
+\begin{itemize}
+\item Monitoring pesan \textit{real-time} dari empat grup target (MY Cuap Cuap, MY Swing Plan, MY Advanced Group, MY PIRANHA)
+\item Mendeteksi pesan yang di-\textit{unsend} untuk keperluan perlindungan privasi
+\item Mengirimkan rangkuman otomatis ke kanal \textit{output} yang \textit{dedicated}
+\end{itemize}
+
+Bot akan dikonfigurasi dengan \textit{webhook} atau \textit{long polling} tergantung pada stabilitas koneksi internet lokal.
+
+\textbf{Groq API untuk Inferensi LLM}
+
+Groq API akan digunakan untuk inferensi model Llama 3.1 70B dalam proses generasi rangkuman. Pemilihan Groq didasarkan pada:
+\begin{itemize}
+\item Kecepatan inferensi superior: 284 token per detik untuk Llama 3.1 70B \autocite{groq2024}
+\item Biaya operasional yang terjangkau dibandingkan penyedia LLM lainnya
+\item Dukungan untuk \textit{batch API} yang dapat mengurangi latensi dan biaya
+\end{itemize}
+
+Peneliti akan menggunakan akun Groq API pribadi dengan sistem monitoring biaya untuk memastikan penggunaan tetap dalam batasan yang wajar.
+
+\subsubsection{Model NLP dan \textit{Library}}
+
+\textbf{Named Entity Recognition (NER)}
+
+Model \textit{cahya/bert-base-indonesian-NER} akan digunakan untuk ekstraksi entitas finansial dari pesan. Model ini dipilih karena telah di-\textit{pre-train} pada korpus bahasa Indonesia yang besar dan menunjukkan performa baik untuk tugas NER umum. Untuk meningkatkan akurasi deteksi \textit{ticker} saham, sistem akan mengintegrasikan \textit{whitelist} kode \textit{ticker} resmi dari Bursa Efek Indonesia (IDX) yang berjumlah sekitar 800+ emiten. Pendekatan hibrida ini menggabungkan deteksi berbasis model dengan validasi berbasis aturan untuk meminimalkan \textit{false positive}.
+
+\textbf{Analisis Emosi}
+
+Model \textit{indonesian-roberta-base-emotion-classifier} akan digunakan untuk klasifikasi emosi pesan. Model ini mampu mendeteksi spektrum emosi yang relevan dengan psikologi pasar finansial, termasuk ketakutan (\textit{fear}), kegembiraan (\textit{joy}), kemarahan (\textit{anger}), dan emosi lainnya. Output dari komponen ini akan menjadi salah satu sinyal agregat dalam rangkuman untuk memberikan gambaran sentimen komunitas pada periode waktu tertentu.
+
+\textbf{\textit{Topic Modeling} dengan BERTopic}
+
+\textit{Library} BERTopic akan digunakan untuk identifikasi topik diskusi dominan dalam setiap periode waktu. BERTopic dipilih karena kemampuannya dalam menghasilkan topik yang interpretatif dan bermakna untuk teks pendek seperti pesan media sosial \autocite{grootendorst2022}. Model akan dikonfigurasi dengan parameter yang dioptimalkan untuk teks finansial Indonesia, dengan target mencapai \textit{coherence score} (C\_v) minimal 0,5.
+
+\textbf{\textit{Library} Pendukung Lainnya}
+
+\begin{itemize}
+\item \textbf{python-telegram-bot}: \textit{Library} untuk interaksi dengan Telegram Bot API
+\item \textbf{SQLAlchemy}: ORM untuk manajemen basis data PostgreSQL
+\item \textbf{Celery}: \textit{Distributed task queue} untuk penjadwalan otomatis
+\item \textbf{Transformers (Hugging Face)}: \textit{Framework} untuk loading dan inferensi model NLP
+\item \textbf{scikit-learn}: Utilitas untuk preprocessing dan evaluasi model
+\item \textbf{pandas}: Manipulasi dan analisis data terstruktur
+\end{itemize}
+
+\subsection{Tahapan Implementasi}
+
+Implementasi sistem akan dilakukan melalui empat fase utama yang bersifat iteratif. Setiap fase memiliki fokus dan \textit{deliverable} yang spesifik untuk memastikan pengembangan sistem yang terstruktur dan terukur.
+
+\subsubsection{Fase 1: Pengembangan Sistem Inti}
+
+Fase ini berfokus pada pembangunan komponen-komponen fundamental sistem rangkuman otomatis. Aktivitas utama mencakup:
+
+\begin{itemize}
+\item \textbf{Pengembangan \textit{Telegram Bot} untuk \textit{Message Collection}}: Implementasi bot yang mampu memantau empat grup target secara \textit{real-time}, menyimpan pesan ke basis data PostgreSQL, dan mendeteksi pesan yang di-\textit{unsend} untuk keperluan perlindungan privasi.
+
+\item \textbf{Integrasi Komponen NLP}: Implementasi \textit{pipeline} pemrosesan teks yang mencakup:
+\begin{itemize}
+\item Ekstraksi entitas finansial menggunakan model NER dengan validasi \textit{whitelist} IDX
+\item Klasifikasi emosi menggunakan model \textit{RoBERTa}
+\item \textit{Topic modeling} menggunakan BERTopic
+\item Implementasi sistem \textit{weighted influence} berdasarkan peran pengirim pesan
+\end{itemize}
+
+\item \textbf{Integrasi Groq API untuk Generasi Rangkuman}: Implementasi modul yang memanggil Groq API dengan \textit{prompt engineering} yang dioptimalkan untuk menghasilkan rangkuman dalam format campuran \textit{bullet points} dan paragraf naratif dalam Bahasa Indonesia.
+
+\item \textbf{Implementasi Sistem Penjadwalan}: Konfigurasi Celery dengan \textit{beat scheduler} untuk mengotomasi proses pengumpulan pesan dan generasi rangkuman pada interval waktu yang telah ditentukan (11:00, 12:00, 14:00, 15:00, 16:00).
+
+\item \textbf{Implementasi Distribusi Otomatis}: Modul untuk mengirimkan rangkuman yang telah dihasilkan ke kanal Telegram \textit{output} yang \textit{dedicated}.
+\end{itemize}
+
+\textit{Deliverable} dari fase ini adalah sistem purwarupa yang fungsional secara end-to-end, mampu mengumpulkan pesan, memprosesnya melalui \textit{pipeline} NLP, menghasilkan rangkuman menggunakan LLM, dan mendistribusikannya ke kanal Telegram.
+
+\subsubsection{Fase 2: Pengujian Internal dan Iterasi}
+
+Fase pengujian internal dilakukan oleh peneliti untuk memvalidasi fungsionalitas sistem dan melakukan iterasi perbaikan sebelum melibatkan pengguna eksternal. Aktivitas mencakup:
+
+\begin{itemize}
+\item \textbf{Pengujian Fungsional}: Verifikasi bahwa setiap komponen sistem berfungsi sesuai spesifikasi kebutuhan fungsional (FR-01 hingga FR-12).
+
+\item \textbf{Pengujian Integrasi}: Memastikan bahwa komponen-komponen sistem terintegrasi dengan baik dan \textit{pipeline} pemrosesan berjalan tanpa kesalahan.
+
+\item \textbf{Analisis Output Rangkuman}: Evaluasi manual terhadap kualitas rangkuman yang dihasilkan untuk mengidentifikasi kelemahan dan area yang perlu diperbaiki.
+
+\item \textbf{Iterasi \textit{Prompt Engineering}}: Penyempurnaan \textit{prompt} yang diberikan ke Llama 3.1 70B untuk meningkatkan kualitas, relevansi, dan konsistensi format rangkuman.
+
+\item \textbf{Optimisasi Parameter}: \textit{Fine-tuning} hyperparameter untuk BERTopic dan threshold untuk NER guna meningkatkan performa komponen-komponen tersebut.
+\end{itemize}
+
+\textit{Deliverable} dari fase ini adalah sistem yang telah melalui iterasi perbaikan dengan kualitas output yang memadai untuk diuji oleh pengguna eksternal.
+
+\subsubsection{Fase 3: Evaluasi Ahli}
+
+Fase evaluasi ahli melibatkan Michael Yeoh sebagai pemimpin komunitas dan beberapa administrator untuk memberikan \textit{feedback} kualitatif terhadap sistem. Tujuan fase ini adalah:
+
+\begin{itemize}
+\item Memvalidasi relevansi konten rangkuman dari perspektif ahli yang memahami dinamika pasar dan kebutuhan komunitas
+\item Mengidentifikasi kekurangan atau bias sistemik dalam pemilihan informasi
+\item Mendapatkan persetujuan prinsip dari Michael Yeoh untuk melanjutkan ke fase pengujian yang lebih luas
+\item Menerima rekomendasi penyempurnaan format, gaya bahasa, dan struktur rangkuman
+\end{itemize}
+
+Evaluasi dilakukan melalui diskusi semi-terstruktur dan tinjauan bersama terhadap rangkuman yang dihasilkan sistem selama periode evaluasi. \textit{Feedback} dari fase ini akan digunakan untuk melakukan iterasi perbaikan sebelum peluncuran ke pengguna yang lebih luas.
+
+\subsubsection{Fase 4: Pengujian Beta dengan Pengguna}
+
+Fase pengujian beta melibatkan 20-30 anggota grup MY PIRANHA sebagai partisipan untuk mengevaluasi sistem dalam kondisi penggunaan nyata. Pada fase ini:
+
+\begin{itemize}
+\item Sistem akan dijalankan secara konsisten selama periode pengujian untuk menghasilkan rangkuman periodik
+\item Rangkuman akan didistribusikan ke kanal khusus yang dapat diakses oleh partisipan pengujian
+\item Partisipan akan diminta untuk menggunakan rangkuman dalam aktivitas investasi harian mereka
+\item Data kualitatif dan kuantitatif akan dikumpulkan melalui survei \textit{Google Forms} pada akhir periode pengujian
+\item \textit{Feedback} akan dianalisis untuk mengidentifikasi keberhasilan sistem dan area yang masih memerlukan perbaikan
+\end{itemize}
+
+\textit{Deliverable} akhir dari seluruh fase implementasi adalah sistem rangkuman otomatis yang telah divalidasi oleh pengguna nyata, lengkap dengan dokumentasi teknis, hasil evaluasi, dan rekomendasi untuk pengembangan lebih lanjut.
+
+\subsection{Estimasi Biaya Operasional}
+
+Estimasi biaya operasional sistem akan ditentukan setelah fase pengujian internal selesai dan pola penggunaan API Groq dapat diukur secara akurat. Faktor-faktor yang akan memengaruhi biaya meliputi:
+
+\begin{itemize}
+\item Jumlah token yang diproses per rangkuman (bergantung pada volume pesan harian)
+\item Frekuensi generasi rangkuman (6 kali per hari untuk 2 grup)
+\item Durasi periode pengujian beta
+\item Penggunaan \textit{batch API} versus \textit{standard API} dari Groq
+\end{itemize}
+
+Proyeksi awal menunjukkan bahwa biaya operasional akan berada dalam rentang terjangkau, jauh lebih rendah dibandingkan biaya solusi manual yang memerlukan asisten manusia tambahan. Detail estimasi biaya akan dilengkapi setelah data penggunaan aktual tersedia dari fase pengujian internal.
+
+
+% ==========================================
+\section{Rencana Pengujian dan Evaluasi}
+\label{sec:rencana-evaluasi}
+
+Evaluasi sistem rangkuman otomatis akan dilakukan melalui dua pendekatan komplementer: pengujian teknis untuk memvalidasi performa komponen-komponen sistem, dan evaluasi pengguna untuk mengukur kegunaan dan dampak sistem terhadap pengalaman pengguna dalam komunitas finansial.
+
+\subsection{Pengujian Teknis}
+
+Pengujian teknis bertujuan untuk memverifikasi bahwa komponen-komponen sistem memenuhi target metrik yang telah ditetapkan dalam kebutuhan non-fungsional (NFR).
+
+\subsubsection{Pengujian Akurasi \textit{Named Entity Recognition}}
+
+Akurasi ekstraksi \textit{ticker} saham Indonesia akan diukur menggunakan sampel pesan yang dianotasi secara manual. Metodologi pengujian mencakup:
+
+\begin{itemize}
+\item \textbf{Dataset Pengujian}: Sampel 50-100 pesan dari grup komunitas yang mengandung referensi \textit{ticker} saham akan dikumpulkan dan dianotasi secara manual oleh peneliti sebagai \textit{ground truth}.
+
+\item \textbf{Metrik Evaluasi}: \textit{Precision}, \textit{Recall}, dan F1-\textit{score} akan dihitung untuk mengukur performa deteksi \textit{ticker}. Target minimal adalah F1-\textit{score} 70\%, dengan aspirasi mencapai 80\% jika memungkinkan.
+
+\item \textbf{Analisis Kesalahan}: Kesalahan klasifikasi akan dianalisis untuk mengidentifikasi pola \textit{false positive} dan \textit{false negative}, yang akan menginformasikan penyempurnaan \textit{whitelist} IDX atau penyesuaian \textit{threshold} model.
+\end{itemize}
+
+\subsubsection{Evaluasi Koherensi Topik}
+
+Kualitas topik yang dihasilkan oleh BERTopic akan dievaluasi menggunakan metrik koherensi C\_v. Proses evaluasi mencakup:
+
+\begin{itemize}
+\item \textbf{Perhitungan Koherensi}: Skor C\_v akan dihitung menggunakan \textit{library} Gensim pada sampel topik yang dihasilkan dari data pesan real komunitas.
+
+\item \textbf{Target Metrik}: Skor C\_v minimal 0,5 sebagaimana ditetapkan dalam NFR-03, yang mengindikasikan kualitas topik yang baik dengan interpretabilitas tinggi.
+
+\item \textbf{Validasi Interpretatif}: Selain metrik kuantitatif, topik-topik yang dihasilkan akan dievaluasi secara kualitatif untuk memastikan bahwa representasi topik (\textit{top words}) bermakna dan relevan dengan konteks diskusi finansial.
+\end{itemize}
+
+\subsubsection{Pengukuran \textit{Response Time}}
+
+Waktu respons sistem dari akhir periode pengumpulan pesan hingga distribusi rangkuman akan dicatat dan dianalisis:
+
+\begin{itemize}
+\item \textbf{\textit{Logging} Otomatis}: Setiap eksekusi proses rangkuman akan mencatat \textit{timestamp} mulai dan selesai untuk menghitung durasi total.
+
+\item \textbf{Target Metrik}: Waktu respons harus kurang dari 5 menit sebagaimana ditetapkan dalam NFR-01, dengan margin keamanan 15-40 kali lipat dibandingkan waktu inferensi aktual LLM.
+
+\item \textbf{Identifikasi \textit{Bottleneck}}: Jika waktu respons melebihi target, profiling akan dilakukan untuk mengidentifikasi komponen yang menjadi \textit{bottleneck} (misalnya, \textit{topic modeling}, panggilan API Groq, atau operasi basis data).
+\end{itemize}
+
+\subsection{Evaluasi Pengguna}
+
+Evaluasi pengguna merupakan komponen kritis untuk mengukur keberhasilan sistem dari perspektif pengguna akhir. Pendekatan evaluasi akan menggunakan metodologi \textit{mixed methods} yang menggabungkan data kuantitatif dan kualitatif.
+
+\subsubsection{Metodologi Survei}
+
+\textbf{Rekrutmen Partisipan}
+
+Partisipan akan direkrut dari anggota grup MY PIRANHA yang aktif. Target jumlah partisipan adalah 20-30 orang untuk memastikan representasi yang memadai dari basis pengguna. Kriteria partisipan mencakup:
+\begin{itemize}
+\item Anggota aktif MY PIRANHA yang rutin membaca diskusi grup
+\item Bersedia menggunakan rangkuman otomatis selama periode pengujian
+\item Bersedia mengisi survei evaluasi pada akhir periode pengujian
+\end{itemize}
+
+Rekrutmen akan dilakukan dengan mengumumkan program pengujian beta di grup dan mengundang anggota untuk berpartisipasi secara sukarela.
+
+\textbf{Instrumen Survei}
+
+Survei evaluasi akan didistribusikan melalui \textit{Google Forms} dan mencakup pertanyaan-pertanyaan berikut:
+
+\textbf{Pengukuran Kepuasan Pengguna (Skala Likert 1-5)}:
+\begin{itemize}
+\item Tingkat kepuasan keseluruhan terhadap rangkuman
+\item Akurasi dan relevansi informasi yang disajikan
+\item Kelengkapan \textit{coverage} informasi penting
+\item Keterbacaan dan kejelasan bahasa rangkuman
+\item Format presentasi (campuran \textit{bullet points} dan naratif)
+\end{itemize}
+
+\textbf{Pengukuran Efisiensi Waktu}:
+\begin{itemize}
+\item "Sebelum menggunakan rangkuman otomatis, berapa lama waktu yang Anda habiskan untuk membaca pesan grup per hari?" (pilihan: <30 menit, 30-60 menit, 1-2 jam, >2 jam)
+\item "Berapa lama waktu yang Anda perlukan untuk membaca dan memahami satu rangkuman?" (pilihan: <1 menit, 1-2 menit, 2-3 menit, >3 menit)
+\item "Seberapa banyak waktu yang Anda hemat dengan menggunakan rangkuman dibandingkan membaca semua pesan?" (pilihan: <15 menit, 15-30 menit, 30-60 menit, >1 jam)
+\end{itemize}
+
+\textbf{Pertanyaan Kualitatif Terbuka}:
+\begin{itemize}
+\item "Informasi penting apa yang terlewat atau kurang lengkap dalam rangkuman?"
+\item "Aspek apa dari rangkuman yang paling berguna bagi Anda?"
+\item "Saran perbaikan untuk meningkatkan kualitas rangkuman:"
+\end{itemize}
+
+\textbf{Pengukuran Niat Adopsi}:
+\begin{itemize}
+\item "Apakah Anda ingin rangkuman otomatis ini terus tersedia setelah periode pengujian selesai?" (Ya/Tidak/Mungkin)
+\item "Apakah Anda akan merekomendasikan rangkuman ini kepada anggota komunitas lain?" (Ya/Tidak/Mungkin)
+\end{itemize}
+
+\subsubsection{Evaluasi Ahli}
+
+Selain survei pengguna, evaluasi kualitatif mendalam akan dilakukan dengan Michael Yeoh dan beberapa administrator komunitas. Evaluasi ahli ini bertujuan untuk:
+
+\begin{itemize}
+\item Mendapatkan perspektif dari individu yang memiliki pemahaman mendalam tentang dinamika pasar dan kebutuhan informasi komunitas
+\item Mengidentifikasi bias sistemik atau kesenjangan dalam pemilihan informasi yang mungkin tidak tertangkap dalam evaluasi pengguna reguler
+\item Memvalidasi bahwa sistem tidak menimbulkan risiko penyebaran informasi yang keliru atau menyesatkan
+\item Mendapatkan persetujuan untuk penggunaan sistem secara berkelanjutan jika hasil evaluasi positif
+\end{itemize}
+
+Evaluasi ahli akan dilakukan melalui sesi diskusi semi-terstruktur dengan durasi 45-60 menit, yang mencakup demonstrasi sistem dan tinjauan bersama terhadap sampel rangkuman.
+
+\subsection{Kriteria Keberhasilan Sistem}
+
+Keberhasilan sistem rangkuman otomatis akan dievaluasi berdasarkan kombinasi metrik teknis dan metrik kepuasan pengguna. Sistem dianggap berhasil jika memenuhi kriteria-kriteria berikut:
+
+\textbf{Kriteria Kepuasan Pengguna (Prioritas Tertinggi)}:
+\begin{itemize}
+\item Minimal 70\% partisipan survei memberikan rating kepuasan ≥4 dari skala 5
+\item Rata-rata waktu membaca rangkuman <3 menit (sesuai NFR-07)
+\item Minimal 70\% partisipan menyatakan rangkuman menghemat waktu ≥30 menit per hari
+\item Minimal 70\% partisipan menyatakan ingin rangkuman ini terus tersedia
+\end{itemize}
+
+\textbf{Kriteria Persetujuan Ahli}:
+\begin{itemize}
+\item Michael Yeoh memberikan persetujuan untuk penggunaan berkelanjutan sistem
+\item Tidak ada isu kritis yang diidentifikasi terkait akurasi atau bias informasi
+\end{itemize}
+
+\textbf{Kriteria Teknis (Minimum Viable Performance)}:
+\begin{itemize}
+\item Akurasi NER (F1-\textit{score}) ≥70\% pada dataset pengujian
+\item Skor koherensi topik (C\_v) ≥0,5
+\item Waktu respons sistem <5 menit untuk setiap generasi rangkuman
+\end{itemize}
+
+\textbf{Kriteria \textit{Coverage} Informasi}:
+\begin{itemize}
+\item Rangkuman berhasil mencakup periode gap (10:00-16:00) yang tidak tercakup oleh rangkuman manual Richy di grup Advanced
+\item Umpan balik kualitatif menunjukkan bahwa informasi penting tidak terlewat secara konsisten
+\end{itemize}
+
+Jika kriteria-kriteria di atas terpenuhi, sistem dapat dianggap berhasil mengatasi masalah \textit{information overload} yang diidentifikasi dan memberikan nilai tambah signifikan kepada komunitas finansial Michael Yeoh.
+
+
+% ==========================================
+\section{Analisis Risiko dan Mitigasi}
+\label{sec:risiko-mitigasi}
+
+Pengembangan dan evaluasi sistem rangkuman otomatis menghadapi berbagai risiko yang dapat memengaruhi keberhasilan penelitian. Bagian ini mengidentifikasi risiko-risiko utama beserta strategi mitigasi yang telah disiapkan untuk mengantisipasi dan menangani risiko tersebut.
+
+\subsection{Risiko Teknis}
+
+\begin{longtable}{|p{1cm}|p{3.5cm}|p{2cm}|p{2cm}|p{5cm}|}
+\caption{Identifikasi dan mitigasi risiko teknis}
+\label{tab:risiko-teknis} \\
+\hline
+\textbf{ID} & \textbf{Risiko} & \textbf{Probabilitas} & \textbf{Dampak} & \textbf{Strategi Mitigasi} \\
+\hline
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\tablename\ \thetable{} -- lanjutan dari halaman sebelumnya}} \\
+\hline
+\textbf{ID} & \textbf{Risiko} & \textbf{Probabilitas} & \textbf{Dampak} & \textbf{Strategi Mitigasi} \\
+\hline
+\endhead
+
+\hline \multicolumn{5}{r}{{Lanjut ke halaman berikutnya}} \\
+\endfoot
+
+\hline
+\endlastfoot
+
+RT-01 & Kualitas rangkuman LLM tidak memenuhi ekspektasi pengguna & Sedang & Tinggi & \textbf{Mitigasi Utama}: Iterasi \textit{prompt engineering} dengan pengujian berbagai struktur \textit{prompt}, \textit{temperature setting}, dan strategi \textit{few-shot learning}. \textbf{Kontinjensi}: Jika iterasi tidak berhasil, kombinasikan pendekatan ekstraktif (memilih kalimat penting) dengan abstraktif untuk meningkatkan \textit{informativeness}. \\
+\hline
+
+RT-02 & Akurasi NER tidak mencapai target 70\% & Sedang & Sedang & \textbf{Mitigasi}: Gunakan pendekatan hibrida yang menggabungkan output model NER dengan validasi terhadap \textit{whitelist} resmi ticker IDX (800+ emiten). \textbf{Kontinjensi}: Jika akurasi masih rendah, implementasikan sistem berbasis \textit{regex} dengan pola khusus untuk kode ticker 4-huruf (format standar BEI) sebagai \textit{fallback}. \\
+\hline
+
+RT-03 & Groq API mengalami \textit{downtime} atau \textit{rate limiting} & Rendah & Tinggi & \textbf{Mitigasi}: Implementasi \textit{retry logic} dengan \textit{exponential backoff} (tunggu 2s, 4s, 8s, dst). Monitor penggunaan API secara \textit{real-time} untuk menghindari \textit{rate limit}. \textbf{Kontinjensi}: Siapkan akun Groq cadangan atau pertimbangkan model lokal Llama 3.1 8B sebagai \textit{fallback} dengan penurunan kualitas yang dapat diterima. \\
+\hline
+
+RT-04 & Skor koherensi topik BERTopic <0,5 & Sedang & Sedang & \textbf{Mitigasi}: Lakukan \textit{hyperparameter tuning} pada parameter \texttt{min\_cluster\_size} (lebih konservatif), \texttt{n\_gram\_range}, dan \texttt{nr\_topics}. Eksperimen dengan model \textit{embedding} alternatif (IndoBERT vs multilingual-e5). \textbf{Kontinjensi}: Gunakan kategori topik yang telah didefinisikan sebelumnya (\textit{supervised clustering}) jika pendekatan \textit{unsupervised} gagal. \\
+\hline
+
+RT-05 & Waktu respons sistem >5 menit & Rendah & Sedang & \textbf{Mitigasi}: Profiling kode untuk identifikasi \textit{bottleneck}. Optimasi \textit{query} basis data dengan indexing yang tepat. Gunakan \textit{batch API} Groq yang lebih cepat. \textbf{Kontinjensi}: Jika latensi tetap tinggi, pertimbangkan pemrosesan asinkron dengan notifikasi kepada pengguna ketika rangkuman siap. \\
+\hline
+
+RT-06 & Sistem crash atau error saat operasi & Sedang & Sedang & \textbf{Mitigasi}: Implementasi \textit{comprehensive error handling} dengan \textit{try-catch blocks}, \textit{logging} detail untuk debugging, dan \textit{graceful degradation} untuk komponen non-kritis. \textbf{Kontinjensi}: Monitor log secara aktif selama fase pengujian dan lakukan \textit{hotfix} cepat jika ditemukan bug kritis. \\
+\hline
+\end{longtable}
+
+\subsection{Risiko Non-Teknis}
+
+\begin{longtable}{|p{1cm}|p{3.5cm}|p{2cm}|p{2cm}|p{5cm}|}
+\caption{Identifikasi dan mitigasi risiko non-teknis}
+\label{tab:risiko-non-teknis} \\
+\hline
+\textbf{ID} & \textbf{Risiko} & \textbf{Probabilitas} & \textbf{Dampak} & \textbf{Strategi Mitigasi} \\
+\hline
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\tablename\ \thetable{} -- lanjutan dari halaman sebelumnya}} \\
+\hline
+\textbf{ID} & \textbf{Risiko} & \textbf{Probabilitas} & \textbf{Dampak} & \textbf{Strategi Mitigasi} \\
+\hline
+\endhead
+
+\hline \multicolumn{5}{r}{{Lanjut ke halaman berikutnya}} \\
+\endfoot
+
+\hline
+\endlastfoot
+
+RN-01 & Adopsi pengguna rendah (anggota tidak membaca rangkuman) & Sedang & Tinggi & \textbf{Mitigasi}: Lakukan sesi \textit{onboarding} dengan demo langsung kepada calon partisipan. Komunikasikan nilai tambah yang jelas (hemat waktu, cakupan komprehensif). Gunakan kanal distribusi yang mudah diakses. \textbf{Kontinjensi}: Kumpulkan \textit{feedback} awal tentang hambatan adopsi dan iterasi cepat untuk memperbaiki pengalaman pengguna. \\
+\hline
+
+RN-02 & Kekhawatiran privasi dari anggota komunitas & Rendah & Tinggi & \textbf{Mitigasi}: Komunikasikan secara transparan bahwa sistem tidak memproses pesan yang di-\textit{unsend} (FR-09) sebagai respek terhadap privasi. Jelaskan bahwa data hanya digunakan untuk penelitian dan tidak dibagikan ke pihak ketiga. \textbf{Kontinjensi}: Siapkan mekanisme \textit{opt-out} untuk pengguna yang tidak ingin pesannya diproses. \\
+\hline
+
+RN-03 & Michael Yeoh tidak menyetujui deployment penuh setelah evaluasi & Rendah & Kritis & \textbf{Mitigasi}: Libatkan Michael Yeoh sejak fase evaluasi ahli untuk mendapatkan \textit{feedback} dini dan melakukan iterasi sebelum pengujian beta. Tunjukkan hasil evaluasi teknis dan \textit{feedback} positif dari fase sebelumnya. \textbf{Kontinjensi}: Jika tidak disetujui, dokumentasikan temuan penelitian sebagai bukti konsep (\textit{proof of concept}) dan rekomendasikan perbaikan untuk implementasi masa depan. \\
+\hline
+
+RN-04 & Jumlah partisipan survei tidak mencukupi (target 20-30, hanya dapat <10) & Sedang & Sedang & \textbf{Mitigasi}: Berikan insentif partisipasi (voucher Google Play Rp 50.000) untuk meningkatkan motivasi. Lakukan undangan personal dari Michael Yeoh yang menekankan kontribusi untuk penelitian. \textbf{Kontinjensi}: Jika jumlah partisipan terbatas, fokuskan pada evaluasi kualitatif mendalam dengan partisipan yang ada, dan akui limitasi ini dalam laporan penelitian. \\
+\hline
+
+RN-05 & Biaya operasional Groq API melebihi anggaran & Rendah & Sedang & \textbf{Mitigasi}: Monitor penggunaan API secara \textit{real-time} dengan \textit{alerting} ketika mendekati batas. Gunakan \textit{batch API} yang lebih murah (diskon 50\%). Optimalkan panjang \textit{prompt} untuk mengurangi token yang diproses. \textbf{Kontinjensi}: \textit{Downgrade} ke model Llama 3.1 8B yang 5-6 kali lebih murah jika anggaran menjadi kendala serius. \\
+\hline
+
+RN-06 & Kehilangan akses ke grup Telegram karena alasan teknis atau administratif & Rendah & Tinggi & \textbf{Mitigasi}: Pastikan bot memiliki izin yang stabil dari administrator grup. Dokumentasikan konfigurasi bot dengan baik untuk \textit{recovery} cepat jika terjadi masalah. \textbf{Kontinjensi}: Siapkan mekanisme backup untuk mengumpulkan data dari sumber alternatif jika akses hilang sementara. \\
+\hline
+\end{longtable}
+
+\subsection{Strategi Mitigasi Umum}
+
+Selain mitigasi spesifik untuk setiap risiko, penelitian ini menerapkan beberapa strategi mitigasi umum:
+
+\textbf{Pendekatan Iteratif dan Agile}
+
+Pengembangan sistem dilakukan secara iteratif dengan siklus \textit{feedback} yang cepat. Setiap fase implementasi diikuti dengan evaluasi dan penyempurnaan sebelum melanjutkan ke fase berikutnya. Pendekatan ini memungkinkan deteksi dini terhadap masalah dan koreksi cepat sebelum masalah tersebut menjadi kritis.
+
+\textbf{Dokumentasi Komprehensif}
+
+Semua keputusan desain, konfigurasi sistem, dan hasil pengujian akan didokumentasikan dengan baik. Dokumentasi ini tidak hanya penting untuk reproduksibilitas penelitian, tetapi juga memfasilitasi \textit{troubleshooting} dan iterasi perbaikan.
+
+\textbf{Komunikasi Terbuka dengan \textit{Stakeholder}}
+
+Komunikasi rutin dengan Michael Yeoh dan administrator komunitas akan dilakukan sepanjang proses pengembangan dan evaluasi. Transparansi tentang kemajuan, tantangan, dan keterbatasan sistem akan membangun kepercayaan dan memfasilitasi \textit{feedback} yang konstruktif.
+
+\textbf{Fleksibilitas dalam Kriteria Keberhasilan}
+
+Meskipun target metrik telah ditetapkan, penelitian ini mengakui bahwa sistem \textit{proof-of-concept} mungkin tidak mencapai semua target secara sempurna. Fokus utama adalah pada demonstrasi bahwa pendekatan yang diusulkan dapat memberikan nilai tambah signifikan, dengan dokumentasi jelas tentang keterbatasan dan rekomendasi untuk perbaikan masa depan.
+
+Dengan strategi mitigasi yang komprehensif dan pendekatan yang pragmatis, penelitian ini memiliki probabilitas tinggi untuk mencapai tujuan yang ditetapkan meskipun menghadapi berbagai risiko yang telah diidentifikasi.

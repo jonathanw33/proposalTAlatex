@@ -9,66 +9,13 @@
 
 Bab ini menyajikan analisis mendalam terhadap kondisi sistem komunitas Telegram Michael Yeoh saat ini, identifikasi masalah spesifik yang dihadapi, analisis kebutuhan sistem rangkuman otomatis, serta evaluasi berbagai alternatif solusi dengan justifikasi pemilihan pendekatan yang diusulkan. Analisis ini menjadi fondasi untuk desain konsep solusi yang akan diuraikan pada Bab \ref{chap:desain-konsep-solusi}.
 
-% ==========================================
-\section{Analisis Kondisi Saat Ini}
-\label{sec:kondisi-saat-ini}
 
-\subsection{Model Konseptual Komunitas Telegram Eksisting}
-
-Komunitas investasi saham Indonesia Michael Yeoh di Telegram merupakan ekosistem informasi finansial berskala besar dengan struktur hierarkis empat tingkat yang dirancang untuk menyediakan nilai berbeda pada setiap level keanggotaan. Gambar \ref{fig:current-system} mengilustrasikan arsitektur sistem komunikasi komunitas saat ini beserta aliran informasi antar komponen.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.9\textwidth]{image/current-state-diagram.png}
-  \caption{Model konseptual sistem komunikasi komunitas Telegram Michael Yeoh saat ini}
-  \label{fig:current-system}
-\end{figure}
-
-Struktur hierarkis komunitas terdiri dari empat grup dengan karakteristik berbeda yang dapat dilihat pada Tabel \ref{tab:group-characteristics}.\footnote{Data jumlah anggota berdasarkan kondisi per 4 November 2025. Jumlah anggota bersifat dinamis dan terus bertambah seiring pertumbuhan komunitas.} Setiap grup memiliki fungsi spesifik dalam ekosistem informasi, dengan kompleksitas komunikasi yang meningkat seiring level hierarki.
-
-\begin{longtable}{@{\extracolsep{\fill}} p{3cm} p{2.5cm} p{2.5cm} p{3cm} p{2.5cm}}
-\caption{Karakteristik grup dalam komunitas Telegram Michael Yeoh (per 4 November 2025)}
-\label{tab:group-characteristics} \\
-\toprule
-\textbf{Aspek} & \textbf{Cuap Cuap} & \textbf{Swing Plan} & \textbf{Advanced} & \textbf{PIRANHA} \\
-\midrule
-\endfirsthead
-
-\caption{Karakteristik grup dalam komunitas Telegram Michael Yeoh (lanjutan)} \\
-\toprule
-\textbf{Aspek} & \textbf{Cuap Cuap} & \textbf{Swing Plan} & \textbf{Advanced} & \textbf{PIRANHA} \\
-\midrule
-\endhead
-
-\midrule
-\multicolumn{5}{r}{\textit{Bersambung ke halaman berikutnya}} \\
-\bottomrule
-\endfoot
-
-\bottomrule
-\endlastfoot
-
-Jumlah Anggota & 20.500 & 20.500 & 4.300 & 2.000 \\
-Tipe Komunikasi & \textit{Broadcast} (\textit{read-only}) & Sinyal terstruktur & Interaktif dua arah & Interaktif dua arah \\
-Volume Pesan & 100 pesan per hari (10 per jam) & 5 pesan per hari & 200 pesan per jam & Lebih dari 200 pesan per jam \\
-Konten Utama & Edukasi umum dan berita pasar & Sinyal jual-beli terstruktur & Diskusi analisis teknikal & Debat strategi investasi \\
-Rangkuman Manual & Tidak tersedia & Tidak tersedia & Tersedia (1 kali per hari, pukul 10:00) & Tidak tersedia \\
-Tingkat Masalah & Rendah & Minimal & Tinggi & Sangat Tinggi \\
-\end{longtable}
-
-Grup MY Cuap Cuap dan MY Swing Plan berfungsi sebagai kanal informasi dengan mode \textit{read-only} atau sinyal terstruktur. MY Cuap Cuap menyediakan edukasi pasar dan analisis makroekonomi dengan volume 100 pesan per hari, sementara MY Swing Plan mendistribusikan sinyal \textit{trading} terstruktur (contoh: "BGTG BUY 106-100 SL 98 porsi 5\%") dengan volume hanya 5 pesan per hari. Kedua grup ini memiliki tingkat \textit{information overload} rendah namun menjadi bagian penting dari ekosistem yang memerlukan sintesis dengan diskusi di grup premium.
-
-Grup MY Advanced Group merupakan grup premium pertama dengan komunikasi interaktif dua arah untuk 4.300 anggota. Volume pesan mencapai 200 pesan per jam selama jam perdagangan (09:00-16:00), menghasilkan sekitar 1.400 pesan per hari. Grup ini memiliki satu rangkuman manual oleh asisten Richy Matthew Ashari setiap pukul 10:00, namun hanya mencakup jam pertama perdagangan (09:00-10:00), meninggalkan gap enam jam berikutnya.
-
-Grup MY PIRANHA, sebagai grup ultra-premium dengan 2.000 anggota elite, mengalami volume pesan tertinggi (lebih dari 200 pesan per jam) namun tanpa rangkuman manual sama sekali. Diskusi cenderung kasual dalam gaya namun sangat mendalam secara konten, menciptakan tantangan ekstraksi sinyal karena informasi penting sering tersembunyi dalam percakapan informal tanpa penanda eksplisit.
-
-Aliran informasi bersifat hierarkis dengan fragmentasi sistemik. Michael Yeoh dan administrator dapat memposting di semua grup, menciptakan aliran vertikal dari puncak hierarki. Namun, anggota di level berbeda tidak dapat mengakses grup yang lebih tinggi, menciptakan fragmentasi informasi antara analisis makro (Cuap Cuap), sinyal konkret (Swing Plan), diskusi implementasi (Advanced), dan debat strategi (PIRANHA). Anggota yang mengikuti multiple grup harus melakukan sintesis manual lintas grup, yang memerlukan waktu dan kemampuan analisis signifikan.
-
-\subsection{Identifikasi Masalah Sistem Saat Ini}
+\section{Identifikasi Masalah}
+\label{sec:identifikasi-masalah}
 
 Berdasarkan analisis terhadap model konseptual sistem saat ini, terdapat tiga kategori masalah utama: (1) \textit{information overload} dengan intensitas ekstrim di grup premium, (2) fragmentasi informasi lintas struktur hierarkis, dan (3) keterbatasan kognitif anggota dalam memproses volume informasi tinggi.
 
-\subsubsection{\textit{Information Overload} di Grup Premium}
+\subsection{\textit{Information Overload} di Grup Premium}
 
 Grup PIRANHA dan Advanced mengalami tingkat \textit{information overload} yang parah dengan volume melebihi 200 pesan per jam (sekitar 1.400 pesan per hari). PIRANHA tidak memiliki mekanisme rangkuman sama sekali, sementara Advanced hanya memiliki satu rangkuman manual pukul 10:00 yang mencakup jam pertama perdagangan, meninggalkan gap enam jam berikutnya (10:00-16:00).
 
@@ -76,7 +23,7 @@ Anggota dihadapkan pada pilihan suboptimal: (1) memantau diskusi \textit{real-ti
 
 Dampak kuantitatif: dengan asumsi 15 detik per pesan, membaca 200 pesan memerlukan 50 menit per jam. Anggota yang mencoba membaca semua pesan akan menghabiskan hampir seluruh waktu untuk konsumsi informasi tanpa waktu untuk analisis dan pengambilan keputusan—situasi yang tidak \textit{sustainable} dan bertentangan dengan tujuan komunitas.
 
-\subsubsection{Fragmentasi Informasi dan Keterbatasan Kognitif}
+\subsection{Fragmentasi Informasi dan Keterbatasan Kognitif}
 
 Struktur hierarkis empat tingkat menciptakan fragmentasi informasi sistemik. Informasi relevan tersebar di empat grup dengan sedikit mekanisme sintesis eksplisit: analisis makro (Cuap Cuap), sinyal konkret (Swing Plan), diskusi implementasi (Advanced), dan debat strategi (PIRANHA). Anggota premium yang mengakses multiple grup harus secara manual: (1) membaca konten di keempat grup, (2) mengidentifikasi hubungan semantik antar informasi, (3) mensintesis menjadi \textit{actionable insight}, dan (4) mengulangi proses ini sepanjang hari. Proses ini memerlukan \textit{cognitive switching cost} tinggi karena perpindahan antar konteks komunikasi berbeda (broadcast vs interaktif, formal vs kasual).
 
@@ -106,15 +53,11 @@ Anggota grup Advanced, dengan sekitar 4.000 anggota premium, menghadapi \textit{
 
 Kebutuhan kelompok ini meliputi: (1) rangkuman tambahan sepanjang hari untuk melengkapi rangkuman manual eksisting, (2) informasi tentang perubahan sentimen atau topik baru yang muncul setelah jam 10:00, dan (3) sintesis lintas grup yang menghubungkan informasi dari Cuap Cuap dan Swing Plan dengan diskusi di Advanced. Kelompok ini juga akan mendapat manfaat dari standardisasi format rangkuman yang konsisten, mengingat variabilitas dalam rangkuman manual.
 
-\subsubsection{Anggota Cuap Cuap dan Swing Plan (Bukan Target Sistem)}
+\subsubsection{Anggota Cuap Cuap dan Swing Plan}
 
-Anggota grup Cuap Cuap (~20.500) dan Swing Plan (~20.500) **tidak termasuk dalam target pengguna** sistem rangkuman otomatis yang diusulkan. Hal ini didasarkan pada dua pertimbangan utama yang terkait dengan desain arsitektur komunitas dan karakteristik masalah yang diidentifikasi.
+Anggota grup Cuap Cuap dan Swing Plan yang berjumlah sekitar 20.500 orang menghadapi \textit{pain points} yang berbeda, yaitu keterbatasan akses ke diskusi mendalam yang terjadi di grup premium. Meskipun mereka tidak mengalami \textit{information overload} di grup mereka sendiri, mereka kehilangan konteks penting tentang bagaimana analisis umum atau sinyal trading diimplementasikan dan didiskusikan oleh komunitas premium.
 
-Pertama, kedua grup ini **tidak mengalami masalah \textit{information overload}** yang menjadi fokus penelitian ini. Cuap Cuap dengan volume 100 pesan per hari (10 per jam) dan Swing Plan dengan hanya 5 pesan per hari memiliki volume komunikasi yang jauh di bawah ambang batas yang menyebabkan beban kognitif berlebihan. Anggota dapat dengan mudah membaca semua pesan tanpa menghabiskan waktu yang tidak proporsional. Dengan asumsi 15 detik per pesan, membaca semua pesan Cuap Cuap memerlukan waktu hanya 25 menit per hari, sementara Swing Plan memerlukan kurang dari 2 menit—volume yang sangat dapat dikelola tanpa intervensi sistem otomatis.
-
-Kedua, anggota Cuap Cuap dan Swing Plan **tidak memiliki akses** ke grup Advanced dan PIRANHA sesuai dengan struktur premium komunitas. Sistem rangkuman yang diusulkan dirancang untuk meringkas diskusi di grup premium (Advanced dan PIRANHA), bukan untuk mendistribusikan informasi premium kepada anggota non-premium. Memberikan akses rangkuman dari grup premium kepada anggota Cuap Cuap dan Swing Plan akan melanggar model bisnis komunitas berjenjang dan mengurangi nilai proposisi keanggotaan premium. Struktur hierarkis yang ada berfungsi sebagai mekanisme monetisasi dan diferensiasi nilai, yang harus dihormati oleh solusi teknis yang dikembangkan.
-
-Meskipun anggota Cuap Cuap dan Swing Plan mungkin memiliki kebutuhan untuk memahami sentimen komunitas secara keseluruhan atau validasi sinyal trading, kebutuhan ini berada di luar \textit{scope} penelitian saat ini yang fokus pada reduksi \textit{information overload} di grup premium. Sistem rangkuman dirancang untuk melayani anggota yang **sudah memiliki akses** ke Advanced dan PIRANHA namun mengalami kesulitan memproses volume informasi yang tinggi, bukan untuk memberikan akses baru ke informasi premium.
+Kebutuhan kelompok ini meliputi: (1) akses (meskipun mungkin terbatas) ke insight dari diskusi premium tanpa harus upgrade keanggotaan, (2) pemahaman tentang sentimen komunitas secara keseluruhan terhadap saham atau kondisi pasar tertentu, dan (3) validasi bahwa sinyal yang mereka terima memiliki dukungan diskusi substantif di tingkat yang lebih tinggi. Sistem rangkuman dapat menyediakan nilai ini sambil tetap menghormati struktur premium komunitas.
 
 \subsubsection{Michael Yeoh dan Tim Administrator}
 
@@ -134,42 +77,31 @@ Berdasarkan analisis \textit{stakeholder} dan masalah sistem saat ini, Tabel \re
 \midrule
 \endfirsthead
 
-\caption{Kebutuhan fungsional sistem rangkuman otomatis (lanjutan)} \\
+\multicolumn{4}{c}%
+{{\tablename\ \thetable{} -- lanjutan dari halaman sebelumnya}} \\
 \toprule
 \textbf{ID} & \textbf{Kebutuhan Fungsional} & \textbf{Prioritas} & \textbf{Keterangan} \\
 \midrule
 \endhead
 
 \midrule
-\multicolumn{4}{r}{\textit{Bersambung ke halaman berikutnya}} \\
-\bottomrule
+\multicolumn{4}{r}{{Lanjut ke halaman berikutnya}} \\
 \endfoot
 
 \bottomrule
 \endlastfoot
 
 FR-01 & Sistem harus dapat mengumpulkan pesan dari empat grup Telegram (MY Cuap Cuap, MY Swing Plan, MY Advanced Group, MY PIRANHA) secara \textit{real-time} & MUST & Fondasi sistem untuk akuisisi data \\
-
 FR-02 & Sistem harus dapat mengekstrak entitas finansial (nama perusahaan, kode ticker saham) menggunakan model \textit{cahya/bert-base-indonesian-NER} dan \textit{whitelist} ticker dari \textit{Indonesia Stock Exchange} & MUST & Identifikasi aset yang dibahas \\
-
 FR-03 & Sistem harus dapat menganalisis emosi pesan menggunakan \textit{indonesian-roberta-base-emotion-classifier} untuk mendeteksi spektrum emosi (ketakutan, kegembiraan, kemarahan) & MUST & Analisis sentimen psikologis pasar \\
-
 FR-04 & Sistem harus dapat mengidentifikasi topik diskusi dominan dalam setiap periode waktu menggunakan BERTopic & MUST & Pemodelan topik untuk kategorisasi \\
-
 FR-05 & Sistem harus menerapkan \textit{weighted influence system} dengan bobot: Michael Yeoh (4×), Administrator (3×), VIP members (2×), Regular members (1×) & MUST & Filter intelijen berbasis hierarki \\
-
 FR-06 & Sistem harus menghasilkan rangkuman secara otomatis pada interval waktu tetap (11:00, 12:00, 14:00, 15:00, 16:00) & MUST & Otomasi periodik \\
-
 FR-07 & Rangkuman harus merupakan sintesis lintas-grup (\textit{cross-group merged}) yang mengintegrasikan informasi dari keempat grup dalam satu dokumen koheren & MUST & Sintesis holistik \\
-
 FR-08 & Format rangkuman harus \textit{mixed} yang menggabungkan bullet points untuk informasi terstruktur dan paragraf naratif untuk konteks & MUST & Readability dan comprehensiveness \\
-
 FR-09 & Sistem TIDAK boleh memproses pesan yang telah di-\textit{unsend} oleh pengirim untuk menghormati privasi & MUST & Perlindungan privasi eksplisit \\
-
 FR-10 & Sistem harus mengirim rangkuman yang dihasilkan ke kanal Telegram output yang dedicated melalui Telegram Bot API & MUST & Distribusi otomatis \\
-
 FR-11 & Sistem harus menyimpan rangkuman historis beserta metadata (timestamp, jumlah pesan diproses, topik terdeteksi) dalam basis data & SHOULD & Persistensi data dan audit trail \\
-
 FR-12 & Sistem harus mendukung query untuk mengakses rangkuman periode tertentu (harian, mingguan) melalui perintah bot & COULD & Akses retroaktif \\
 \end{longtable}
 
@@ -177,7 +109,9 @@ FR-12 & Sistem harus mendukung query untuk mengakses rangkuman periode tertentu 
 
 Kebutuhan non-fungsional mendefinisikan atribut kualitas sistem yang harus dipenuhi untuk memastikan sistem dapat beroperasi secara efektif dalam konteks \textit{real-world} komunitas Telegram finansial. Tabel \ref{tab:nonfunctional-requirements} merangkum kebutuhan non-fungsional beserta target metrik yang dapat diukur.
 
-\begin{longtable}{@{\extracolsep{\fill}} p{1.5cm} p{3.5cm} p{3.5cm} p{5cm}}
+% Catatan: Pastikan \usepackage{booktabs} dan \usepackage{longtable} ada di preamble Anda
+
+\begin{longtable}{@{\extracolsep{\fill}} p{1.5cm} p{2.5cm} p{4cm} p{6cm}}
 \caption{Kebutuhan non-fungsional sistem rangkuman otomatis} 
 \label{tab:nonfunctional-requirements} \\
 \toprule
@@ -185,37 +119,37 @@ Kebutuhan non-fungsional mendefinisikan atribut kualitas sistem yang harus dipen
 \midrule
 \endfirsthead
 
-\caption{Kebutuhan non-fungsional sistem rangkuman otomatis (lanjutan)} \\
+\multicolumn{4}{c}%
+{{\tablename\ \thetable{} -- lanjutan dari halaman sebelumnya}} \\
 \toprule
 \textbf{ID} & \textbf{Aspek} & \textbf{Target Metrik} & \textbf{Keterangan} \\
 \midrule
 \endhead
 
 \midrule
-\multicolumn{4}{r}{\textit{Bersambung ke halaman berikutnya}} \\
-\bottomrule
+\multicolumn{4}{r}{{Bersambung ke halaman berikutnya}} \\
 \endfoot
 
 \bottomrule
 \endlastfoot
 
-NFR-01 & \textit{Response Time} & Rangkuman harus selesai dihasilkan dalam waktu kurang dari 5 menit setelah akhir periode pengumpulan & Relevansi temporal untuk grup PIRANHA yang sangat aktif \\
+NFR-01 & Response Time & Rangkuman harus selesai dihasilkan dalam waktu kurang dari 5 menit setelah akhir periode pengumpulan & Relevansi temporal (Bagian 2.1: teori information overload); LLM inference 7-20 detik dengan margin keamanan 15-40$\times$ (Bagian 2.3) \\
 
-NFR-02 & Akurasi NER & \textit{Precision} dan \textit{Recall} deteksi ticker saham Indonesia harus mencapai minimal 80\% & Kualitas ekstraksi entitas finansial \\
+NFR-02 & Akurasi NER & Precision dan Recall deteksi ticker saham Indonesia harus mencapai minimal 80\% & Target antara baseline Indonesia 73\% dan sistem matang 92-95\% (Bagian 2.4) \\
 
-NFR-03 & Kualitas \textit{Topic Modeling} & \textit{Coherence score} BERTopic harus mencapai minimal 0.5 & Topik yang dihasilkan harus interpretatif dan bermakna \\
+NFR-03 & Kualitas Topic Modeling & Coherence score BERTopic harus mencapai minimal 0.5 & Skor C\_v 0.5 = kualitas baik dengan interpretabilitas tinggi (Bagian 2.5) \\
 
-NFR-04 & \textit{System Uptime} & Ketersediaan sistem harus mencapai minimal 95\% selama jam perdagangan (09:00-16:00) & Reliabilitas operasional \\
+NFR-04 & System Uptime & Ketersediaan sistem harus mencapai minimal 95\% selama jam perdagangan (09:00-16:00) & Reliabilitas operasional (18 hari downtime tahunan, sesuai untuk sistem internal non-kritis) \\
 
-NFR-05 & \textit{Scalability} & Sistem harus mampu menangani lebih dari 250 pesan per jam per grup tanpa degradasi performa & \textit{Future-proof} untuk pertumbuhan komunitas \\
+NFR-05 & Scalability & Sistem harus mampu menangani lebih dari 250 pesan per jam per grup tanpa degradasi performa & Buffer 25\% sesuai CAGR pertumbuhan komunitas online 24,3\% \\
 
-NFR-06 & Privasi & Zero kebocoran data; pesan yang di-\textit{unsend} harus dikecualikan dari pemrosesan & Kepatuhan terhadap prinsip privasi \\
+NFR-06 & Privasi & Zero kebocoran data; pesan yang di-unsend harus dikecualikan dari pemrosesan & Kepatuhan terhadap prinsip privasi \\
 
-NFR-07 & \textit{Usability} & Rangkuman harus dapat dibaca dan dipahami dalam waktu kurang dari 3 menit oleh anggota rata-rata & Target \textit{user experience} \\
+NFR-07 & Usability & Rangkuman harus dapat dibaca dan dipahami dalam waktu kurang dari 3 menit oleh anggota rata-rata & Kecepatan baca 238 WPM $\times$ 3 menit = 714 kata (Bagian 2.3); sesuai kapasitas memori kerja \\
 
 NFR-08 & Lokalisasi & Semua output rangkuman harus dalam Bahasa Indonesia dengan terminologi finansial yang sesuai & Aksesibilitas untuk komunitas lokal \\
 
-NFR-09 & Efisiensi Biaya & Biaya operasional Groq API untuk inferensi LLM harus kurang dari \$50 per bulan untuk 18 rangkuman per hari & Keberlanjutan finansial \\
+NFR-09 & Efisiensi Biaya & Biaya operasional Groq API untuk inferensi LLM harus kurang dari \$50 per bulan untuk 18 rangkuman per hari & Llama 3.1 8B: \$5,46/bulan atau Llama 3.3 70B batch: \$31/bulan untuk 60k pesan/bulan \\
 \end{longtable}
 
 Target metrik pada kebutuhan non-fungsional ini akan menjadi dasar untuk evaluasi sistem pada fase \textit{Evaluation} metodologi DSRM. Beberapa metrik seperti akurasi NER dan kualitas topic modeling dapat diukur secara objektif melalui evaluasi teknis. Metrik lain seperti \textit{usability} dan efisiensi waktu akses akan diukur melalui survei \textit{feedback} pengguna yang akan dilakukan selama fase pengujian sistem.
@@ -269,7 +203,7 @@ Alternatif kedua adalah mengembangkan bot Telegram sederhana yang memfilter pesa
 \item Tidak dapat menerapkan \textit{weighted influence} atau analisis sentimen yang kompleks
 \end{itemize}
 
-\subsubsection{Alternatif 3: Bot Rangkuman Berbasis \textit{AI} dengan NLP Khusus Domain (DIUSULKAN)}
+\subsubsection{Alternatif 3: Bot Rangkuman Berbasis \textit{AI} dengan NLP Khusus Domain}
 
 Alternatif ketiga, yang merupakan solusi yang diusulkan dalam penelitian ini, adalah mengembangkan sistem rangkuman otomatis berbasis \textit{artificial intelligence} dengan \textit{pipeline} NLP yang dioptimalkan untuk domain finansial Indonesia. Sistem ini mengintegrasikan multiple komponen: ekstraksi entitas menggunakan \textit{bert-based-indonesian-NER}, analisis emosi dengan \textit{indonesian-roberta-base-emotion-classifier}, pemodelan topik dengan BERTopic, \textit{weighted influence algorithm}, dan generasi rangkuman dengan \textit{large language model} (Llama 3.1 70B via Groq API).
 
@@ -318,37 +252,30 @@ Alternatif keempat adalah menggunakan layanan SaaS \textit{third-party} seperti 
 
 Untuk memilih alternatif solusi yang optimal, dilakukan analisis menggunakan \textit{decision matrix} dengan enam kriteria yang diberi bobot berdasarkan prioritas untuk konteks komunitas Telegram finansial ini. Tabel \ref{tab:decision-matrix} menyajikan \textit{decision matrix} dengan skor untuk setiap alternatif pada setiap kriteria.
 
-\begin{longtable}{@{\extracolsep{\fill}} p{3.5cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm}}
+\begin{table}[H]
+\centering
 \caption{\textit{Decision matrix} untuk pemilihan alternatif solusi}
-\label{tab:decision-matrix} \\
-\toprule
+\label{tab:decision-matrix}
+\begin{tabular}{|p{3.5cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|}
+\hline
 \textbf{Kriteria} & \textbf{Bobot} & \textbf{Alt 1: Manual} & \textbf{Alt 2: Rule} & \textbf{Alt 3: AI NLP} & \textbf{Alt 4: SaaS} \\
-\midrule
-\endfirsthead
-
-\caption{\textit{Decision matrix} untuk pemilihan alternatif solusi (lanjutan)} \\
-\toprule
-\textbf{Kriteria} & \textbf{Bobot} & \textbf{Alt 1: Manual} & \textbf{Alt 2: Rule} & \textbf{Alt 3: AI NLP} & \textbf{Alt 4: SaaS} \\
-\midrule
-\endhead
-
-\midrule
-\multicolumn{6}{r}{\textit{Bersambung ke halaman berikutnya}} \\
-\bottomrule
-\endfoot
-
-\bottomrule
-\endlastfoot
-
+\hline
 Skalabilitas (24 recap/hari) & 25\% & 1/5 & 5/5 & 5/5 & 4/5 \\
+\hline
 Akurasi (konteks finansial) & 20\% & 5/5 & 2/5 & 4/5 & 3/5 \\
+\hline
 Efisiensi Biaya & 15\% & 1/5 & 5/5 & 4/5 & 3/5 \\
+\hline
 \textit{Customizability} (weighted) & 20\% & 3/5 & 2/5 & 5/5 & 2/5 \\
+\hline
 Privasi \& Kepatuhan & 10\% & 5/5 & 5/5 & 5/5 & 2/5 \\
+\hline
 Kecepatan Deployment & 10\% & 4/5 & 5/5 & 3/5 & 4/5 \\
-\midrule
+\hline
 \textbf{Skor Tertimbang} & \textbf{100\%} & \textbf{2.75} & \textbf{3.60} & \textbf{4.35} & \textbf{3.00} \\
-\end{longtable}
+\hline
+\end{tabular}
+\end{table}
 
 Berdasarkan \textit{decision matrix}, Alternatif 3 (Bot Rangkuman Berbasis AI dengan NLP Khusus Domain) memperoleh skor tertimbang tertinggi sebesar 4.35 dari skala 5.0. Pemilihan alternatif ini dijustifikasi oleh beberapa alasan strategis dan teknis berikut.
 

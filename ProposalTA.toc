@@ -21,9 +21,9 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {chapter}{DAFTAR GAMBAR}{vi}{figure.caption.1}%
-\contentsline {chapter}{DAFTAR TABEL}{vii}{figure.caption.1}%
-\contentsline {chapter}{\centering \normalsize DAFTAR KODE}{viii}{chapter*.2}%
+\contentsline {chapter}{DAFTAR GAMBAR}{vii}{figure.caption.1}%
+\contentsline {chapter}{DAFTAR TABEL}{viii}{figure.caption.1}%
+\contentsline {chapter}{\centering \normalsize DAFTAR KODE}{ix}{chapter*.2}%
 \contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {I.1}Latar Belakang}{1}{section.1.1}%
 \babel@toc {english}{}\relax 
@@ -213,13 +213,7 @@
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \contentsline {subsection}{\numberline {II.3.6}Tantangan Inferensi LLM dalam Sistem \textit {Real-Time}}{16}{subsection.2.3.6}%
-\contentsline {section}{\numberline {II.4}Analisis Teks Finansial: Sentimen, Emosi, dan Entitas}{17}{section.2.4}%
-\contentsline {subsection}{\numberline {II.4.1}Model Bahasa untuk Analisis Sentimen Indonesia}{17}{subsection.2.4.1}%
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.4.2}Analisis Sentimen Domain Finansial}{17}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {II.3.7}Standar Latensi dan Keterbacaan untuk Sistem Rangkuman}{17}{subsection.2.3.7}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -228,13 +222,34 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.4.3}Klasifikasi Emosi vs Sentimen untuk Investor Ritel}{18}{subsection.2.4.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {II.4}Analisis Teks Finansial: Sentimen, Emosi, dan Entitas}{18}{section.2.4}%
+\contentsline {subsection}{\numberline {II.4.1}Model Bahasa untuk Analisis Sentimen Indonesia}{18}{subsection.2.4.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.4.2}Analisis Sentimen Domain Finansial}{18}{subsection.2.4.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.4.3}Klasifikasi Emosi vs Sentimen untuk Investor Ritel}{19}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {II.4.4}Pemanfaatan Sinyal Komunitas dalam Peringkasan}{19}{subsection.2.4.4}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.4.5}\textit {Named Entity Recognition} untuk Teks Finansial Indonesia}{19}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {II.4.5}\textit {Named Entity Recognition} untuk Teks Finansial Indonesia}{20}{subsection.2.4.5}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -247,8 +262,7 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {section}{\numberline {II.5}Infrastruktur Sistem: Platform, Arsitektur, dan \textit {Pipeline}}{20}{section.2.5}%
-\contentsline {subsection}{\numberline {II.5.1}Karakteristik Platform Telegram}{20}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {II.4.6}Standar Akurasi NER untuk Domain Finansial Indonesia}{21}{subsection.2.4.6}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -261,24 +275,8 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.5.2}Arsitektur Sistem \textit {Real-time} dan \textit {Event-Driven}}{21}{subsection.2.5.2}%
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.5.3}Komponen Analisis Asinkron: \textit {Topic Modeling} dengan BERTopic}{22}{subsection.2.5.3}%
+\contentsline {section}{\numberline {II.5}Infrastruktur Sistem: Platform, Arsitektur, dan \textit {Pipeline}}{21}{section.2.5}%
+\contentsline {subsection}{\numberline {II.5.1}Karakteristik Platform Telegram}{22}{subsection.2.5.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -295,9 +293,7 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.5.4}Integrasi \textit {Pipeline} dan Tantangannya}{23}{subsection.2.5.4}%
-\contentsline {section}{\numberline {II.6}Penelitian Basis Utama}{24}{section.2.6}%
-\contentsline {subsection}{\numberline {II.6.1}BERTopic untuk \textit {Topic Modeling} Teks Media Sosial}{24}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {II.5.2}Arsitektur Sistem \textit {Real-time} dan \textit {Event-Driven}}{22}{subsection.2.5.2}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -306,7 +302,11 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.6.2}\textit {Weighted Influence System} dari Analisis Sentimen Media Sosial}{24}{subsection.2.6.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.5.3}Komponen Analisis Asinkron: \textit {Topic Modeling} dengan BERTopic}{23}{subsection.2.5.3}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -315,55 +315,138 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.6.3}Peringkasan Percakapan \textit {Structure-Aware}}{25}{subsection.2.6.3}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {II.6.4}Justifikasi Pemilihan dan Integrasi}{25}{subsection.2.6.4}%
-\contentsline {chapter}{\numberline {III}ANALISIS MASALAH}{26}{chapter.3}%
-\contentsline {section}{\numberline {III.1}Analisis Kondisi Saat Ini}{26}{section.3.1}%
-\contentsline {subsection}{\numberline {III.1.1}Model Konseptual Komunitas Telegram Eksisting}{26}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {III.1.2}Identifikasi Masalah Sistem Saat Ini}{29}{subsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {III.1.2.1}\textit {Information Overload} di Grup Premium}{29}{subsubsection.3.1.2.1}%
-\contentsline {subsubsection}{\numberline {III.1.2.2}Fragmentasi Informasi dan Keterbatasan Kognitif}{29}{subsubsection.3.1.2.2}%
-\contentsline {section}{\numberline {III.2}Analisis Kebutuhan}{30}{section.3.2}%
-\contentsline {subsection}{\numberline {III.2.1}Identifikasi \textit {Stakeholder} dan \textit {Pain Points}}{30}{subsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {III.2.1.1}Anggota Grup PIRANHA (Target Primer)}{30}{subsubsection.3.2.1.1}%
-\contentsline {subsubsection}{\numberline {III.2.1.2}Anggota Grup Advanced (Target Sekunder)}{31}{subsubsection.3.2.1.2}%
-\contentsline {subsubsection}{\numberline {III.2.1.3}Anggota Cuap Cuap dan Swing Plan (Bukan Target Sistem)}{31}{subsubsection.3.2.1.3}%
-\contentsline {subsubsection}{\numberline {III.2.1.4}Michael Yeoh dan Tim Administrator}{32}{subsubsection.3.2.1.4}%
-\contentsline {subsection}{\numberline {III.2.2}Kebutuhan Fungsional}{32}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {III.2.3}Kebutuhan Non-Fungsional}{34}{subsection.3.2.3}%
-\contentsline {section}{\numberline {III.3}Analisis Alternatif Solusi}{36}{section.3.3}%
-\contentsline {subsection}{\numberline {III.3.1}Alternatif Pendekatan untuk Mereduksi \textit {Information Overload}}{36}{subsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {III.3.1.1}Alternatif 1: Ekspansi \textit {Manual Curation} (Status Quo yang Ditingkatkan)}{36}{subsubsection.3.3.1.1}%
-\contentsline {subsubsection}{\numberline {III.3.1.2}Alternatif 2: Bot Filter Berbasis Aturan (\textit {Rule-Based Keyword Bot})}{37}{subsubsection.3.3.1.2}%
-\contentsline {subsubsection}{\numberline {III.3.1.3}Alternatif 3: Bot Rangkuman Berbasis \textit {AI} dengan NLP Khusus Domain (DIUSULKAN)}{38}{subsubsection.3.3.1.3}%
-\contentsline {subsubsection}{\numberline {III.3.1.4}Alternatif 4: Solusi SaaS \textit {Generic} dengan LLM \textit {Third-Party}}{39}{subsubsection.3.3.1.4}%
-\contentsline {subsection}{\numberline {III.3.2}Analisis Pemilihan Solusi}{40}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {IV}DESAIN KONSEP SOLUSI}{43}{chapter.4}%
-\contentsline {section}{\numberline {IV.1}Perbandingan Sistem Saat Ini dengan Sistem yang Diusulkan}{43}{section.4.1}%
-\contentsline {subsection}{\numberline {IV.1.1}Model Konseptual Sistem Saat Ini (\textit {Before})}{43}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {IV.1.2}Model Konseptual Sistem yang Diusulkan (\textit {After})}{44}{subsection.4.1.2}%
-\contentsline {section}{\numberline {IV.2}Komponen Utama Sistem yang Diusulkan}{45}{section.4.2}%
-\contentsline {subsection}{\numberline {IV.2.1}\textit {Weighted Influence System}}{45}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {IV.2.2}\textit {Named Entity Recognition} (NER)}{45}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {IV.2.3}Klasifikasi Emosi}{45}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {IV.2.4}\textit {Topic Modeling} dengan BERTopic}{45}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {IV.2.5}Agregasi Data dengan \textit {Weighted Influence}}{46}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {IV.2.6}Generasi Rangkuman dengan \textit {Large Language Model}}{46}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {IV.2.7}Perlindungan Privasi dan Basis Data}{46}{subsection.4.2.7}%
-\contentsline {section}{\numberline {IV.3}Aliran Data dan Proses Operasional}{47}{section.4.3}%
-\contentsline {subsection}{\numberline {IV.3.1}Aliran Data \textit {End-to-End}}{47}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {IV.3.2}Jadwal Operasional}{47}{subsection.4.3.2}%
-\contentsline {section}{\numberline {IV.4}Perbedaan Kunci dengan Sistem Saat Ini}{48}{section.4.4}%
-\contentsline {section}{\numberline {IV.5}Nilai Proposisi dan \textit {Expected Outcomes}}{49}{section.4.5}%
-\contentsline {subsection}{\numberline {IV.5.1}Untuk Anggota PIRANHA (Target Primer)}{49}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {IV.5.2}Untuk Anggota Advanced (Target Sekunder)}{49}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {IV.5.3}Untuk Michael Yeoh dan Administrator}{49}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {IV.5.4}\textit {Expected Outcomes}}{50}{subsection.4.5.4}%
-\contentsline {chapter}{\numberline {V}RENCANA SELANJUTNYA}{51}{chapter.5}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.5.4}Integrasi \textit {Pipeline} dan Tantangannya}{24}{subsection.2.5.4}%
+\contentsline {section}{\numberline {II.6}Penelitian Basis Utama}{25}{section.2.6}%
+\contentsline {subsection}{\numberline {II.6.1}BERTopic untuk \textit {Topic Modeling} Teks Media Sosial}{25}{subsection.2.6.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.6.2}\textit {Weighted Influence System} dari Analisis Sentimen Media Sosial}{26}{subsection.2.6.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.6.3}Peringkasan Percakapan \textit {Structure-Aware}}{26}{subsection.2.6.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.6.4}Justifikasi Pemilihan dan Integrasi}{27}{subsection.2.6.4}%
+\contentsline {section}{\numberline {II.7}Konteks Penelitian: Komunitas Telegram Michael Yeoh}{27}{section.2.7}%
+\contentsline {subsection}{\numberline {II.7.1}Model Konseptual Sistem Komunikasi Komunitas}{28}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {II.7.2}Implikasi untuk Desain Sistem Rangkuman Otomatis}{31}{subsection.2.7.2}%
+\contentsline {chapter}{\numberline {III}ANALISIS MASALAH}{32}{chapter.3}%
+\contentsline {section}{\numberline {III.1}Identifikasi Masalah}{32}{section.3.1}%
+\contentsline {subsection}{\numberline {III.1.1}\textit {Information Overload} di Grup Premium}{32}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {III.1.2}Fragmentasi Informasi dan Keterbatasan Kognitif}{33}{subsection.3.1.2}%
+\contentsline {section}{\numberline {III.2}Analisis Kebutuhan}{33}{section.3.2}%
+\contentsline {subsection}{\numberline {III.2.1}Identifikasi \textit {Stakeholder} dan \textit {Pain Points}}{34}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {III.2.1.1}Anggota Grup PIRANHA (Target Primer)}{34}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {III.2.1.2}Anggota Grup Advanced (Target Sekunder)}{34}{subsubsection.3.2.1.2}%
+\contentsline {subsubsection}{\numberline {III.2.1.3}Anggota Cuap Cuap dan Swing Plan}{35}{subsubsection.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {III.2.1.4}Michael Yeoh dan Tim Administrator}{35}{subsubsection.3.2.1.4}%
+\contentsline {subsection}{\numberline {III.2.2}Kebutuhan Fungsional}{35}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {III.2.3}Kebutuhan Non-Fungsional}{37}{subsection.3.2.3}%
+\contentsline {section}{\numberline {III.3}Analisis Alternatif Solusi}{39}{section.3.3}%
+\contentsline {subsection}{\numberline {III.3.1}Alternatif Pendekatan untuk Mereduksi \textit {Information Overload}}{39}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {III.3.1.1}Alternatif 1: Ekspansi \textit {Manual Curation} (Status Quo yang Ditingkatkan)}{39}{subsubsection.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {III.3.1.2}Alternatif 2: Bot Filter Berbasis Aturan (\textit {Rule-Based Keyword Bot})}{40}{subsubsection.3.3.1.2}%
+\contentsline {subsubsection}{\numberline {III.3.1.3}Alternatif 3: Bot Rangkuman Berbasis \textit {AI} dengan NLP Khusus Domain}{40}{subsubsection.3.3.1.3}%
+\contentsline {subsubsection}{\numberline {III.3.1.4}Alternatif 4: Solusi SaaS \textit {Generic} dengan LLM \textit {Third-Party}}{42}{subsubsection.3.3.1.4}%
+\contentsline {subsection}{\numberline {III.3.2}Analisis Pemilihan Solusi}{42}{subsection.3.3.2}%
+\contentsline {chapter}{\numberline {IV}DESAIN KONSEP SOLUSI}{45}{chapter.4}%
+\contentsline {section}{\numberline {IV.1}Perbandingan Sistem Saat Ini dengan Sistem yang Diusulkan}{45}{section.4.1}%
+\contentsline {subsection}{\numberline {IV.1.1}Model Konseptual Sistem Saat Ini (\textit {Before})}{45}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {IV.1.2}Model Konseptual Sistem yang Diusulkan (\textit {After})}{46}{subsection.4.1.2}%
+\contentsline {section}{\numberline {IV.2}Komponen Utama Sistem yang Diusulkan}{47}{section.4.2}%
+\contentsline {subsection}{\numberline {IV.2.1}\textit {Weighted Influence System}}{47}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {IV.2.2}\textit {Named Entity Recognition} (NER)}{47}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {IV.2.3}Klasifikasi Emosi}{47}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {IV.2.4}\textit {Topic Modeling} dengan BERTopic}{47}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {IV.2.5}Agregasi Data dengan \textit {Weighted Influence}}{48}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {IV.2.6}Generasi Rangkuman dengan \textit {Large Language Model}}{48}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {IV.2.7}Perlindungan Privasi dan Basis Data}{48}{subsection.4.2.7}%
+\contentsline {section}{\numberline {IV.3}Aliran Data dan Proses Operasional}{49}{section.4.3}%
+\contentsline {subsection}{\numberline {IV.3.1}Aliran Data \textit {End-to-End}}{49}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {IV.3.2}Jadwal Operasional}{49}{subsection.4.3.2}%
+\contentsline {section}{\numberline {IV.4}Perbedaan Kunci dengan Sistem Saat Ini}{50}{section.4.4}%
+\contentsline {section}{\numberline {IV.5}Nilai Proposisi dan \textit {Expected Outcomes}}{51}{section.4.5}%
+\contentsline {subsection}{\numberline {IV.5.1}Untuk Anggota PIRANHA (Target Primer)}{51}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {IV.5.2}Untuk Anggota Advanced (Target Sekunder)}{51}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {IV.5.3}Untuk Michael Yeoh dan Administrator}{51}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {IV.5.4}\textit {Expected Outcomes}}{52}{subsection.4.5.4}%
+\contentsline {chapter}{\numberline {V}RENCANA SELANJUTNYA}{53}{chapter.5}%
+\contentsline {section}{\numberline {V.1}Rencana Implementasi Sistem}{53}{section.5.1}%
+\contentsline {subsection}{\numberline {V.1.1}Lingkungan Pengembangan}{53}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {V.1.2}Alat dan Bahan yang Diperlukan}{54}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {V.1.2.1}API dan Layanan Eksternal}{54}{subsubsection.5.1.2.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsubsection}{\numberline {V.1.2.2}Model NLP dan \textit {Library}}{55}{subsubsection.5.1.2.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {V.1.3}Tahapan Implementasi}{56}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {V.1.3.1}Fase 1: Pengembangan Sistem Inti}{56}{subsubsection.5.1.3.1}%
+\contentsline {subsubsection}{\numberline {V.1.3.2}Fase 2: Pengujian Internal dan Iterasi}{56}{subsubsection.5.1.3.2}%
+\contentsline {subsubsection}{\numberline {V.1.3.3}Fase 3: Evaluasi Ahli}{57}{subsubsection.5.1.3.3}%
+\contentsline {subsubsection}{\numberline {V.1.3.4}Fase 4: Pengujian Beta dengan Pengguna}{57}{subsubsection.5.1.3.4}%
+\contentsline {subsection}{\numberline {V.1.4}Estimasi Biaya Operasional}{58}{subsection.5.1.4}%
+\contentsline {section}{\numberline {V.2}Rencana Pengujian dan Evaluasi}{58}{section.5.2}%
+\contentsline {subsection}{\numberline {V.2.1}Pengujian Teknis}{59}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {V.2.1.1}Pengujian Akurasi \textit {Named Entity Recognition}}{59}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {V.2.1.2}Evaluasi Koherensi Topik}{59}{subsubsection.5.2.1.2}%
+\contentsline {subsubsection}{\numberline {V.2.1.3}Pengukuran \textit {Response Time}}{59}{subsubsection.5.2.1.3}%
+\contentsline {subsection}{\numberline {V.2.2}Evaluasi Pengguna}{60}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {V.2.2.1}Metodologi Survei}{60}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {V.2.2.2}Evaluasi Ahli}{61}{subsubsection.5.2.2.2}%
+\contentsline {subsection}{\numberline {V.2.3}Kriteria Keberhasilan Sistem}{62}{subsection.5.2.3}%
+\contentsline {section}{\numberline {V.3}Analisis Risiko dan Mitigasi}{62}{section.5.3}%
+\contentsline {subsection}{\numberline {V.3.1}Risiko Teknis}{62}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {V.3.2}Risiko Non-Teknis}{65}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {V.3.3}Strategi Mitigasi Umum}{68}{subsection.5.3.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
